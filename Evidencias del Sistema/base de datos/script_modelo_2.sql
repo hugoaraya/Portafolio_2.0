@@ -5,6 +5,10 @@
 
 
 
+--LIMPIEZA DE AMBIENTE...
+--SELECT 'DROP TABLE '||table_name||' CASCADE CONSTRAINTS;' FROM user_tables
+
+
 CREATE TABLE comedor (
     id          INTEGER NOT NULL,
     plato_id    INTEGER NOT NULL,
@@ -13,17 +17,19 @@ CREATE TABLE comedor (
 
 ALTER TABLE comedor ADD CONSTRAINT comedor_pk PRIMARY KEY ( id );
 
+--quite not null a usuario_id porque al programar me daba un error.
 CREATE TABLE empleado (
     id           INTEGER NOT NULL,
     rut          INTEGER NOT NULL,
     dv           CHAR(1) NOT NULL,
     nombre       VARCHAR2(15) NOT NULL,
     apellido     VARCHAR2(15) NOT NULL,
-    usuario_id   INTEGER NOT NULL
+    usuario_id   INTEGER
 );
 
 ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id );
 
+--quite not null a usuario_id porque al programar me daba un error.
 CREATE TABLE empresa (
     id           INTEGER NOT NULL,
     rut          INTEGER NOT NULL,
@@ -31,7 +37,7 @@ CREATE TABLE empresa (
     nombre       VARCHAR2(20) NOT NULL,
     direccion    VARCHAR2(20) NOT NULL,
     telefono     INTEGER NOT NULL,
-    usuario_id   INTEGER NOT NULL
+    usuario_id   INTEGER
 );
 
 ALTER TABLE empresa ADD CONSTRAINT empresa_pk PRIMARY KEY ( id );
