@@ -11,25 +11,23 @@
 
 CREATE TABLE comedor (
     id          INTEGER NOT NULL,
-    plato_id    INTEGER NOT NULL,
-    minuta_id   INTEGER NOT NULL
+    plato_id    INTEGER,
+    minuta_id   INTEGER 
 );
 
 ALTER TABLE comedor ADD CONSTRAINT comedor_pk PRIMARY KEY ( id );
 
---quite not null a usuario_id porque al programar me daba un error.
 CREATE TABLE empleado (
     id           INTEGER NOT NULL,
     rut          INTEGER NOT NULL,
     dv           CHAR(1) NOT NULL,
     nombre       VARCHAR2(15) NOT NULL,
     apellido     VARCHAR2(15) NOT NULL,
-    usuario_id   INTEGER
+    usuario_id   INTEGER 
 );
 
 ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( id );
 
---quite not null a usuario_id porque al programar me daba un error.
 CREATE TABLE empresa (
     id           INTEGER NOT NULL,
     rut          INTEGER NOT NULL,
@@ -37,7 +35,7 @@ CREATE TABLE empresa (
     nombre       VARCHAR2(20) NOT NULL,
     direccion    VARCHAR2(20) NOT NULL,
     telefono     INTEGER NOT NULL,
-    usuario_id   INTEGER
+    usuario_id   INTEGER 
 );
 
 ALTER TABLE empresa ADD CONSTRAINT empresa_pk PRIMARY KEY ( id );
@@ -51,7 +49,7 @@ ALTER TABLE estado_habitacion ADD CONSTRAINT estado_habitacion_pk PRIMARY KEY ( 
 
 CREATE TABLE estado_recepcion (
     id            INTEGER NOT NULL,
-    estado        INTEGER,
+    estado        INTEGER NOT NULL,
     descripcion   VARCHAR2(255) NOT NULL
 );
 
@@ -59,8 +57,8 @@ ALTER TABLE estado_recepcion ADD CONSTRAINT estado_recepcion_pk PRIMARY KEY ( id
 
 CREATE TABLE factura (
     id                INTEGER NOT NULL,
-    nro_factura       INTEGER,
-    orden_compra_id   INTEGER NOT NULL
+    nro_factura       INTEGER NOT NULL,
+    orden_compra_id   INTEGER
 );
 
 ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( id );
@@ -72,7 +70,7 @@ CREATE TABLE habitacion (
     precio                 INTEGER NOT NULL,
     descripcion            VARCHAR2(255) NOT NULL,
     nombre                 VARCHAR2(20) NOT NULL,
-    estado_habitacion_id   INTEGER NOT NULL
+    estado_habitacion_id   INTEGER
 );
 
 ALTER TABLE habitacion ADD CONSTRAINT habitacion_pk PRIMARY KEY ( id );
@@ -86,7 +84,7 @@ CREATE TABLE huesped (
     telefono     INTEGER NOT NULL,
     correo       VARCHAR2(255) NOT NULL,
     cargo        VARCHAR2(15) NOT NULL,
-    empresa_id   INTEGER NOT NULL
+    empresa_id   INTEGER 
 );
 
 ALTER TABLE huesped ADD CONSTRAINT huesped_pk PRIMARY KEY ( id );
@@ -104,10 +102,10 @@ ALTER TABLE minuta ADD CONSTRAINT minuta_pk PRIMARY KEY ( id );
 
 CREATE TABLE orden_compra (
     id              INTEGER NOT NULL,
-    nro_orden       INTEGER,
-    huesped_id      INTEGER NOT NULL,
-    habitacion_id   INTEGER NOT NULL,
-    comedor_id      INTEGER NOT NULL
+    nro_orden       INTEGER NOT NULL,
+    huesped_id      INTEGER,
+    habitacion_id   INTEGER,
+    comedor_id      INTEGER
 );
 
 ALTER TABLE orden_compra ADD CONSTRAINT orden_compra_pk PRIMARY KEY ( id );
@@ -115,8 +113,8 @@ ALTER TABLE orden_compra ADD CONSTRAINT orden_compra_pk PRIMARY KEY ( id );
 CREATE TABLE orden_pedido (
     id                      INTEGER NOT NULL,
     nro_orden               INTEGER NOT NULL,
-    recepcion_producto_id   INTEGER NOT NULL,
-    empleado_id             INTEGER NOT NULL
+    recepcion_producto_id   INTEGER,
+    empleado_id             INTEGER
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( id );
@@ -160,9 +158,9 @@ CREATE TABLE recepcion_producto (
     id                    INTEGER NOT NULL,
     nro_recepcion         INTEGER NOT NULL,
     codigo_barra          INTEGER NOT NULL,
-    proveedor_id          INTEGER NOT NULL,
-    producto_id           INTEGER NOT NULL,
-    estado_recepcion_id   INTEGER NOT NULL
+    proveedor_id          INTEGER,
+    producto_id           INTEGER,
+    estado_recepcion_id   INTEGER
 );
 
 ALTER TABLE recepcion_producto ADD CONSTRAINT recepcion_producto_pk PRIMARY KEY ( id );
@@ -178,7 +176,7 @@ CREATE TABLE usuario (
     id                INTEGER NOT NULL,
     nombre_usuario    VARCHAR2(10) NOT NULL,
     contrasenia       VARCHAR2(10) NOT NULL,
-    tipo_usuario_id   INTEGER NOT NULL
+    tipo_usuario_id   INTEGER
 );
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( id );
