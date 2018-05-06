@@ -1,0 +1,93 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F00FDF56-638D-0503-66E9-7B1F6A7295B4" name="orden_pedido">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:05:21 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_5</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="048A41CC-13F5-DF39-FB1E-6704DEA000D7">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:05:43 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nro_orden" id="11392A14-E52E-CCAA-0390-8CBA9EF6ABE1">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:06:05 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="recepcion_producto_id" id="D005E98E-1A70-97B9-871D-A78BF34EC2C8">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:22:17 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AD0BF25E-AE9D-8696-7DC4-709A0DBE029A" referredColumn="EEA0192D-C354-D0B8-3D25-87CED1D25490"/>
+</associations>
+</Column>
+<Column name="empleado_id" id="39497614-0720-919B-3C2A-21DD67CCA02F">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:22:58 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DF03D829-4E02-2FB5-F7B0-A18FEB97FF38" referredColumn="61E595B5-644F-A261-C48A-34887AB7EFAB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="77E88528-E2E9-5B2A-963E-B0D31BCBE529" name="orden_pedido_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:05:43 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="048A41CC-13F5-DF39-FB1E-6704DEA000D7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="75A61B9B-4F0F-011D-5D2F-696E0C008297" name="orden_recepcion_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:22:17 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D005E98E-1A70-97B9-871D-A78BF34EC2C8"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="C6F1EB98-2F0E-4AAD-6CAD-0CBF8C25E5A1" name="orden_empleado_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:22:58 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="39497614-0720-919B-3C2A-21DD67CCA02F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

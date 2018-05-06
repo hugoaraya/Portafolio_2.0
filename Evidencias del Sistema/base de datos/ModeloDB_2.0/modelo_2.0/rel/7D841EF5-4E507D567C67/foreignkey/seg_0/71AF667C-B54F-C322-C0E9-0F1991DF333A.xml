@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="71AF667C-B54F-C322-C0E9-0F1991DF333A" containerWithKeyObject="DB15A5C1-8DA3-2A80-36B6-95577B7D0C01" localFKIndex="9A41C379-4EC3-1340-6EA4-7EC386B93A70" name="comedor_plato_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:53:10 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<referredTableLongName>plato</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>DEFA36B0-7C16-5632-C192-949FC2FD4CDC</referredTableID>
+<keyObject>5132D716-7E12-30E6-1D8E-07C17C97162F</keyObject>
+<referredKeyID>5132D716-7E12-30E6-1D8E-07C17C97162F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

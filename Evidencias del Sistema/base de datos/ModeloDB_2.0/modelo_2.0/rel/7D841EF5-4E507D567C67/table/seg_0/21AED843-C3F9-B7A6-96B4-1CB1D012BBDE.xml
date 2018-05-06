@@ -1,0 +1,127 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="21AED843-C3F9-B7A6-96B4-1CB1D012BBDE" name="recepcion_producto">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:17:26 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_8</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="EEA0192D-C354-D0B8-3D25-87CED1D25490">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:18:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nro_recepcion" id="0BC2E095-0EA9-F519-D153-5D8E5B6CAAE0">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:18:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo_barra" id="7946C165-898D-9608-5C4B-90CEA865A055">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:18:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="proveedor_id" id="EEACD862-1D34-F069-D0AE-D2FA33710DF3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:20:53 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0785B4D8-B1F7-E404-AEB5-953F450BEA7A" referredColumn="8DACF31D-47B6-81FD-0BCE-C663F34DA322"/>
+</associations>
+</Column>
+<Column name="producto_id" id="98C2DE93-AB2E-9496-C6CA-213A47C6C543">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:20:59 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="071CE2C4-A80E-0B94-3F96-4EA7F1828732" referredColumn="3576E2F5-EB59-63AE-F725-C4D507A0B84C"/>
+</associations>
+</Column>
+<Column name="estado_recepcion_id" id="74A9767A-3E73-B44C-F7EE-EC47AEF3E13D">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:35:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="21B2E922-9457-C05A-69FE-EDA3073F39A3" referredColumn="DD9BABBF-7325-0840-ED30-A532CA46A99B"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8A3DB2D9-F95C-7724-BDDD-14D74E1EC317" name="recepcion_producto_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:18:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEA0192D-C354-D0B8-3D25-87CED1D25490"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="E4F29012-7FFE-5DB4-D6DD-98B8B566C452" name="recepcion_proveedor_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:20:53 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="EEACD862-1D34-F069-D0AE-D2FA33710DF3"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F3B002E6-63AC-A53B-AFC0-F612167B1F04" name="recepcion_producto_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:20:59 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="98C2DE93-AB2E-9496-C6CA-213A47C6C543"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="FEAFFA17-FE71-C6E6-B91A-FED6858108A5" name="recepcion_estado_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:35:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="74A9767A-3E73-B44C-F7EE-EC47AEF3E13D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

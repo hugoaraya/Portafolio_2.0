@@ -1,0 +1,57 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="56E57A3C-4321-BCDF-4868-14B30628598C" name="estado_recepcion">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:33:34 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_12</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="DD9BABBF-7325-0840-ED30-A532CA46A99B">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:34:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="estado" id="32E1DCA3-7ABD-F3B8-7DB4-E3E3AAF26417">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:34:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="BF83E56C-018E-859B-42F8-B6A0982DE5E4">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:34:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="18E6F744-35EC-05BC-6A55-06163878DB82" name="estado_recepcion_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:34:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="DD9BABBF-7325-0840-ED30-A532CA46A99B"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

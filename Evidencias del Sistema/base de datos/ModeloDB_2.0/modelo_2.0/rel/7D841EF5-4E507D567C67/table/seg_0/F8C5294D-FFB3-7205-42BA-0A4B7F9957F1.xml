@@ -1,0 +1,70 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F8C5294D-FFB3-7205-42BA-0A4B7F9957F1" name="factura">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:37:49 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_13</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8031E9F1-D11B-764C-1D3C-91F8CC02B74C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:38:32 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nro_factura" id="0F116C36-4D05-018C-72FF-B6B128969B3C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:38:32 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="orden_compra_id" id="0EB6056E-05E4-F9E3-2521-B9A2A639BD1C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:55:00 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A8273CBB-DD47-EE8C-8F06-22D3EEF21F89" referredColumn="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="DD1C4E99-18CB-E130-8194-F9D3C7999D2E" name="factura_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:38:32 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8031E9F1-D11B-764C-1D3C-91F8CC02B74C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EC49F49D-7AD4-B67B-EDCB-8F4E5EA0642A" name="factura_orden_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:55:00 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0EB6056E-05E4-F9E3-2521-B9A2A639BD1C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

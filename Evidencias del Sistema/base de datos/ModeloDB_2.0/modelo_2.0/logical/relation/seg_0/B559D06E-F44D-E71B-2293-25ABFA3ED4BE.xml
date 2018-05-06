@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="comedor_plato_FK" directorySegmentName="seg_0" id="B559D06E-F44D-E71B-2293-25ABFA3ED4BE">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>71AF667C-B54F-C322-C0E9-0F1991DF333A</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<sourcePk>EEE265A6-60CE-015F-B5CE-4BC5CEEC8C53</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>97CCF2C9-F730-36E4-F39A-10E9CBE71BDB</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9B22B2BD-EB4C-68B9-B963-83EFA9A59B31</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

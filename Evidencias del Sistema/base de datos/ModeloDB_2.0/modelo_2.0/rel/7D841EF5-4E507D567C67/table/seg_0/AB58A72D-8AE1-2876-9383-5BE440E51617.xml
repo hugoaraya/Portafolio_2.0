@@ -1,0 +1,119 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB58A72D-8AE1-2876-9383-5BE440E51617" name="producto">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:09:21 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_7</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="3576E2F5-EB59-63AE-F725-C4D507A0B84C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:09:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="BC5D8E28-85DA-73EB-F474-AA8A1B999273">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:10:21 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_vencimiento" id="EEE2A0C5-A94C-31E5-4755-983CCEE89724">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:10:52 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="E1E1CB04-BB20-EBCA-8C39-5984EE338B51">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:10:52 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="familia" id="B5903141-154C-EA4E-67D3-9B61A90E8FAD">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:12:04 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="tipo_producto" id="DD18ABAF-D760-E5A6-5BBF-30910FFF168F">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:12:18 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="E36C31F6-9E21-2205-CDD0-CFB2C30C6AC2">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:13:27 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25</dataTypeSize>
+<ownDataTypeParameters>25,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stock" id="68D3258E-5485-A239-1F6E-AAB97FD757D0">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:13:37 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="stock_critico" id="2C75A2E9-4FB1-82E7-6EF3-AED9E6A55FD9">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:13:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="52587FCB-D467-5FE7-A9B5-C98FD2858E84" name="producto_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:09:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3576E2F5-EB59-63AE-F725-C4D507A0B84C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

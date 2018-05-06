@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="43387A93-F677-A8D7-6762-C5363F9DFD7D" containerWithKeyObject="A01800FF-E06E-7A86-5F80-80A8FFABBE1A" localFKIndex="5A35A158-1C13-3EEF-081B-EF497C8947DA" name="orden_huesped_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:54:25 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<referredTableLongName>huesped</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>F0CC3153-FF94-DA5D-BCE1-62546C9776A4</referredTableID>
+<keyObject>A2B4E1AC-8F21-BC31-487A-8DEBB4DA645F</keyObject>
+<referredKeyID>A2B4E1AC-8F21-BC31-487A-8DEBB4DA645F</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>id</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A7F5C102-FB9F-4B87-8BFE-03E1C61AD4A9" name="estado habitacion">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>84C5F8CA-ADE7-7F85-5587-7492F171EF7E</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="B704608E-65FA-FD9F-5E4F-6B52990928B5">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>9BEAC8DA-2AA4-BC43-15C6-07318C9D1DE0</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="1A118AAF-CB33-6924-B983-E925FC68DA7E">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>4C9CBA79-4147-24BF-EF8E-EE2179439850</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="372D695B-B17F-3A21-93E5-DC0A757060D1" name="estado habitacion PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>99B2B770-2426-5F09-AEB8-623E46D65B13</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>B704608E-65FA-FD9F-5E4F-6B52990928B5</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

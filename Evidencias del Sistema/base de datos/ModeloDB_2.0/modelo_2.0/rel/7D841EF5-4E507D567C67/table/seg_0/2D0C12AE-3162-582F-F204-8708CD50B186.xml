@@ -1,0 +1,112 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2D0C12AE-3162-582F-F204-8708CD50B186" name="empresa">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:25:15 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_3</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="898DC08B-0944-CDC6-4504-2FC4790D222D">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:57:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="rut" id="94F62CC9-A4D9-36AA-E25D-4C5DDB292530">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:57:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="dv" id="D9108524-AC5F-A5DC-7A8E-277636084F54">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:57:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre" id="5D81F601-6686-088F-C15D-E253A5D62724">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:57:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="direccion" id="F2F58D34-CF68-AB6C-D26C-EFF30BD81DB8">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:58:13 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="telefono" id="36B92E10-0042-AB24-517C-B69C64C37958">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:58:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="usuario_id" id="681CE020-A509-07EB-159B-AB99D1851318">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:01:48 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="EEE14905-F04C-0FC4-27BA-434D278C495E" referredColumn="3F85F396-FB53-8799-48B1-7322790717CB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="7DA00D7B-FC2B-BBAB-68A8-28DA45C2885D" name="empresa_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 01:57:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="898DC08B-0944-CDC6-4504-2FC4790D222D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BB01EE6D-8A34-E28F-F873-36174DBA59B3" name="empresa_usuario_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:01:48 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="681CE020-A509-07EB-159B-AB99D1851318"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
