@@ -5,7 +5,7 @@
 CREATE TABLE comedor (
     id              INTEGER NOT NULL,
     plato_id        INTEGER ,
-    minuta_id       INTEGER L,
+    minuta_id       INTEGER ,
     tipo_servicio   VARCHAR2(25) NOT NULL,
     precio          INTEGER NOT NULL
 );
