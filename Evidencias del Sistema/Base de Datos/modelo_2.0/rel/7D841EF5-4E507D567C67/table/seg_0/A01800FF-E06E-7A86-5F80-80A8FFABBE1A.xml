@@ -1,0 +1,80 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A01800FF-E06E-7A86-5F80-80A8FFABBE1A" name="orden_compra">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:31:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_11</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="644C403E-1B8C-9F46-E8E8-4B7C75D9C740">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:31:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nro_orden" id="86747690-E894-E2E8-302A-0B96981E38FC">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:31:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="empresa_id" id="C0C2C1E2-B71E-0FC6-4FC1-964F0782F616">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:44:56 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5A12E71D-E545-8E15-CD3A-71A3B7510F07" referredColumn="898DC08B-0944-CDC6-4504-2FC4790D222D"/>
+</associations>
+</Column>
+<Column name="fecha" id="303A03FE-F463-DA28-7D7F-E070AB740890">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:57:09 UTC</createdTime>
+<generatorID>420F58CA-9A12-F872-CACD-A59BF05714BA</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="434F4B3C-C963-8446-2EB6-22CF9D1671EC" name="orden_compra_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:31:50 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="BA061256-75AD-05B8-ACB3-86B2625C177E" name="orden_compra_empresa_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:44:56 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C0C2C1E2-B71E-0FC6-4FC1-964F0782F616"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

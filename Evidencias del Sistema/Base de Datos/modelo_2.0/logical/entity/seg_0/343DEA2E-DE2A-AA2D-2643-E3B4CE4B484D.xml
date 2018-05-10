@@ -1,0 +1,63 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="343DEA2E-DE2A-AA2D-2643-E3B4CE4B484D" name="servicio">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>F0356B7E-211D-32FA-1D93-E9A2659BE03F</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A911BF97-B6F1-27AE-3666-D53E56792E03">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>A7C235B8-C441-6BC0-C008-A7C39D75E7EC</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="3C653E9E-046F-F9D7-B933-A3F6E931F9D2">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>1B8277D3-D70D-88B7-B62A-3B27EA95C527</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="9224804D-DC07-C96F-EF90-89BE3A02D47B" name="servicio PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>DA274101-5BDA-23D0-6BD1-B8DABD3521E2</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A911BF97-B6F1-27AE-3666-D53E56792E03</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

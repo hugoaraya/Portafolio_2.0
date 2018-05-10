@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="comedor_minuta_FK" directorySegmentName="seg_0" id="7ADAA5A0-70E1-9E00-59F4-E4F62DA607CB">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>53D1687D-3120-1CE3-A80A-D86D4E1589B7</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<sourcePk>5B917785-0E2B-BFC5-0FDF-C0D3C55D39EB</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>09C3116A-82D3-F613-9CBB-993930204C5B</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9B22B2BD-EB4C-68B9-B963-83EFA9A59B31</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

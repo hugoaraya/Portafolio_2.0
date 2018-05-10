@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="comedor_servicio_FK" directorySegmentName="seg_0" id="575FCA7D-1054-D598-3CC1-6B018DC83A04">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>1EAA7776-52D5-FC3C-A601-8F9FF382C732</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<sourcePk>9224804D-DC07-C96F-EF90-89BE3A02D47B</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>343DEA2E-DE2A-AA2D-2643-E3B4CE4B484D</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>9B22B2BD-EB4C-68B9-B963-83EFA9A59B31</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

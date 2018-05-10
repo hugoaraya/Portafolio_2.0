@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="84C5F8CA-ADE7-7F85-5587-7492F171EF7E" name="estado_habitacion">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:43:05 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_15</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="9BEAC8DA-2AA4-BC43-15C6-07318C9D1DE0">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:44:06 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="4C9CBA79-4147-24BF-EF8E-EE2179439850">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:44:06 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="99B2B770-2426-5F09-AEB8-623E46D65B13" name="estado_habitacion_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:44:06 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9BEAC8DA-2AA4-BC43-15C6-07318C9D1DE0"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

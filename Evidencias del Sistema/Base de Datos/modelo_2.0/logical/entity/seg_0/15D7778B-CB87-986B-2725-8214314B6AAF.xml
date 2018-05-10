@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="15D7778B-CB87-986B-2725-8214314B6AAF" name="estado recepcion">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>56E57A3C-4321-BCDF-4868-14B30628598C</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="88581C86-4530-88CE-DAB6-CAA467995651">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>DD9BABBF-7325-0840-ED30-A532CA46A99B</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado" id="AD785724-48FE-9CCD-B0C0-7DBA7AA360C0">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>32E1DCA3-7ABD-F3B8-7DB4-E3E3AAF26417</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="descripcion" id="56C2C157-6883-5217-655E-999F6C7EB373">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>BF83E56C-018E-859B-42F8-B6A0982DE5E4</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="7486141C-2A56-E95D-08C1-E5D962FD80B4" name="estado recepcion PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>18E6F744-35EC-05BC-6A55-06163878DB82</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>88581C86-4530-88CE-DAB6-CAA467995651</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

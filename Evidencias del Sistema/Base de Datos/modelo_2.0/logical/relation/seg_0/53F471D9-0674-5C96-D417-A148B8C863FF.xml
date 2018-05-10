@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="recepcion_producto_FK" directorySegmentName="seg_0" id="53F471D9-0674-5C96-D417-A148B8C863FF">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>071CE2C4-A80E-0B94-3F96-4EA7F1828732</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<sourcePk>83CD6B4A-FE04-5330-80E8-B55F3BF25DE8</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>11ABF378-B731-FDB4-3521-368FAB60075F</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DA2882A3-1AB2-A0E2-FB4D-DAE997B1B2E6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

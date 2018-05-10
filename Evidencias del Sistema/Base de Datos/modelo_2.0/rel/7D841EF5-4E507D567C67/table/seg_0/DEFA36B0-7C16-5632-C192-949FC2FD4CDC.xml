@@ -1,0 +1,67 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="DEFA36B0-7C16-5632-C192-949FC2FD4CDC" name="plato">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:44:24 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_16</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="F4272A50-E06A-1020-1E4E-4D8D01D818A4">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:46:39 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_plato" id="D53DEFCE-79F2-D939-F44D-6B616D3C6A58">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:46:39 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="0503A449-8C6D-E21A-7356-371157B1CBC9">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:47:09 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="24206865-28B7-8190-E777-09D989A40064">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:51:14 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="5132D716-7E12-30E6-1D8E-07C17C97162F" name="plato_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:46:39 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F4272A50-E06A-1020-1E4E-4D8D01D818A4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

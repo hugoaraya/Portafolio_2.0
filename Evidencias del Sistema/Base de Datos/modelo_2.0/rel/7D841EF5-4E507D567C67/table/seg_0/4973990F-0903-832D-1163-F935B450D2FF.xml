@@ -1,0 +1,77 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="4973990F-0903-832D-1163-F935B450D2FF" name="minuta">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:48:55 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_17</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:09 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="nombre_minuta" id="4C304604-4FF6-7692-9931-9B60ABE7117F">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:26 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descipcion" id="A0EA181A-F143-7B1A-8C7A-8876289BF0CF">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:47 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_inicio" id="493CE5C2-2AA0-DF90-18EA-58730F30D0B6">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:47 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_fin" id="B0E8D455-41D1-5D3A-5930-6C76926F43E7">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:56 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="442F86DE-1D9B-49B5-6EA3-73B09D56090A" name="minuta_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:49:09 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

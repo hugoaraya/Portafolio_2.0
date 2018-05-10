@@ -1,0 +1,49 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="90094D94-F4FE-4B6E-F6DD-D77CAA0CCBF9" name="orden comedor">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>D69BB9BD-63FC-A2C0-1C11-D1546E9F9565</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="4AF18385-71D0-520C-71D6-8F66BC26E472">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>78445491-6B0F-AEEF-0678-684F1273A3B1</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="A432FF47-3BC6-BF38-B310-CF25F70025D8" name="orden comedor PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>D5210421-2DB7-0600-6C8A-5CBE6C1CF01A</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>4AF18385-71D0-520C-71D6-8F66BC26E472</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

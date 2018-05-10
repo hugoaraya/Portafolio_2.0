@@ -1,0 +1,20 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="huesped_empresa_FK" directorySegmentName="seg_0" id="606A8CD0-76AE-109A-752D-8AD1AE835D60">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>DFF80C5A-AD65-3F12-7E58-DAA778140CC1</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<sourcePk>55DE78EC-020D-67AB-B284-230CC4BEC736</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>F65E3463-3359-E6BA-4D5D-AE262B40C852</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>A1BA5C9A-3B33-2235-2BB8-6A09CD867FD8</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

@@ -1,0 +1,159 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="A1BA5C9A-3B33-2235-2BB8-6A09CD867FD8" name="huesped">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>F0CC3153-FF94-DA5D-BCE1-62546C9776A4</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="E0F6E3BE-6352-815A-0789-EB47CD0618C3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>99085901-CC77-9DEC-322D-8E5E37AD7552</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="rut" id="391E556B-E34E-BE97-13CB-D17670E1786D">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>462ACE97-4E4F-D592-C4E7-FD8C1CEAC5CD</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dv" id="5510C28E-C322-B5A4-9392-E9CA95D5D410">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>1C6676F5-5940-56F0-9EB7-D51F45A7A87D</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nombre" id="0BD92815-3693-D490-AB35-380E887BB199">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>D16B5AAE-7039-0BFA-3C0B-3AE5A455C62F</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="apellido" id="F7A5E5D7-3527-76CD-600E-9C24B9AEBE80">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>E20386DD-57CB-0E51-9D06-6A7AA7F0EBAB</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="telefono" id="DEF8A1D5-B5E6-0402-C6F4-AE48B27A3B8A">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>BFD85BF3-48B4-73E1-E4ED-A07A1F1D3A15</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="correo" id="C2F5B9BE-2E7E-9E68-E800-5271E0FAF4D4">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>F7187B1A-30A7-F28E-F4CB-67F5DC16A188</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cargo" id="412D3E5D-16CF-B85F-A960-B751625C5C5C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>BF80BF19-13AE-B34D-03D5-99AB35821279</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>15</dataTypeSize>
+<ownDataTypeParameters>15,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="empresa id" id="3451C9C2-AEC9-FB7A-16F8-2995BF098BE2">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>606A8CD0-76AE-109A-752D-8AD1AE835D60</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>F27855BC-3688-8B01-364E-F617775BA1E7</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="B636CE59-C361-34C7-3B55-629C033388A4" name="huesped PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>A2B4E1AC-8F21-BC31-487A-8DEBB4DA645F</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>E0F6E3BE-6352-815A-0789-EB47CD0618C3</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

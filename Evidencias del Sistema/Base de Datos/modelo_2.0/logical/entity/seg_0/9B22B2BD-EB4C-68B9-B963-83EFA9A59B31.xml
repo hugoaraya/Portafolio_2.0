@@ -1,0 +1,91 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9B22B2BD-EB4C-68B9-B963-83EFA9A59B31" name="comedor">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>DB15A5C1-8DA3-2A80-36B6-95577B7D0C01</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="A3E6141F-8902-218E-D5DC-EDE529B04CA9">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>3BDF931F-717D-7340-1DAA-3598DC6CED85</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="plato id" id="1F9D774A-1FE2-6904-32DA-83C2F52E6ABD">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>B559D06E-F44D-E71B-2293-25ABFA3ED4BE</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>CAF8C4A4-155F-D74A-0D19-1C88BCC7C60C</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="minuta id" id="251F7200-3E14-7E3A-0606-28F186C9E5F7">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>7ADAA5A0-70E1-9E00-59F4-E4F62DA607CB</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>68F4208E-C72E-6AA9-6977-204EC82722C0</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="servicio id" id="38824D00-3F42-849E-DADB-A26AF0F339AD">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>575FCA7D-1054-D598-3CC1-6B018DC83A04</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>A911BF97-B6F1-27AE-3666-D53E56792E03</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="1BE26BB7-4531-EEBE-C255-E2882E0F5371" name="comedor PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:56 UTC</createdTime>
+<generatorID>16283A86-33B7-B437-4F96-1CBE0E1AB9AF</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>A3E6141F-8902-218E-D5DC-EDE529B04CA9</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

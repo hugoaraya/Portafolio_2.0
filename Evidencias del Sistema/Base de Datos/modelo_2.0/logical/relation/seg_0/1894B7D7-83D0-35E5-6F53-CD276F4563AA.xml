@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="recepcion_proveedor_FK" directorySegmentName="seg_0" id="1894B7D7-83D0-35E5-6F53-CD276F4563AA">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>0785B4D8-B1F7-E404-AEB5-953F450BEA7A</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<sourcePk>E25010F9-B1DD-1957-09E4-A6FA8F68E02F</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>E8C6EBC2-9055-CFE9-B716-D53646566739</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>DA2882A3-1AB2-A0E2-FB4D-DAE997B1B2E6</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>

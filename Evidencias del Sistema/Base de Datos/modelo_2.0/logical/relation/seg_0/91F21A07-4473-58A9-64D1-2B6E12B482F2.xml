@@ -1,0 +1,21 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="habitacion_estado_FK" directorySegmentName="seg_0" id="91F21A07-4473-58A9-64D1-2B6E12B482F2">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-06 02:58:57 UTC</createdTime>
+<generatorID>D8C0FB2E-7FC7-DEF4-0503-7D30D0E3802B</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
+</engineerTo>
+<sourcePk>372D695B-B17F-3A21-93E5-DC0A757060D1</sourcePk>
+<identifying>false</identifying>
+<optionalSource>true</optionalSource>
+<optionalTarget>false</optionalTarget>
+<sourceCardinality>1</sourceCardinality>
+<sourceEntity>A7F5C102-FB9F-4B87-8BFE-03E1C61AD4A9</sourceEntity>
+<targetCardinalityString>*</targetCardinalityString>
+<targetEntity>B86495A8-B11C-2C07-722E-DD67566E4588</targetEntity>
+<transferable>true</transferable>
+<deleteRule>NO ACTION</deleteRule>
+</Relation>
