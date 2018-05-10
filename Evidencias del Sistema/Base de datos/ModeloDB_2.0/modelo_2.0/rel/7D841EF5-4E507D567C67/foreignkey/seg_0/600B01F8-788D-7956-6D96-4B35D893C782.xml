@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="99B966FB-566D-99DD-8457-E22CB462B9B1" containerWithKeyObject="A01800FF-E06E-7A86-5F80-80A8FFABBE1A" localFKIndex="5A9AAFE5-3A63-5494-9722-2830491DC784" name="orden_comedor_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="600B01F8-788D-7956-6D96-4B35D893C782" containerWithKeyObject="2B346980-0CCD-8137-B56B-6C222C3ADB46" localFKIndex="2F5FDCC6-11C5-FDD7-FCC5-514AFA3F49AA" name="orden_comedor_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:50 UTC</createdTime>
+<createdTime>2018-05-10 01:58:05 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <referredTableLongName>comedor</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

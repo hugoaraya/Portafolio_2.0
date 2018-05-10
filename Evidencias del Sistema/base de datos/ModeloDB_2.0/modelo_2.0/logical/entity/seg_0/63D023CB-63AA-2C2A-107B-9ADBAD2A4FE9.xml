@@ -37,7 +37,6 @@
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -57,6 +56,18 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fecha" id="392EEE21-5E0E-7CDA-4445-663610D336EE">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:55:26 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="3B5AB823-572E-9C24-6C3E-EFFEA8BE6E3C" name="factura PK">
@@ -64,8 +75,9 @@
 <createdTime>2018-05-06 02:58:56 UTC</createdTime>
 <generatorID>DD1C4E99-18CB-E130-8194-F9D3C7999D2E</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

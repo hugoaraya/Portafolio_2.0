@@ -80,6 +80,30 @@
 <colAssociation fkAssociation="21B2E922-9457-C05A-69FE-EDA3073F39A3" referredColumn="DD9BABBF-7325-0840-ED30-A532CA46A99B"/>
 </associations>
 </Column>
+<Column name="orden_pedido_id" id="D675CEE8-E320-5F33-ED2C-5345216C3E9C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 02:05:47 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="061B401D-F801-C794-048F-4DD88F0C6AEA" referredColumn="048A41CC-13F5-DF39-FB1E-6704DEA000D7"/>
+</associations>
+</Column>
+<Column name="fecha" id="021C800F-BF15-F041-3B74-768E265B3FC6">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 02:06:28 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="8A3DB2D9-F95C-7724-BDDD-14D74E1EC317" name="recepcion_producto_PK">
@@ -121,6 +145,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="74A9767A-3E73-B44C-F7EE-EC47AEF3E13D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="908C5C44-7F2C-1EBB-93BE-E9CC324125BC" name="recepcion_orden_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 02:05:47 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D675CEE8-E320-5F33-ED2C-5345216C3E9C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

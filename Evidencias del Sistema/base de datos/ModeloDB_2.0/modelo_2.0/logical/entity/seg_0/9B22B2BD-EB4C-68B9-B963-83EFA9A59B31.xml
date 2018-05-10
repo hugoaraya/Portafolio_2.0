@@ -57,6 +57,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="servicio id" id="38824D00-3F42-849E-DADB-A26AF0F339AD">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>575FCA7D-1054-D598-3CC1-6B018DC83A04</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>A911BF97-B6F1-27AE-3666-D53E56792E03</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="1BE26BB7-4531-EEBE-C255-E2882E0F5371" name="comedor PK">
@@ -64,8 +78,9 @@
 <createdTime>2018-05-06 02:58:56 UTC</createdTime>
 <generatorID>16283A86-33B7-B437-4F96-1CBE0E1AB9AF</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

@@ -46,6 +46,20 @@
 <colAssociation fkAssociation="53D1687D-3120-1CE3-A80A-D86D4E1589B7" referredColumn="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29"/>
 </associations>
 </Column>
+<Column name="servicio_id" id="15C578F1-F008-2DA8-A405-262308E8654C">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:48:26 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="1EAA7776-52D5-FC3C-A601-8F9FF382C732" referredColumn="A7C235B8-C441-6BC0-C008-A7C39D75E7EC"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="16283A86-33B7-B437-4F96-1CBE0E1AB9AF" name="comedor_PK">
@@ -77,6 +91,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="111D67A2-A64A-5323-0C7F-8D3FCA0F02C2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B6F5F712-EE72-8149-CE9D-21BA999E7EF5" name="comedor_servicio_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:48:26 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="15C578F1-F008-2DA8-A405-262308E8654C"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

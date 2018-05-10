@@ -37,52 +37,35 @@
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="huesped id" id="1903C0B0-7799-889F-9E65-0C885B8E5C29">
+<Attribute name="empresa id" id="E4D0D2A4-F3B4-B90C-337D-DB1400287D26">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:58:57 UTC</createdTime>
-<generatorID>CE52080A-D30B-3556-CBC0-31A0C5381BF9</generatorID>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>D93CBE7B-9B1E-E8B3-B872-858BEA84CF96</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<referedAttribute>E0F6E3BE-6352-815A-0789-EB47CD0618C3</referedAttribute>
+<referedAttribute>F27855BC-3688-8B01-364E-F617775BA1E7</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="habitacion id" id="B3134414-4C3C-A78E-460E-D9F04087DCD9">
+<Attribute name="fecha" id="420F58CA-9A12-F872-CACD-A59BF05714BA">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:58:57 UTC</createdTime>
-<generatorID>9F2C7AE0-27A0-0B4B-4B83-E12948E3CBB9</generatorID>
+<createdTime>2018-05-10 01:55:12 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<referedAttribute>29CFCF55-BEBE-BFB3-5E27-14A37AD98808</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-</Attribute>
-<Attribute name="comedor id" id="32D214C1-EA24-04B6-84B8-F52B955C95B5">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:58:57 UTC</createdTime>
-<generatorID>05DB1057-944D-1A30-6DBE-56A3103C916D</generatorID>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<engineerTo>
-<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
-</engineerTo>
-<referedAttribute>A3E6141F-8902-218E-D5DC-EDE529B04CA9</referedAttribute>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
 </attributes>
@@ -92,8 +75,9 @@
 <createdTime>2018-05-06 02:58:57 UTC</createdTime>
 <generatorID>434F4B3C-C963-8446-2EB6-22CF9D1671EC</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>

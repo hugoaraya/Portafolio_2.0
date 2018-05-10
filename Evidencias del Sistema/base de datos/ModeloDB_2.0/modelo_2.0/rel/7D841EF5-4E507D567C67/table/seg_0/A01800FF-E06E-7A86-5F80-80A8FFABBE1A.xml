@@ -22,16 +22,15 @@
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:31:50 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="huesped_id" id="A4AEE029-F474-B818-A348-3FEBA021AE1A">
+<Column name="empresa_id" id="C0C2C1E2-B71E-0FC6-4FC1-964F0782F616">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:25 UTC</createdTime>
+<createdTime>2018-05-10 01:44:56 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -40,36 +39,19 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="43387A93-F677-A8D7-6762-C5363F9DFD7D" referredColumn="99085901-CC77-9DEC-322D-8E5E37AD7552"/>
+<colAssociation fkAssociation="5A12E71D-E545-8E15-CD3A-71A3B7510F07" referredColumn="898DC08B-0944-CDC6-4504-2FC4790D222D"/>
 </associations>
 </Column>
-<Column name="habitacion_id" id="22482030-8814-6DC1-D39C-3DEE7B4AC9FA">
+<Column name="fecha" id="303A03FE-F463-DA28-7D7F-E070AB740890">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:32 UTC</createdTime>
+<createdTime>2018-05-10 01:57:09 UTC</createdTime>
+<generatorID>420F58CA-9A12-F872-CACD-A59BF05714BA</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
+<logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="7ABED45F-A3B0-B4A8-0DEF-F40068DAE65D" referredColumn="CD9880EC-EA91-7C22-03AA-572C4A2BF9BC"/>
-</associations>
-</Column>
-<Column name="comedor_id" id="C53E29DB-A9C9-524C-98D6-A7E9D59683A0">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:50 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="99B966FB-566D-99DD-8457-E22CB462B9B1" referredColumn="3BDF931F-717D-7340-1DAA-3598DC6CED85"/>
-</associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
@@ -84,34 +66,14 @@
 <colUsage columnID="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="5A35A158-1C13-3EEF-081B-EF497C8947DA" name="orden_huesped_FK">
+<ind_PK_UK id="BA061256-75AD-05B8-ACB3-86B2625C177E" name="orden_compra_empresa_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:25 UTC</createdTime>
+<createdTime>2018-05-10 01:44:56 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A4AEE029-F474-B818-A348-3FEBA021AE1A"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="613E97F5-0566-DC7E-28D9-371682CAE3B4" name="orden_habitacion_FK">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:32 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="22482030-8814-6DC1-D39C-3DEE7B4AC9FA"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="5A9AAFE5-3A63-5494-9722-2830491DC784" name="orden_comedor_FK">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:54:50 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="C53E29DB-A9C9-524C-98D6-A7E9D59683A0"/>
+<colUsage columnID="C0C2C1E2-B71E-0FC6-4FC1-964F0782F616"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

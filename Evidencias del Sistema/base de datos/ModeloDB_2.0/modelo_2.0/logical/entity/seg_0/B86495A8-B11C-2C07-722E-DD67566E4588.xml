@@ -112,6 +112,20 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="huesped id" id="4C70C569-7462-5B97-A3A9-5CB096748DA1">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-10 01:54:23 UTC</createdTime>
+<generatorID>B7107E15-CB1F-8687-3AC5-6BCB8BF9C98C</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>E0F6E3BE-6352-815A-0789-EB47CD0618C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="CFA979E8-4A1B-10B2-291E-4347086D86B4" name="habitacion PK">
@@ -119,8 +133,9 @@
 <createdTime>2018-05-06 02:58:56 UTC</createdTime>
 <generatorID>389DCD04-1588-3143-3A9A-6E21B8979F24</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <engineerTo>
-<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="false"/>
 </engineerTo>
 <pk>true</pk>
 <usedAttributes>
