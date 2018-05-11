@@ -1,7 +1,8 @@
--- Generado por Oracle SQL Developer Data Modeler 18.1.0.082.1041
---   en:        2018-05-10 00:12:33 CLST
+-- Generado por Oracle SQL Developer Data Modeler 17.4.0.355.2131
+--   en:        2018-05-11 15:05:40 CLST
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
+
 
 --LIMPIEZA DE AMBIENTE...
 --SELECT 'DROP TABLE '||table_name||' CASCADE CONSTRAINTS;' FROM user_tables
@@ -110,6 +111,14 @@ CREATE TABLE minuta (
 
 ALTER TABLE minuta ADD CONSTRAINT minuta_pk PRIMARY KEY ( id );
 
+CREATE TABLE orden_comedor (
+    id                INTEGER NOT NULL,
+    comedor_id        INTEGER,
+    orden_compra_id   INTEGER
+);
+
+ALTER TABLE orden_comedor ADD CONSTRAINT orden_comedor_pk PRIMARY KEY ( id );
+
 CREATE TABLE orden_compra (
     id           INTEGER NOT NULL,
     nro_orden    INTEGER NOT NULL,
@@ -122,18 +131,17 @@ ALTER TABLE orden_compra ADD CONSTRAINT orden_compra_pk PRIMARY KEY ( id );
 CREATE TABLE orden_habitacion (
     id                INTEGER NOT NULL,
     habitacion_id     INTEGER,
-    comedor_id        INTEGER,
     orden_compra_id   INTEGER
 );
 
 ALTER TABLE orden_habitacion ADD CONSTRAINT orden_habitacion_pk PRIMARY KEY ( id );
 
 CREATE TABLE orden_pedido (
-    id            INTEGER NOT NULL,
-    nro_orden     INTEGER NOT NULL,
-    empleado_id   INTEGER,
-	proveedor_id  INTEGER,
-    fecha         DATE NOT NULL
+    id             INTEGER NOT NULL,
+    nro_orden      INTEGER NOT NULL,
+    empleado_id    INTEGER,
+    fecha          DATE NOT NULL,
+    proveedor_id   INTEGER
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( id );
@@ -175,7 +183,7 @@ ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( id );
 CREATE TABLE recepcion_producto (
     id                    INTEGER NOT NULL,
     nro_recepcion         INTEGER NOT NULL,
-    codigo_barra          INTEGER NOT NULL,    
+    codigo_barra          INTEGER NOT NULL,
     producto_id           INTEGER,
     estado_recepcion_id   INTEGER,
     orden_pedido_id       INTEGER,
@@ -247,9 +255,13 @@ ALTER TABLE huesped_habitacion
     ADD CONSTRAINT huesped_habitacion_fk FOREIGN KEY ( huesped_id )
         REFERENCES huesped ( id );
 
-ALTER TABLE orden_habitacion
+ALTER TABLE orden_comedor
     ADD CONSTRAINT orden_comedor_fk FOREIGN KEY ( comedor_id )
         REFERENCES comedor ( id );
+
+ALTER TABLE orden_comedor
+    ADD CONSTRAINT orden_comedor_fkv2 FOREIGN KEY ( orden_compra_id )
+        REFERENCES orden_compra ( id );
 
 ALTER TABLE orden_compra
     ADD CONSTRAINT orden_compra_empresa_fk FOREIGN KEY ( empresa_id )
@@ -258,11 +270,7 @@ ALTER TABLE orden_compra
 ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_empleado_fk FOREIGN KEY ( empleado_id )
         REFERENCES empleado ( id );
-		
-ALTER TABLE orden_pedido
-    ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
-        REFERENCES proveedor ( id );
-		
+
 ALTER TABLE orden_habitacion
     ADD CONSTRAINT orden_hab_compra_fk FOREIGN KEY ( orden_compra_id )
         REFERENCES orden_compra ( id );
@@ -270,6 +278,10 @@ ALTER TABLE orden_habitacion
 ALTER TABLE orden_habitacion
     ADD CONSTRAINT orden_habitacion_fk FOREIGN KEY ( habitacion_id )
         REFERENCES habitacion ( id );
+
+ALTER TABLE orden_pedido
+    ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
+        REFERENCES proveedor ( id );
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_estado_fk FOREIGN KEY ( estado_recepcion_id )
@@ -287,13 +299,13 @@ ALTER TABLE usuario
     ADD CONSTRAINT usuario_tipo_fk FOREIGN KEY ( tipo_usuario_id )
         REFERENCES tipo_usuario ( id );
 
-COMMIT;
+
 
 -- Informe de Resumen de Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                            20
+-- CREATE TABLE                            21
 -- CREATE INDEX                             0
--- ALTER TABLE                             40
+-- ALTER TABLE                             42
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0
