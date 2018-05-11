@@ -52,6 +52,20 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="proveedor_id" id="D4DA6C0B-2FF6-639E-DC0C-E32DAFEF89A9">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 17:22:48 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AB8BD970-895D-002B-A041-994B9E261838" referredColumn="8DACF31D-47B6-81FD-0BCE-C663F34DA322"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="77E88528-E2E9-5B2A-963E-B0D31BCBE529" name="orden_pedido_PK">
@@ -73,6 +87,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="39497614-0720-919B-3C2A-21DD67CCA02F"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="DDD38E71-0E31-5CF7-F171-4958AF6414F1" name="orden_proveedor_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 17:22:48 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D4DA6C0B-2FF6-639E-DC0C-E32DAFEF89A9"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

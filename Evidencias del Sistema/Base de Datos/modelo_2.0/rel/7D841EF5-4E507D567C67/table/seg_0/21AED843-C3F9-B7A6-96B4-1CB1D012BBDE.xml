@@ -38,20 +38,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="proveedor_id" id="EEACD862-1D34-F069-D0AE-D2FA33710DF3">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:20:53 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<previousColumn>false</previousColumn>
-<autoIncrementCycle>false</autoIncrementCycle>
-<associations>
-<colAssociation fkAssociation="0785B4D8-B1F7-E404-AEB5-953F450BEA7A" referredColumn="8DACF31D-47B6-81FD-0BCE-C663F34DA322"/>
-</associations>
-</Column>
 <Column name="producto_id" id="98C2DE93-AB2E-9496-C6CA-213A47C6C543">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:20:59 UTC</createdTime>
@@ -115,16 +101,6 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="EEA0192D-C354-D0B8-3D25-87CED1D25490"/>
-</indexColumnUsage>
-</ind_PK_UK>
-<ind_PK_UK id="E4F29012-7FFE-5DB4-D6DD-98B8B566C452" name="recepcion_proveedor_FK">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:20:53 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<indexState>Foreign Key</indexState>
-<isSurrogateKey>false</isSurrogateKey>
-<indexColumnUsage>
-<colUsage columnID="EEACD862-1D34-F069-D0AE-D2FA33710DF3"/>
 </indexColumnUsage>
 </ind_PK_UK>
 <ind_PK_UK id="F3B002E6-63AC-A53B-AFC0-F612167B1F04" name="recepcion_producto_FK">

@@ -132,6 +132,7 @@ CREATE TABLE orden_pedido (
     id            INTEGER NOT NULL,
     nro_orden     INTEGER NOT NULL,
     empleado_id   INTEGER,
+	proveedor_id  INTEGER,
     fecha         DATE NOT NULL
 );
 
@@ -174,8 +175,7 @@ ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( id );
 CREATE TABLE recepcion_producto (
     id                    INTEGER NOT NULL,
     nro_recepcion         INTEGER NOT NULL,
-    codigo_barra          INTEGER NOT NULL,
-    proveedor_id          INTEGER,
+    codigo_barra          INTEGER NOT NULL,    
     producto_id           INTEGER,
     estado_recepcion_id   INTEGER,
     orden_pedido_id       INTEGER,
@@ -258,7 +258,11 @@ ALTER TABLE orden_compra
 ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_empleado_fk FOREIGN KEY ( empleado_id )
         REFERENCES empleado ( id );
-
+		
+ALTER TABLE orden_pedido
+    ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
+        REFERENCES proveedor ( id );
+		
 ALTER TABLE orden_habitacion
     ADD CONSTRAINT orden_hab_compra_fk FOREIGN KEY ( orden_compra_id )
         REFERENCES orden_compra ( id );
@@ -278,10 +282,6 @@ ALTER TABLE recepcion_producto
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_producto_fk FOREIGN KEY ( producto_id )
         REFERENCES producto ( id );
-
-ALTER TABLE recepcion_producto
-    ADD CONSTRAINT recepcion_proveedor_fk FOREIGN KEY ( proveedor_id )
-        REFERENCES proveedor ( id );
 
 ALTER TABLE usuario
     ADD CONSTRAINT usuario_tipo_fk FOREIGN KEY ( tipo_usuario_id )
