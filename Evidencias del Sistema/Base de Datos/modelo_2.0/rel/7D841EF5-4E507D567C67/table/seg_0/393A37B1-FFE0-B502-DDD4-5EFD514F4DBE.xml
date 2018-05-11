@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="2B346980-0CCD-8137-B56B-6C222C3ADB46" name="orden_habitacion">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="393A37B1-FFE0-B502-DDD4-5EFD514F4DBE" name="orden_comedor">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:51:24 UTC</createdTime>
+<createdTime>2018-05-11 20:37:19 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
-<ordsAlias>table_20</ordsAlias>
+<ordsAlias>table_21</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="F0D08086-4C10-B550-C7D4-0FDC9C9AEE97">
+<Column name="id" id="CDD2C7B2-7596-0F7D-ED08-D4581897BB22">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:52:00 UTC</createdTime>
+<createdTime>2018-05-11 20:37:38 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,9 +18,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="habitacion_id" id="3AED2581-B029-B19E-CECF-BAEF1C75040B">
+<Column name="comedor_id" id="6EEA3F81-5819-AE57-34AE-477AE1D57367">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:57:21 UTC</createdTime>
+<createdTime>2018-05-11 20:37:42 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -29,12 +29,12 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="9226AA92-2C9B-B8B9-269B-7E7A617973B2" referredColumn="CD9880EC-EA91-7C22-03AA-572C4A2BF9BC"/>
+<colAssociation fkAssociation="AE47EABD-5DAE-DA76-CD1B-4B23820BB8CE" referredColumn="3BDF931F-717D-7340-1DAA-3598DC6CED85"/>
 </associations>
 </Column>
-<Column name="orden_compra_id" id="88690F10-D577-E598-52D7-D6000ADF3EFB">
+<Column name="orden_compra_id" id="93092195-DD7A-8AC8-9872-216572898136">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:59:23 UTC</createdTime>
+<createdTime>2018-05-11 20:37:53 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -43,40 +43,40 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="F28FDC36-7444-27A3-7EB6-3CEBBD6D40C7" referredColumn="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
+<colAssociation fkAssociation="588429EB-49C1-7E07-0EDC-D4247CC95ECE" referredColumn="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
 </associations>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="ABE74600-29AD-788E-A7C4-B23FF31A0078" name="orden_habitacion_PK">
+<ind_PK_UK id="D693F827-8EE0-9CE2-7998-72E98CD146CF" name="orden_comedor_PK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:52:00 UTC</createdTime>
+<createdTime>2018-05-11 20:37:38 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="F0D08086-4C10-B550-C7D4-0FDC9C9AEE97"/>
+<colUsage columnID="CDD2C7B2-7596-0F7D-ED08-D4581897BB22"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="C9063434-C346-5E1A-A149-BFE4F3170000" name="orden_habitacion_FK">
+<ind_PK_UK id="91D8A6F0-F64B-74D0-F967-D652219FCE44" name="comedor_orden_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:57:21 UTC</createdTime>
+<createdTime>2018-05-11 20:37:42 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="3AED2581-B029-B19E-CECF-BAEF1C75040B"/>
+<colUsage columnID="6EEA3F81-5819-AE57-34AE-477AE1D57367"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="32686E2A-CB07-0C5C-8BC6-EB980153A015" name="orden_hab_compra_FK">
+<ind_PK_UK id="24CF2E03-99B3-0802-A105-BB1FB1B358AC" name="orden_comedor_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:59:23 UTC</createdTime>
+<createdTime>2018-05-11 20:37:53 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="88690F10-D577-E598-52D7-D6000ADF3EFB"/>
+<colUsage columnID="93092195-DD7A-8AC8-9872-216572898136"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

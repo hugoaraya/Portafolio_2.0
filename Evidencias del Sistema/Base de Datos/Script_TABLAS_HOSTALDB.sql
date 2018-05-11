@@ -256,11 +256,11 @@ ALTER TABLE huesped_habitacion
         REFERENCES huesped ( id );
 
 ALTER TABLE orden_comedor
-    ADD CONSTRAINT orden_comedor_fk FOREIGN KEY ( comedor_id )
+    ADD CONSTRAINT comedor_orden_fk FOREIGN KEY ( comedor_id )
         REFERENCES comedor ( id );
 
 ALTER TABLE orden_comedor
-    ADD CONSTRAINT orden_comedor_fkv2 FOREIGN KEY ( orden_compra_id )
+    ADD CONSTRAINT orden_comedor_fk FOREIGN KEY ( orden_compra_id )
         REFERENCES orden_compra ( id );
 
 ALTER TABLE orden_compra
