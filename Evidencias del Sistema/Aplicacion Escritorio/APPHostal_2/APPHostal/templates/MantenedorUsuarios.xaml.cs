@@ -31,26 +31,28 @@ namespace APPHostal.templates
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
                 USUARIO usuario = new USUARIO();
-                usuario.ID = 5;
-                usuario.NOMBRE_USUARIO = "prueba";
-                usuario.CONTRASENIA = "prueba";
+                usuario.IDUSUARIO = 2;
+                usuario.NOMBRE_USUARIO = txNombre.Text;
+                usuario.CONTRASENIA = txContrasena.Text;
                 usuario.TIPO_USUARIO_ID = 2;
                    
                 AddUsuario(usuario);
+                
         }
 
 
 
 
         public void AddUsuario(USUARIO usu)
-
+            
         {
             using (EntitiesHostal con = new EntitiesHostal())
             {
                 con.USUARIO.Add(usu);
                 con.SaveChanges();
             }
-            
+            LimpiarCampos();
+            lbMsg1.Content = "Usuario Ingresado...";
         }
         
 
@@ -61,7 +63,7 @@ namespace APPHostal.templates
 
         private void btnLimpiar_Click(object sender, RoutedEventArgs e)
         {
-
+            LimpiarCampos();
         }
 
         private void dgManteneUsuario_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -71,7 +73,6 @@ namespace APPHostal.templates
 
         private void LimpiarCampos()
         {
-            txId.Text = "";
             txNombre.Text = "";
             txContrasena.Text = "";
             txTipoUsuario.Text = "";

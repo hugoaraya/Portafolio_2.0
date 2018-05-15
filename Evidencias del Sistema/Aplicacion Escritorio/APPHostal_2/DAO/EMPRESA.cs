@@ -21,7 +21,7 @@ namespace DAO
             this.ORDEN_COMPRA = new HashSet<ORDEN_COMPRA>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDEMPRESA { get; set; }
         public decimal RUT { get; set; }
         public string DV { get; set; }
         public string NOMBRE { get; set; }

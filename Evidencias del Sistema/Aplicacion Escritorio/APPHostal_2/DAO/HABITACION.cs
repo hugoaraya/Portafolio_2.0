@@ -21,7 +21,7 @@ namespace DAO
             this.ORDEN_HABITACION = new HashSet<ORDEN_HABITACION>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDHABITACION { get; set; }
         public string TIPO_CAMA { get; set; }
         public string ACCESORIO { get; set; }
         public decimal PRECIO { get; set; }

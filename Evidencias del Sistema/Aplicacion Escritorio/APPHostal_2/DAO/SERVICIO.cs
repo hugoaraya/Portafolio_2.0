@@ -20,7 +20,7 @@ namespace DAO
             this.COMEDOR = new HashSet<COMEDOR>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDSERVICIO { get; set; }
         public string DESCRIPCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

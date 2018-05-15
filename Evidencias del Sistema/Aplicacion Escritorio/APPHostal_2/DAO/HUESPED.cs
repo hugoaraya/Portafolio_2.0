@@ -20,7 +20,7 @@ namespace DAO
             this.HUESPED_HABITACION = new HashSet<HUESPED_HABITACION>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDHUESPED { get; set; }
         public decimal RUT { get; set; }
         public string DV { get; set; }
         public string NOMBRE { get; set; }

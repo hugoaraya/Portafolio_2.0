@@ -20,7 +20,7 @@ namespace DAO
             this.ORDEN_PEDIDO = new HashSet<ORDEN_PEDIDO>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDEMPLEADO { get; set; }
         public decimal RUT { get; set; }
         public string DV { get; set; }
         public string NOMBRE { get; set; }

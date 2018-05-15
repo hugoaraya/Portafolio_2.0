@@ -14,7 +14,7 @@ namespace DAO
     
     public partial class HUESPED_HABITACION
     {
-        public decimal ID { get; set; }
+        public decimal IDHUESPED_HABITACION { get; set; }
         public Nullable<decimal> HUESPED_ID { get; set; }
         public Nullable<decimal> HABITACION_ID { get; set; }
     

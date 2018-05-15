@@ -14,7 +14,7 @@ namespace DAO
     
     public partial class ORDEN_COMEDOR
     {
-        public decimal ID { get; set; }
+        public decimal IDORDEN_COMEDOR { get; set; }
         public Nullable<decimal> COMEDOR_ID { get; set; }
         public Nullable<decimal> ORDEN_COMPRA_ID { get; set; }
     

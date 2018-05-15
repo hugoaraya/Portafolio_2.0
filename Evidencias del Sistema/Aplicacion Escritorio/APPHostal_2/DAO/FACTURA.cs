@@ -14,7 +14,7 @@ namespace DAO
     
     public partial class FACTURA
     {
-        public decimal ID { get; set; }
+        public decimal IDFACTURA { get; set; }
         public decimal NRO_FACTURA { get; set; }
         public Nullable<decimal> ORDEN_COMPRA_ID { get; set; }
         public System.DateTime FECHA { get; set; }

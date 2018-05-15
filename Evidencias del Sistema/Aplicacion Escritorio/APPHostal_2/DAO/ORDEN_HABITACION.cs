@@ -14,7 +14,7 @@ namespace DAO
     
     public partial class ORDEN_HABITACION
     {
-        public decimal ID { get; set; }
+        public decimal IDORDEN_HABITACION { get; set; }
         public Nullable<decimal> HABITACION_ID { get; set; }
         public Nullable<decimal> ORDEN_COMPRA_ID { get; set; }
     

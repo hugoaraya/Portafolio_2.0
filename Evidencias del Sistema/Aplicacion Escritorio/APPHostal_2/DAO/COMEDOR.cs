@@ -20,7 +20,7 @@ namespace DAO
             this.ORDEN_COMEDOR = new HashSet<ORDEN_COMEDOR>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDCOMEDOR { get; set; }
         public Nullable<decimal> PLATO_ID { get; set; }
         public Nullable<decimal> MINUTA_ID { get; set; }
         public Nullable<decimal> SERVICIO_ID { get; set; }

@@ -20,7 +20,7 @@ namespace DAO
             this.COMEDOR = new HashSet<COMEDOR>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDMINUTA { get; set; }
         public string NOMBRE_MINUTA { get; set; }
         public string DESCIPCION { get; set; }
         public System.DateTime FECHA_INICIO { get; set; }

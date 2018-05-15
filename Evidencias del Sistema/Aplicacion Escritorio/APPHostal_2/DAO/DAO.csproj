@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E5962CEC-C326-4563-B26F-9EBF6C997739}</ProjectGuid>
+    <ProjectGuid>{3FCA8378-1FEA-489D-82AD-4F2C8399655E}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DAO</RootNamespace>
@@ -28,24 +28,6 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
-    <DebugSymbols>true</DebugSymbols>
-    <OutputPath>bin\x86\Debug\</OutputPath>
-    <DefineConstants>DEBUG;TRACE</DefineConstants>
-    <DebugType>full</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
-  </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
-    <OutputPath>bin\x86\Release\</OutputPath>
-    <DefineConstants>TRACE</DefineConstants>
-    <Optimize>true</Optimize>
-    <DebugType>pdbonly</DebugType>
-    <PlatformTarget>x86</PlatformTarget>
-    <ErrorReport>prompt</ErrorReport>
-    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
@@ -79,106 +61,106 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="COMEDOR.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EMPLEADO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="EMPRESA.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ESTADO_HABITACION.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ESTADO_RECEPCION.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="FACTURA.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="HABITACION.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="HUESPED.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="HUESPED_HABITACION.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="MINUTA.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloHostal.Context.cs">
+    <Compile Include="ModelHOSTALDB.Context.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloHostal.Context.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.Context.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloHostal.cs">
+    <Compile Include="ModelHOSTALDB.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="ModeloHostal.Designer.cs">
+    <Compile Include="ModelHOSTALDB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
-      <DependentUpon>ModeloHostal.edmx</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.edmx</DependentUpon>
     </Compile>
     <Compile Include="ORDEN_COMEDOR.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ORDEN_COMPRA.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ORDEN_HABITACION.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="ORDEN_PEDIDO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="PLATO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="PRODUCTO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PROVEEDOR.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="RECEPCION_PRODUCTO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="SERVICIO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="TIPO_USUARIO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
     <Compile Include="USUARIO.cs">
-      <DependentUpon>ModeloHostal.tt</DependentUpon>
+      <DependentUpon>ModelHOSTALDB.tt</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <EntityDeploy Include="ModeloHostal.edmx">
+    <EntityDeploy Include="ModelHOSTALDB.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModeloHostal.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelHOSTALDB.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="ModeloHostal.edmx.diagram">
-      <DependentUpon>ModeloHostal.edmx</DependentUpon>
+    <None Include="ModelHOSTALDB.edmx.diagram">
+      <DependentUpon>ModelHOSTALDB.edmx</DependentUpon>
     </None>
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="ModeloHostal.Context.tt">
+    <Content Include="ModelHOSTALDB.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModeloHostal.edmx</DependentUpon>
-      <LastGenOutput>ModeloHostal.Context.cs</LastGenOutput>
+      <DependentUpon>ModelHOSTALDB.edmx</DependentUpon>
+      <LastGenOutput>ModelHOSTALDB.Context.cs</LastGenOutput>
     </Content>
-    <Content Include="ModeloHostal.tt">
+    <Content Include="ModelHOSTALDB.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModeloHostal.edmx</DependentUpon>
-      <LastGenOutput>ModeloHostal.cs</LastGenOutput>
+      <DependentUpon>ModelHOSTALDB.edmx</DependentUpon>
+      <LastGenOutput>ModelHOSTALDB.cs</LastGenOutput>
     </Content>
   </ItemGroup>
   <ItemGroup>

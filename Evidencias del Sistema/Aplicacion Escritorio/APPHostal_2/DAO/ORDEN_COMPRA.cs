@@ -22,7 +22,7 @@ namespace DAO
             this.ORDEN_HABITACION = new HashSet<ORDEN_HABITACION>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDORDEN_COMPRA { get; set; }
         public decimal NRO_ORDEN { get; set; }
         public Nullable<decimal> EMPRESA_ID { get; set; }
         public System.DateTime FECHA { get; set; }

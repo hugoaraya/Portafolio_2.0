@@ -20,7 +20,7 @@ namespace DAO
             this.RECEPCION_PRODUCTO = new HashSet<RECEPCION_PRODUCTO>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDORDEN_PEDIDO { get; set; }
         public decimal NRO_ORDEN { get; set; }
         public Nullable<decimal> EMPLEADO_ID { get; set; }
         public System.DateTime FECHA { get; set; }

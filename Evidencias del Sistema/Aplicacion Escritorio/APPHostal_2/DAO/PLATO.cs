@@ -20,7 +20,7 @@ namespace DAO
             this.COMEDOR = new HashSet<COMEDOR>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDPLATO { get; set; }
         public string NOMBRE_PLATO { get; set; }
         public string DESCRIPCION { get; set; }
         public decimal PRECIO { get; set; }

@@ -14,7 +14,7 @@ namespace DAO
     
     public partial class RECEPCION_PRODUCTO
     {
-        public decimal ID { get; set; }
+        public decimal IDRECEPCION_PRODUCTO { get; set; }
         public decimal NRO_RECEPCION { get; set; }
         public decimal CODIGO_BARRA { get; set; }
         public Nullable<decimal> PRODUCTO_ID { get; set; }

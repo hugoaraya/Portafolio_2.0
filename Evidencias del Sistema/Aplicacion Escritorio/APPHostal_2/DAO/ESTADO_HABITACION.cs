@@ -20,7 +20,7 @@ namespace DAO
             this.HABITACION = new HashSet<HABITACION>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDESTADO_HABITACION { get; set; }
         public string DESCRIPCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

@@ -21,7 +21,7 @@ namespace DAO
             this.EMPRESA = new HashSet<EMPRESA>();
         }
     
-        public decimal ID { get; set; }
+        public decimal IDUSUARIO { get; set; }
         public string NOMBRE_USUARIO { get; set; }
         public string CONTRASENIA { get; set; }
         public Nullable<decimal> TIPO_USUARIO_ID { get; set; }
