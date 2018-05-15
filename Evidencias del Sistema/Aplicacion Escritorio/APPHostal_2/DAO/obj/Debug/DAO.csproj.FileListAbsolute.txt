@@ -1,0 +1,12 @@
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\DAO.dll.config
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\DAO.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\EntityFramework.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\obj\Debug\DAO.csprojResolveAssemblyReference.cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\obj\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\APPHostal\DAO\obj\Debug\DAO.pdb

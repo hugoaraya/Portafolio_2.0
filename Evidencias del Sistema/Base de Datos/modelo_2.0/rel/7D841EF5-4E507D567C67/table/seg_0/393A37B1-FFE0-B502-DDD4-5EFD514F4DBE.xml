@@ -1,0 +1,83 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="393A37B1-FFE0-B502-DDD4-5EFD514F4DBE" name="orden_comedor">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:19 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_21</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="CDD2C7B2-7596-0F7D-ED08-D4581897BB22">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="comedor_id" id="6EEA3F81-5819-AE57-34AE-477AE1D57367">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:42 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="AE47EABD-5DAE-DA76-CD1B-4B23820BB8CE" referredColumn="3BDF931F-717D-7340-1DAA-3598DC6CED85"/>
+</associations>
+</Column>
+<Column name="orden_compra_id" id="93092195-DD7A-8AC8-9872-216572898136">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:53 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="588429EB-49C1-7E07-0EDC-D4247CC95ECE" referredColumn="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="D693F827-8EE0-9CE2-7998-72E98CD146CF" name="orden_comedor_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="CDD2C7B2-7596-0F7D-ED08-D4581897BB22"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="91D8A6F0-F64B-74D0-F967-D652219FCE44" name="comedor_orden_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:42 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6EEA3F81-5819-AE57-34AE-477AE1D57367"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="24CF2E03-99B3-0802-A105-BB1FB1B358AC" name="orden_comedor_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-11 20:37:53 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="93092195-DD7A-8AC8-9872-216572898136"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
