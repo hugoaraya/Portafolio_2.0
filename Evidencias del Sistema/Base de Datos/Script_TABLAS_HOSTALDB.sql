@@ -52,7 +52,6 @@ ALTER TABLE estado_habitacion ADD CONSTRAINT estado_habitacion_pk PRIMARY KEY ( 
 
 CREATE TABLE estado_recepcion (
     idEstado_Recepcion            INTEGER NOT NULL,
-    estado        INTEGER NOT NULL,
     descripcion   VARCHAR2(255) NOT NULL
 );
 
@@ -141,7 +140,8 @@ CREATE TABLE orden_pedido (
     nro_orden      INTEGER NOT NULL,
     empleado_id    INTEGER,
     fecha          DATE NOT NULL,
-    proveedor_id   INTEGER
+    proveedor_id   INTEGER,
+	estado_orden_id INTEGER
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idOrden_Pedido );
@@ -179,6 +179,14 @@ CREATE TABLE proveedor (
 );
 
 ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idProveedor );
+
+CREATE TABLE estado_orden_pedido(
+	idEstado_Orden_pedido INTEGER NOT NULL,
+	descipcion VARCHAR2(255) NOT NULL
+);
+
+ALTER TABLE estado_orden_pedido ADD CONSTRAINT estado_orden_pedido_pk PRIMARY KEY ( idEstado_Orden_pedido );
+
 
 CREATE TABLE recepcion_producto (
     idRecepcion_Producto  INTEGER NOT NULL,
@@ -282,6 +290,10 @@ ALTER TABLE orden_habitacion
 ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
         REFERENCES proveedor ( idProveedor );
+		
+ALTER TABLE orden_pedido
+    ADD CONSTRAINT estado_orden_fk FOREIGN KEY ( estado_orden_id )
+        REFERENCES estado_orden_pedido ( idEstado_Orden_pedido );		
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_estado_fk FOREIGN KEY ( estado_recepcion_id )

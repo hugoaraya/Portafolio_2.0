@@ -66,6 +66,20 @@
 <colAssociation fkAssociation="AB8BD970-895D-002B-A041-994B9E261838" referredColumn="8DACF31D-47B6-81FD-0BCE-C663F34DA322"/>
 </associations>
 </Column>
+<Column name="estado_orden_pedido_id" id="6A820929-A7A3-37D5-0997-447D7BEE0218">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-15 15:53:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="D8DFB62D-FC0D-4F82-66D6-0C4B3F71CED4" referredColumn="F1C231AE-B6E1-1E1A-9FCB-BED738A3E83C"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="77E88528-E2E9-5B2A-963E-B0D31BCBE529" name="orden_pedido_PK">
@@ -97,6 +111,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="D4DA6C0B-2FF6-639E-DC0C-E32DAFEF89A9"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A62C56C3-520F-C5FD-5259-EF415BFCC83D" name="estado_orden_pedido_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-15 15:53:38 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6A820929-A7A3-37D5-0997-447D7BEE0218"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
