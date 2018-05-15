@@ -221,7 +221,7 @@ ALTER TABLE comedor
 
 ALTER TABLE comedor
     ADD CONSTRAINT comedor_plato_fk FOREIGN KEY ( plato_id )
-        REFERENCES plato ( idPato );
+        REFERENCES plato ( idPlato );
 
 ALTER TABLE comedor
     ADD CONSTRAINT comedor_servicio_fk FOREIGN KEY ( servicio_id )
