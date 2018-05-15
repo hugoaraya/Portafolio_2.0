@@ -175,7 +175,8 @@ CREATE TABLE proveedor (
     dv          CHAR(1) NOT NULL,
     nombre      VARCHAR2(50) NOT NULL,
     direccion   VARCHAR2(50) NOT NULL,
-    rubro       VARCHAR2(50) NOT NULL
+    rubro       VARCHAR2(50) NOT NULL,
+	usuario_id	INTEGER
 );
 
 ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idProveedor );
@@ -310,6 +311,10 @@ ALTER TABLE recepcion_producto
 ALTER TABLE usuario
     ADD CONSTRAINT usuario_tipo_fk FOREIGN KEY ( tipo_usuario_id )
         REFERENCES tipo_usuario ( idTipo_Usuario );
+		
+ALTER TABLE proveedor
+	ADD CONSTRAINT usuario_proveedor_fk FOREIGN KEY (usuario_id)
+		  REFERENCES usuario ( idUsuario );
 
 
 

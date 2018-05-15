@@ -72,6 +72,20 @@
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="usuario_id" id="E387C349-4FCD-C629-706B-4DDBFC557703">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-15 21:29:13 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="DC68C318-6D9D-C07C-D0CA-6D94F635A66F" referredColumn="3F85F396-FB53-8799-48B1-7322790717CB"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="88B67ED7-82DB-2420-9326-0033BBED910A" name="proveedor_PK">
@@ -83,6 +97,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="8DACF31D-47B6-81FD-0BCE-C663F34DA322"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="EAD2A7BB-3425-75FD-8F1D-A46332088E42" name="proveedor_usuario_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-15 21:29:13 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E387C349-4FCD-C629-706B-4DDBFC557703"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
