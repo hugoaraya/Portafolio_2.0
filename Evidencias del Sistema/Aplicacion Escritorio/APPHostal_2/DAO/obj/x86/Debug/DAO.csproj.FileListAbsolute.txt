@@ -1,0 +1,11 @@
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\DAO.dll.config
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\DAO.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\EntityFramework.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\obj\x86\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\DAO\obj\x86\Debug\DAO.pdb
