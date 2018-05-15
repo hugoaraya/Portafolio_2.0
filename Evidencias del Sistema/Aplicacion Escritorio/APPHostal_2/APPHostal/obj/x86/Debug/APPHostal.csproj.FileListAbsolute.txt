@@ -1,0 +1,98 @@
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.csprojResolveAssemblyReference.cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\Main.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MenuAdm.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\Login.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MantenedorUsuarios.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\OP_Proveedor.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\App.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.lref
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\APPHostal.exe.config
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\APPHostal.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\DAO.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\EntityFramework.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\Main.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MenuAdm.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\Login.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MantenedorUsuarios.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\MainWindow.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\OP_Proveedor.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.g.resources
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.Properties.Resources.resources
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.csproj.GenerateResource.Cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal\APPHostal\obj\x86\Debug\APPHostal.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\Main.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\Login.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorEmpleados.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorUsuarios.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\MenuAdm.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\OP_Proveedor.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\App.g.cs
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.lref
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.exe.config
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\DAO.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\DAO.pdb
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\Main.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\Login.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorEmpleados.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorUsuarios.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\MainWindow.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\MenuAdm.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\OP_Proveedor.baml
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.g.resources
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.Properties.Resources.resources
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.csproj.GenerateResource.Cache
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\PORTAL_2.0\Programacion\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.pdb
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.exe.config
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\APPHostal.pdb
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\DAO.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.DataAccess.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\Oracle.ManagedDataAccess.EntityFramework.dll
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\DAO.pdb
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.xml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\bin\x86\Debug\EntityFramework.SqlServer.xml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.csprojResolveAssemblyReference.cache
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\Main.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorEmpleados.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorUsuarios.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\MainWindow.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\OP_Proveedor.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\App.g.cs
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.cache
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal_MarkupCompile.lref
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\Main.baml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorEmpleados.baml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\templates\MantenedorUsuarios.baml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\MainWindow.baml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\OP_Proveedor.baml
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.g.resources
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.Properties.Resources.resources
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.csproj.GenerateResource.Cache
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.exe
+C:\Users\Hugo\Desktop\GIT\Portafolio_2.0\Evidencias del Sistema\Aplicacion Escritorio\APPHostal_2\APPHostal\obj\x86\Debug\APPHostal.pdb
