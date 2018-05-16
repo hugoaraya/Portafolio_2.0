@@ -103,7 +103,7 @@ ALTER TABLE huesped_habitacion ADD CONSTRAINT huesped_habitacion_pk PRIMARY KEY 
 CREATE TABLE minuta (
     idMinuta             INTEGER NOT NULL,
     nombre_minuta   VARCHAR2(50) NOT NULL,
-    descipcion      VARCHAR2(255) NOT NULL,
+    descripcion      VARCHAR2(255) NOT NULL,
     fecha_inicio    DATE NOT NULL,
     fecha_fin       DATE NOT NULL
 );
