@@ -12,21 +12,18 @@ namespace DAO
     using System;
     using System.Collections.Generic;
     
-    public partial class MINUTA
+    public partial class ESTADO_ORDEN_PEDIDO
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public MINUTA()
+        public ESTADO_ORDEN_PEDIDO()
         {
-            this.COMEDOR = new HashSet<COMEDOR>();
+            this.ORDEN_PEDIDO = new HashSet<ORDEN_PEDIDO>();
         }
     
-        public decimal IDMINUTA { get; set; }
-        public string NOMBRE_MINUTA { get; set; }
-        public string DESCRIPCION { get; set; }
-        public System.DateTime FECHA_INICIO { get; set; }
-        public System.DateTime FECHA_FIN { get; set; }
+        public decimal IDESTADO_ORDEN_PEDIDO { get; set; }
+        public string DESCIPCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<COMEDOR> COMEDOR { get; set; }
+        public virtual ICollection<ORDEN_PEDIDO> ORDEN_PEDIDO { get; set; }
     }
 }

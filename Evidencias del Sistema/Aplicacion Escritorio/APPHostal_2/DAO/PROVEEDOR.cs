@@ -26,8 +26,10 @@ namespace DAO
         public string NOMBRE { get; set; }
         public string DIRECCION { get; set; }
         public string RUBRO { get; set; }
+        public Nullable<decimal> USUARIO_ID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ORDEN_PEDIDO> ORDEN_PEDIDO { get; set; }
+        public virtual USUARIO USUARIO { get; set; }
     }
 }

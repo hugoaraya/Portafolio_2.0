@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="ModelStoreContainer" CdmEntityContainer="EntitiesHostal">
+  <EntityContainerMapping StorageEntityContainer="ModelHostalStoreContainer" CdmEntityContainer="EntitiesHostal">
     <EntitySetMapping Name="COMEDOR">
-      <EntityTypeMapping TypeName="Model.COMEDOR">
+      <EntityTypeMapping TypeName="ModelHostal.COMEDOR">
         <MappingFragment StoreEntitySet="COMEDOR">
           <ScalarProperty Name="IDCOMEDOR" ColumnName="IDCOMEDOR" />
           <ScalarProperty Name="PLATO_ID" ColumnName="PLATO_ID" />
@@ -12,7 +12,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EMPLEADO">
-      <EntityTypeMapping TypeName="Model.EMPLEADO">
+      <EntityTypeMapping TypeName="ModelHostal.EMPLEADO">
         <MappingFragment StoreEntitySet="EMPLEADO">
           <ScalarProperty Name="IDEMPLEADO" ColumnName="IDEMPLEADO" />
           <ScalarProperty Name="RUT" ColumnName="RUT" />
@@ -24,7 +24,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="EMPRESA">
-      <EntityTypeMapping TypeName="Model.EMPRESA">
+      <EntityTypeMapping TypeName="ModelHostal.EMPRESA">
         <MappingFragment StoreEntitySet="EMPRESA">
           <ScalarProperty Name="IDEMPRESA" ColumnName="IDEMPRESA" />
           <ScalarProperty Name="RUT" ColumnName="RUT" />
@@ -38,24 +38,31 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ESTADO_HABITACION">
-      <EntityTypeMapping TypeName="Model.ESTADO_HABITACION">
+      <EntityTypeMapping TypeName="ModelHostal.ESTADO_HABITACION">
         <MappingFragment StoreEntitySet="ESTADO_HABITACION">
           <ScalarProperty Name="IDESTADO_HABITACION" ColumnName="IDESTADO_HABITACION" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="ESTADO_ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelHostal.ESTADO_ORDEN_PEDIDO">
+        <MappingFragment StoreEntitySet="ESTADO_ORDEN_PEDIDO">
+          <ScalarProperty Name="IDESTADO_ORDEN_PEDIDO" ColumnName="IDESTADO_ORDEN_PEDIDO" />
+          <ScalarProperty Name="DESCIPCION" ColumnName="DESCIPCION" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="ESTADO_RECEPCION">
-      <EntityTypeMapping TypeName="Model.ESTADO_RECEPCION">
+      <EntityTypeMapping TypeName="ModelHostal.ESTADO_RECEPCION">
         <MappingFragment StoreEntitySet="ESTADO_RECEPCION">
           <ScalarProperty Name="IDESTADO_RECEPCION" ColumnName="IDESTADO_RECEPCION" />
-          <ScalarProperty Name="ESTADO" ColumnName="ESTADO" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="FACTURA">
-      <EntityTypeMapping TypeName="Model.FACTURA">
+      <EntityTypeMapping TypeName="ModelHostal.FACTURA">
         <MappingFragment StoreEntitySet="FACTURA">
           <ScalarProperty Name="IDFACTURA" ColumnName="IDFACTURA" />
           <ScalarProperty Name="NRO_FACTURA" ColumnName="NRO_FACTURA" />
@@ -65,7 +72,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HABITACION">
-      <EntityTypeMapping TypeName="Model.HABITACION">
+      <EntityTypeMapping TypeName="ModelHostal.HABITACION">
         <MappingFragment StoreEntitySet="HABITACION">
           <ScalarProperty Name="IDHABITACION" ColumnName="IDHABITACION" />
           <ScalarProperty Name="TIPO_CAMA" ColumnName="TIPO_CAMA" />
@@ -78,7 +85,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HUESPED">
-      <EntityTypeMapping TypeName="Model.HUESPED">
+      <EntityTypeMapping TypeName="ModelHostal.HUESPED">
         <MappingFragment StoreEntitySet="HUESPED">
           <ScalarProperty Name="IDHUESPED" ColumnName="IDHUESPED" />
           <ScalarProperty Name="RUT" ColumnName="RUT" />
@@ -93,7 +100,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="HUESPED_HABITACION">
-      <EntityTypeMapping TypeName="Model.HUESPED_HABITACION">
+      <EntityTypeMapping TypeName="ModelHostal.HUESPED_HABITACION">
         <MappingFragment StoreEntitySet="HUESPED_HABITACION">
           <ScalarProperty Name="IDHUESPED_HABITACION" ColumnName="IDHUESPED_HABITACION" />
           <ScalarProperty Name="HUESPED_ID" ColumnName="HUESPED_ID" />
@@ -102,18 +109,18 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="MINUTA">
-      <EntityTypeMapping TypeName="Model.MINUTA">
+      <EntityTypeMapping TypeName="ModelHostal.MINUTA">
         <MappingFragment StoreEntitySet="MINUTA">
           <ScalarProperty Name="IDMINUTA" ColumnName="IDMINUTA" />
           <ScalarProperty Name="NOMBRE_MINUTA" ColumnName="NOMBRE_MINUTA" />
-          <ScalarProperty Name="DESCIPCION" ColumnName="DESCIPCION" />
+          <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
           <ScalarProperty Name="FECHA_INICIO" ColumnName="FECHA_INICIO" />
           <ScalarProperty Name="FECHA_FIN" ColumnName="FECHA_FIN" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ORDEN_COMEDOR">
-      <EntityTypeMapping TypeName="Model.ORDEN_COMEDOR">
+      <EntityTypeMapping TypeName="ModelHostal.ORDEN_COMEDOR">
         <MappingFragment StoreEntitySet="ORDEN_COMEDOR">
           <ScalarProperty Name="IDORDEN_COMEDOR" ColumnName="IDORDEN_COMEDOR" />
           <ScalarProperty Name="COMEDOR_ID" ColumnName="COMEDOR_ID" />
@@ -122,7 +129,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ORDEN_COMPRA">
-      <EntityTypeMapping TypeName="Model.ORDEN_COMPRA">
+      <EntityTypeMapping TypeName="ModelHostal.ORDEN_COMPRA">
         <MappingFragment StoreEntitySet="ORDEN_COMPRA">
           <ScalarProperty Name="IDORDEN_COMPRA" ColumnName="IDORDEN_COMPRA" />
           <ScalarProperty Name="NRO_ORDEN" ColumnName="NRO_ORDEN" />
@@ -132,7 +139,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ORDEN_HABITACION">
-      <EntityTypeMapping TypeName="Model.ORDEN_HABITACION">
+      <EntityTypeMapping TypeName="ModelHostal.ORDEN_HABITACION">
         <MappingFragment StoreEntitySet="ORDEN_HABITACION">
           <ScalarProperty Name="IDORDEN_HABITACION" ColumnName="IDORDEN_HABITACION" />
           <ScalarProperty Name="HABITACION_ID" ColumnName="HABITACION_ID" />
@@ -141,18 +148,19 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="ORDEN_PEDIDO">
-      <EntityTypeMapping TypeName="Model.ORDEN_PEDIDO">
+      <EntityTypeMapping TypeName="ModelHostal.ORDEN_PEDIDO">
         <MappingFragment StoreEntitySet="ORDEN_PEDIDO">
           <ScalarProperty Name="IDORDEN_PEDIDO" ColumnName="IDORDEN_PEDIDO" />
           <ScalarProperty Name="NRO_ORDEN" ColumnName="NRO_ORDEN" />
           <ScalarProperty Name="EMPLEADO_ID" ColumnName="EMPLEADO_ID" />
           <ScalarProperty Name="FECHA" ColumnName="FECHA" />
           <ScalarProperty Name="PROVEEDOR_ID" ColumnName="PROVEEDOR_ID" />
+          <ScalarProperty Name="ESTADO_ORDEN_ID" ColumnName="ESTADO_ORDEN_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PLATO">
-      <EntityTypeMapping TypeName="Model.PLATO">
+      <EntityTypeMapping TypeName="ModelHostal.PLATO">
         <MappingFragment StoreEntitySet="PLATO">
           <ScalarProperty Name="IDPLATO" ColumnName="IDPLATO" />
           <ScalarProperty Name="NOMBRE_PLATO" ColumnName="NOMBRE_PLATO" />
@@ -162,7 +170,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PRODUCTO">
-      <EntityTypeMapping TypeName="Model.PRODUCTO">
+      <EntityTypeMapping TypeName="ModelHostal.PRODUCTO">
         <MappingFragment StoreEntitySet="PRODUCTO">
           <ScalarProperty Name="IDPRODUCTO" ColumnName="IDPRODUCTO" />
           <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
@@ -177,7 +185,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="PROVEEDOR">
-      <EntityTypeMapping TypeName="Model.PROVEEDOR">
+      <EntityTypeMapping TypeName="ModelHostal.PROVEEDOR">
         <MappingFragment StoreEntitySet="PROVEEDOR">
           <ScalarProperty Name="IDPROVEEDOR" ColumnName="IDPROVEEDOR" />
           <ScalarProperty Name="RUT" ColumnName="RUT" />
@@ -185,11 +193,12 @@
           <ScalarProperty Name="NOMBRE" ColumnName="NOMBRE" />
           <ScalarProperty Name="DIRECCION" ColumnName="DIRECCION" />
           <ScalarProperty Name="RUBRO" ColumnName="RUBRO" />
+          <ScalarProperty Name="USUARIO_ID" ColumnName="USUARIO_ID" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="RECEPCION_PRODUCTO">
-      <EntityTypeMapping TypeName="Model.RECEPCION_PRODUCTO">
+      <EntityTypeMapping TypeName="ModelHostal.RECEPCION_PRODUCTO">
         <MappingFragment StoreEntitySet="RECEPCION_PRODUCTO">
           <ScalarProperty Name="IDRECEPCION_PRODUCTO" ColumnName="IDRECEPCION_PRODUCTO" />
           <ScalarProperty Name="NRO_RECEPCION" ColumnName="NRO_RECEPCION" />
@@ -202,7 +211,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="SERVICIO">
-      <EntityTypeMapping TypeName="Model.SERVICIO">
+      <EntityTypeMapping TypeName="ModelHostal.SERVICIO">
         <MappingFragment StoreEntitySet="SERVICIO">
           <ScalarProperty Name="IDSERVICIO" ColumnName="IDSERVICIO" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
@@ -210,7 +219,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="TIPO_USUARIO">
-      <EntityTypeMapping TypeName="Model.TIPO_USUARIO">
+      <EntityTypeMapping TypeName="ModelHostal.TIPO_USUARIO">
         <MappingFragment StoreEntitySet="TIPO_USUARIO">
           <ScalarProperty Name="IDTIPO_USUARIO" ColumnName="IDTIPO_USUARIO" />
           <ScalarProperty Name="DESCRIPCION" ColumnName="DESCRIPCION" />
@@ -218,7 +227,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="USUARIO">
-      <EntityTypeMapping TypeName="Model.USUARIO">
+      <EntityTypeMapping TypeName="ModelHostal.USUARIO">
         <MappingFragment StoreEntitySet="USUARIO">
           <ScalarProperty Name="IDUSUARIO" ColumnName="IDUSUARIO" />
           <ScalarProperty Name="NOMBRE_USUARIO" ColumnName="NOMBRE_USUARIO" />

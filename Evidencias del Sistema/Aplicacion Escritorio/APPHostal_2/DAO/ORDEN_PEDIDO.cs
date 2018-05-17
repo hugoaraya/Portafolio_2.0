@@ -25,8 +25,10 @@ namespace DAO
         public Nullable<decimal> EMPLEADO_ID { get; set; }
         public System.DateTime FECHA { get; set; }
         public Nullable<decimal> PROVEEDOR_ID { get; set; }
+        public Nullable<decimal> ESTADO_ORDEN_ID { get; set; }
     
         public virtual EMPLEADO EMPLEADO { get; set; }
+        public virtual ESTADO_ORDEN_PEDIDO ESTADO_ORDEN_PEDIDO { get; set; }
         public virtual PROVEEDOR PROVEEDOR { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<RECEPCION_PRODUCTO> RECEPCION_PRODUCTO { get; set; }

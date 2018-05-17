@@ -21,7 +21,6 @@ namespace DAO
         }
     
         public decimal IDESTADO_RECEPCION { get; set; }
-        public decimal ESTADO { get; set; }
         public string DESCRIPCION { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

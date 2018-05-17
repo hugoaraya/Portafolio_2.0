@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+<Schema Namespace="ModelHostal" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="COMEDOR">
     <Key>
       <PropertyRef Name="IDCOMEDOR" />
@@ -50,12 +50,19 @@
     <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="HABITACION" Relationship="Self.HABITACION_ESTADO_FK" FromRole="ESTADO_HABITACION" ToRole="HABITACION" />
   </EntityType>
+  <EntityType Name="ESTADO_ORDEN_PEDIDO">
+    <Key>
+      <PropertyRef Name="IDESTADO_ORDEN_PEDIDO" />
+    </Key>
+    <Property Name="IDESTADO_ORDEN_PEDIDO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
+    <Property Name="DESCIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="ORDEN_PEDIDO" Relationship="Self.ESTADO_ORDEN_FK" FromRole="ESTADO_ORDEN_PEDIDO" ToRole="ORDEN_PEDIDO" />
+  </EntityType>
   <EntityType Name="ESTADO_RECEPCION">
     <Key>
       <PropertyRef Name="IDESTADO_RECEPCION" />
     </Key>
     <Property Name="IDESTADO_RECEPCION" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
-    <Property Name="ESTADO" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
     <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <NavigationProperty Name="RECEPCION_PRODUCTO" Relationship="Self.RECEPCION_ESTADO_FK" FromRole="ESTADO_RECEPCION" ToRole="RECEPCION_PRODUCTO" />
   </EntityType>
@@ -116,7 +123,7 @@
     </Key>
     <Property Name="IDMINUTA" Type="Decimal" Precision="38" Scale="0" Nullable="false" />
     <Property Name="NOMBRE_MINUTA" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-    <Property Name="DESCIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="DESCRIPCION" Type="String" MaxLength="255" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="FECHA_INICIO" Type="DateTime" Nullable="false" />
     <Property Name="FECHA_FIN" Type="DateTime" Nullable="false" />
     <NavigationProperty Name="COMEDOR" Relationship="Self.COMEDOR_MINUTA_FK" FromRole="MINUTA" ToRole="COMEDOR" />
@@ -163,7 +170,9 @@
     <Property Name="EMPLEADO_ID" Type="Decimal" Precision="38" Scale="0" />
     <Property Name="FECHA" Type="DateTime" Nullable="false" />
     <Property Name="PROVEEDOR_ID" Type="Decimal" Precision="38" Scale="0" />
+    <Property Name="ESTADO_ORDEN_ID" Type="Decimal" Precision="38" Scale="0" />
     <NavigationProperty Name="EMPLEADO" Relationship="Self.ORDEN_EMPLEADO_FK" FromRole="ORDEN_PEDIDO" ToRole="EMPLEADO" />
+    <NavigationProperty Name="ESTADO_ORDEN_PEDIDO" Relationship="Self.ESTADO_ORDEN_FK" FromRole="ORDEN_PEDIDO" ToRole="ESTADO_ORDEN_PEDIDO" />
     <NavigationProperty Name="PROVEEDOR" Relationship="Self.ORDEN_PROVEEDOR_FK" FromRole="ORDEN_PEDIDO" ToRole="PROVEEDOR" />
     <NavigationProperty Name="RECEPCION_PRODUCTO" Relationship="Self.RECEPCION_ORDEN_FK" FromRole="ORDEN_PEDIDO" ToRole="RECEPCION_PRODUCTO" />
   </EntityType>
@@ -202,7 +211,9 @@
     <Property Name="NOMBRE" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="DIRECCION" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="RUBRO" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="USUARIO_ID" Type="Decimal" Precision="38" Scale="0" />
     <NavigationProperty Name="ORDEN_PEDIDO" Relationship="Self.ORDEN_PROVEEDOR_FK" FromRole="PROVEEDOR" ToRole="ORDEN_PEDIDO" />
+    <NavigationProperty Name="USUARIO" Relationship="Self.USUARIO_PROVEEDOR_FK" FromRole="PROVEEDOR" ToRole="USUARIO" />
   </EntityType>
   <EntityType Name="RECEPCION_PRODUCTO">
     <Key>
@@ -245,6 +256,7 @@
     <Property Name="TIPO_USUARIO_ID" Type="Decimal" Precision="38" Scale="0" />
     <NavigationProperty Name="EMPLEADO" Relationship="Self.EMPLEADO_USUARIO_FK" FromRole="USUARIO" ToRole="EMPLEADO" />
     <NavigationProperty Name="EMPRESA" Relationship="Self.EMPRESA_USUARIO_FK" FromRole="USUARIO" ToRole="EMPRESA" />
+    <NavigationProperty Name="PROVEEDOR" Relationship="Self.USUARIO_PROVEEDOR_FK" FromRole="USUARIO" ToRole="PROVEEDOR" />
     <NavigationProperty Name="TIPO_USUARIO" Relationship="Self.USUARIO_TIPO_FK" FromRole="USUARIO" ToRole="TIPO_USUARIO" />
   </EntityType>
   <Association Name="COMEDOR_MINUTA_FK">
@@ -364,6 +376,18 @@
       </Principal>
       <Dependent Role="HABITACION">
         <PropertyRef Name="ESTADO_HABITACION_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ESTADO_ORDEN_FK">
+    <End Role="ESTADO_ORDEN_PEDIDO" Type="Self.ESTADO_ORDEN_PEDIDO" Multiplicity="0..1" />
+    <End Role="ORDEN_PEDIDO" Type="Self.ORDEN_PEDIDO" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="ESTADO_ORDEN_PEDIDO">
+        <PropertyRef Name="IDESTADO_ORDEN_PEDIDO" />
+      </Principal>
+      <Dependent Role="ORDEN_PEDIDO">
+        <PropertyRef Name="ESTADO_ORDEN_ID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -487,6 +511,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="USUARIO_PROVEEDOR_FK">
+    <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="0..1" />
+    <End Role="PROVEEDOR" Type="Self.PROVEEDOR" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="USUARIO">
+        <PropertyRef Name="IDUSUARIO" />
+      </Principal>
+      <Dependent Role="PROVEEDOR">
+        <PropertyRef Name="USUARIO_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="USUARIO_TIPO_FK">
     <End Role="TIPO_USUARIO" Type="Self.TIPO_USUARIO" Multiplicity="0..1" />
     <End Role="USUARIO" Type="Self.USUARIO" Multiplicity="*" />
@@ -504,6 +540,7 @@
     <EntitySet Name="EMPLEADO" EntityType="Self.EMPLEADO" />
     <EntitySet Name="EMPRESA" EntityType="Self.EMPRESA" />
     <EntitySet Name="ESTADO_HABITACION" EntityType="Self.ESTADO_HABITACION" />
+    <EntitySet Name="ESTADO_ORDEN_PEDIDO" EntityType="Self.ESTADO_ORDEN_PEDIDO" />
     <EntitySet Name="ESTADO_RECEPCION" EntityType="Self.ESTADO_RECEPCION" />
     <EntitySet Name="FACTURA" EntityType="Self.FACTURA" />
     <EntitySet Name="HABITACION" EntityType="Self.HABITACION" />
@@ -561,6 +598,10 @@
       <End Role="ESTADO_HABITACION" EntitySet="ESTADO_HABITACION" />
       <End Role="HABITACION" EntitySet="HABITACION" />
     </AssociationSet>
+    <AssociationSet Name="ESTADO_ORDEN_FK" Association="Self.ESTADO_ORDEN_FK">
+      <End Role="ESTADO_ORDEN_PEDIDO" EntitySet="ESTADO_ORDEN_PEDIDO" />
+      <End Role="ORDEN_PEDIDO" EntitySet="ORDEN_PEDIDO" />
+    </AssociationSet>
     <AssociationSet Name="RECEPCION_ESTADO_FK" Association="Self.RECEPCION_ESTADO_FK">
       <End Role="ESTADO_RECEPCION" EntitySet="ESTADO_RECEPCION" />
       <End Role="RECEPCION_PRODUCTO" EntitySet="RECEPCION_PRODUCTO" />
@@ -600,6 +641,10 @@
     <AssociationSet Name="RECEPCION_PRODUCTO_FK" Association="Self.RECEPCION_PRODUCTO_FK">
       <End Role="PRODUCTO" EntitySet="PRODUCTO" />
       <End Role="RECEPCION_PRODUCTO" EntitySet="RECEPCION_PRODUCTO" />
+    </AssociationSet>
+    <AssociationSet Name="USUARIO_PROVEEDOR_FK" Association="Self.USUARIO_PROVEEDOR_FK">
+      <End Role="USUARIO" EntitySet="USUARIO" />
+      <End Role="PROVEEDOR" EntitySet="PROVEEDOR" />
     </AssociationSet>
     <AssociationSet Name="USUARIO_TIPO_FK" Association="Self.USUARIO_TIPO_FK">
       <End Role="TIPO_USUARIO" EntitySet="TIPO_USUARIO" />

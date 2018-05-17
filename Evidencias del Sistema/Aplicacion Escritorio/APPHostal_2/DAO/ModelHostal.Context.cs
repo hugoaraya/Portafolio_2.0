@@ -29,6 +29,7 @@ namespace DAO
         public virtual DbSet<EMPLEADO> EMPLEADO { get; set; }
         public virtual DbSet<EMPRESA> EMPRESA { get; set; }
         public virtual DbSet<ESTADO_HABITACION> ESTADO_HABITACION { get; set; }
+        public virtual DbSet<ESTADO_ORDEN_PEDIDO> ESTADO_ORDEN_PEDIDO { get; set; }
         public virtual DbSet<ESTADO_RECEPCION> ESTADO_RECEPCION { get; set; }
         public virtual DbSet<FACTURA> FACTURA { get; set; }
         public virtual DbSet<HABITACION> HABITACION { get; set; }

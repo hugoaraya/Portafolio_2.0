@@ -27,21 +27,16 @@ namespace APPHostal.templates
             
         }
 
-
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
                 USUARIO usuario = new USUARIO();
                 usuario.IDUSUARIO = 2;
                 usuario.NOMBRE_USUARIO = txNombre.Text;
                 usuario.CONTRASENIA = txContrasena.Text;
-                usuario.TIPO_USUARIO_ID = 2;
+                usuario.TIPO_USUARIO_ID = 1;
                    
                 AddUsuario(usuario);
-                
         }
-
-
-
 
         public void AddUsuario(USUARIO usu)
             

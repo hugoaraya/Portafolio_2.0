@@ -19,6 +19,7 @@ namespace DAO
         {
             this.EMPLEADO = new HashSet<EMPLEADO>();
             this.EMPRESA = new HashSet<EMPRESA>();
+            this.PROVEEDOR = new HashSet<PROVEEDOR>();
         }
     
         public decimal IDUSUARIO { get; set; }
@@ -30,6 +31,8 @@ namespace DAO
         public virtual ICollection<EMPLEADO> EMPLEADO { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<EMPRESA> EMPRESA { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<PROVEEDOR> PROVEEDOR { get; set; }
         public virtual TIPO_USUARIO TIPO_USUARIO { get; set; }
     }
 }
