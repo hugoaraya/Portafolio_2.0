@@ -167,6 +167,10 @@
     <Resource Include="img\logo_b.png" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Biblioteca\Biblioteca.csproj">
+      <Project>{85a32177-710e-4970-98da-2951ec0428f2}</Project>
+      <Name>Biblioteca</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
       <Project>{e899b9aa-bcbf-41d9-9405-134e96a5d482}</Project>
       <Name>DAO</Name>

@@ -46,7 +46,7 @@
                             <MenuItem Header="_Mantenedor Proveedores" />
                         </MenuItem>
                         <MenuItem Header="_Modulo Administrador">
-                            <MenuItem Header="_Mantenedor Empleados"/>
+                            <MenuItem Header="_Mantenedor Empleados" Click="btnMantenedorEmpleados"/>
                             <MenuItem Header="_"/>
                         </MenuItem>
                     </Menu>
@@ -58,11 +58,15 @@
             <Label>Bienvenidos a Sistema de Hostal Doña Clarita</Label>
             <Image Source="img/logo.png" Width="100"/>
         </StackPanel>
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            
         <StackPanel>
-            <Frame Name="Contenidos">
+            <Frame Name="Contenidos" NavigationUIVisibility="Hidden">
 
             </Frame>
         </StackPanel>
+
+        </ScrollViewer>
         <WrapPanel Name="inicioSesion"  Orientation="Horizontal">
                 <GroupBox x:Name="gbxInicioSesion" Header="Inicio de Sesión" Height="200" Width="250">
                     <Grid Height="165"  Width="224">

@@ -63,7 +63,7 @@ namespace APPHostal
         private void btnCerrarSesion(object sender, RoutedEventArgs e)
         {
             inicioSesion.Visibility = Visibility.Visible;
-            Contenidos.Visibility = Visibility.Hidden;
+            Contenidos.Content = "";
             Menus.Visibility = Visibility.Hidden;
         }
 
@@ -74,8 +74,16 @@ namespace APPHostal
 
         private void btnMantenedorUsuarios(object sender, RoutedEventArgs e)
         {
+            //Contenidos.Visibility = Visibility.Visible;
             templates.MantenedorUsuarios m1 = new templates.MantenedorUsuarios();
             Contenidos.Navigate(m1);
+        }
+
+        private void btnMantenedorEmpleados(object sender, RoutedEventArgs e)
+        {
+            //Contenidos.Visibility = Visibility.Visible;
+            templates.MantenedorEmpleados e1 = new templates.MantenedorEmpleados();
+            Contenidos.Navigate(e1);
         }
     }
 }

@@ -5,6 +5,6 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:APPHostal"
         mc:Ignorable="d"
-        Title="Sistema Hotal Doña Clarita" Height="600" Width="800" Source="Main.xaml">
+        Title="Sistema Hotal Doña Clarita" Height="600" Width="800" Source="Main.xaml" ShowsNavigationUI="False">
 
 </NavigationWindow>

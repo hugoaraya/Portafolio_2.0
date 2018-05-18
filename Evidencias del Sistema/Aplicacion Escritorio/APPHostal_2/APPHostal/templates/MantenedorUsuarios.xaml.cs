@@ -13,7 +13,10 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using DAO;
+using APPHostal;
 using Oracle.ManagedDataAccess.Client;
+using Biblioteca;
+
 namespace APPHostal.templates
 {
     /// <summary>
@@ -24,8 +27,36 @@ namespace APPHostal.templates
         public MantenedorUsuarios()
         {
             InitializeComponent();
-            
+            updateDataGrid();
         }
+
+
+        private void updateDataGrid()
+        {
+            Usuario usu = new Usuario();
+            using (EntitiesHostal con = new EntitiesHostal())
+            {
+                var listaUsuarios = new List();
+
+                foreach (var a in con.USUARIO.ToList())
+                {
+                    usu.IDUSUARIO = a.IDUSUARIO;
+                    usu.NOMBRE_USUARIO = a.NOMBRE_USUARIO;
+                    usu.CONTRASENIA = a.CONTRASENIA;
+                    usu.DESCRIPCION = a.TIPO_USUARIO.DESCRIPCION;
+                    listaUsuarios.
+                    dgManteneUsuario.ItemsSource = usu;
+                    dgManteneUsuario.Items.Refresh();
+                    }
+                    
+                }
+
+
+
+
+            LimpiarCampos();
+        }
+
 
         private void btnAgregar_Click(object sender, RoutedEventArgs e)
         {
@@ -61,9 +92,26 @@ namespace APPHostal.templates
             LimpiarCampos();
         }
 
+       
+
         private void dgManteneUsuario_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+            using (EntitiesHostal con = new EntitiesHostal())
+            {
+                try
+                {
+                    var empleadosQuery = from d in con.USUARIO
+                                      orderby d.NOMBRE_USUARIO
+                                      select d;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+                lbMsg1.Content = "Usuarios conextados";
+            }
+            LimpiarCampos();
+            
         }
 
         private void LimpiarCampos()

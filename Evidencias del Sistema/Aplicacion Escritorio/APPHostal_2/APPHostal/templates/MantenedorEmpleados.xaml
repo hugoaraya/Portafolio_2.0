@@ -9,6 +9,6 @@
       Title="MantenedorEmpleados">
 
     <Grid>
-        
+        <Label Content="Mantenedor"/>
     </Grid>
 </Page>
