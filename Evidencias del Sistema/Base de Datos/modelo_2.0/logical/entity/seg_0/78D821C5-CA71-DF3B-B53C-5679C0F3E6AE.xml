@@ -70,6 +70,47 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="fecha" id="D037545F-D1F6-E1BB-7572-90DAC2D0C6F3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>DE39A96D-B59D-9FE1-C573-7E74B708DC2B</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="proveedor id" id="142F223A-C8B9-AF2B-40D2-FD6D8639371D">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>DFC5C277-4227-F5CF-9BAA-001C98E5182A</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>1D091FAD-5ED1-E9D5-3283-725FB11059E1</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="estado orden pedido id" id="1549A5EE-39BA-B468-243E-D7E8AE6E089A">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>8B3DC627-D802-8963-6E3C-89919DF6A65E</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>744581FF-7774-DDB4-E8D3-A92AF4FDAB45</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C0B2B4F8-696C-C36A-4B98-EEC2136693F8" name="orden pedido PK">

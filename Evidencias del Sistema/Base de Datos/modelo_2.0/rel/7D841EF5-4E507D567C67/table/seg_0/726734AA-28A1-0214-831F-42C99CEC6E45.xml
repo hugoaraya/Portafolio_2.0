@@ -86,6 +86,20 @@
 <colAssociation fkAssociation="D8C0FB2E-7FC7-DEF4-0503-7D30D0E3802B" referredColumn="9BEAC8DA-2AA4-BC43-15C6-07318C9D1DE0"/>
 </associations>
 </Column>
+<Column name="fechas_reservas_id" id="D5B4F06A-596C-4C9B-8B46-28B4F1E7B42E">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:51:23 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4D74739D-ED83-D352-7697-F00B052489D0" referredColumn="66284DA5-BDB8-2C05-F2EC-C47BACEBE213"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="389DCD04-1588-3143-3A9A-6E21B8979F24" name="habitacion_PK">
@@ -107,6 +121,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="91C7C7AE-CDD4-C70A-8CC9-FE67E4025B1A"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="1EB25D20-3220-D05B-AF26-D70974C0B784" name="habitacion_fechas_reservas_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:51:23 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D5B4F06A-596C-4C9B-8B46-28B4F1E7B42E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

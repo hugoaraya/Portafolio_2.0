@@ -68,6 +68,34 @@
 <logicalDatatype>LOGDT007</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="orden comedor id" id="E5538D5F-C073-D11E-7160-BE1DFA52AD3A">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>12929F18-B797-33AF-3690-6243A28882FC</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>DFE77981-924A-DD39-381C-7A1C0712CA7E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="huesped habitacion id" id="210AF101-5BE8-7180-DAB8-70D13E199DF6">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>EA8C4D4E-976C-6B07-92AA-3E2AC70C0ABB</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>019D7449-12D0-1177-AA5D-EAF7A86BB32E</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="C12666DB-524B-98AE-98E2-C75A3B58CA57" name="orden compra PK">

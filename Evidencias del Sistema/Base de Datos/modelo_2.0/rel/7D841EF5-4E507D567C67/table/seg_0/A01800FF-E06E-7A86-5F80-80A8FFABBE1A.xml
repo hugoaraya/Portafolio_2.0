@@ -53,6 +53,34 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="orden_comedor_id" id="D588A80D-C268-3D2A-87C4-D2278ECCD694">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:39:42 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5645568A-3E51-F552-842B-55A39FFB30F2" referredColumn="CDD2C7B2-7596-0F7D-ED08-D4581897BB22"/>
+</associations>
+</Column>
+<Column name="huesped_habitacion_id" id="517735F6-D305-D117-2E03-9397B121F1A8">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:46:02 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="071CBEDC-8E95-9BB0-9A32-B80073D53CC5" referredColumn="4816F789-4DA3-C241-9A72-F2E5A7EA0FEC"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="434F4B3C-C963-8446-2EB6-22CF9D1671EC" name="orden_compra_PK">
@@ -74,6 +102,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="C0C2C1E2-B71E-0FC6-4FC1-964F0782F616"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="452E6D73-8969-7D90-F194-175E418D173F" name="compra_orden_comedor_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:39:42 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="D588A80D-C268-3D2A-87C4-D2278ECCD694"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="AD67843B-BD9B-6DE2-8E56-9B9198A37A11" name="compra_huesped_habitacion_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:46:02 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="517735F6-D305-D117-2E03-9397B121F1A8"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

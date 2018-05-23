@@ -1,23 +1,12 @@
 -- Generado por Oracle SQL Developer Data Modeler 17.4.0.355.2131
---   en:        2018-05-11 15:05:40 CLST
+--   en:        2018-05-23 11:11:25 CLT
 --   sitio:      Oracle Database 11g
 --   tipo:      Oracle Database 11g
-
 
 --LIMPIEZA DE AMBIENTE...
 --SELECT 'DROP TABLE '||table_name||' CASCADE CONSTRAINTS;' FROM user_tables
 
 
-
-
-CREATE TABLE comedor (
-    idComedor            INTEGER NOT NULL,
-    plato_id      INTEGER,
-    minuta_id     INTEGER,
-    servicio_id   INTEGER
-);
-
-ALTER TABLE comedor ADD CONSTRAINT comedor_pk PRIMARY KEY ( idComedor );
 
 CREATE TABLE empleado (
     idEmpleado           INTEGER NOT NULL,
@@ -31,7 +20,7 @@ CREATE TABLE empleado (
 ALTER TABLE empleado ADD CONSTRAINT empleado_pk PRIMARY KEY ( idEmpleado );
 
 CREATE TABLE empresa (
-    idEmpresa          INTEGER NOT NULL,
+    idEmpresa           INTEGER NOT NULL,
     rut          INTEGER NOT NULL,
     dv           CHAR(1) NOT NULL,
     nombre       VARCHAR2(50) NOT NULL,
@@ -44,119 +33,138 @@ CREATE TABLE empresa (
 ALTER TABLE empresa ADD CONSTRAINT empresa_pk PRIMARY KEY ( idEmpresa );
 
 CREATE TABLE estado_habitacion (
-    idEstado_Habitacion     INTEGER NOT NULL,
+    idEstado_habitacion            INTEGER NOT NULL,
     descripcion   VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE estado_habitacion ADD CONSTRAINT estado_habitacion_pk PRIMARY KEY ( idEstado_Habitacion );
+ALTER TABLE estado_habitacion ADD CONSTRAINT estado_habitacion_pk PRIMARY KEY ( idEstado_habitacion );
+
+CREATE TABLE estado_huesped (
+    idEstado_huesped       INTEGER NOT NULL,
+    estado   VARCHAR2(10) NOT NULL
+);
+
+ALTER TABLE estado_huesped ADD CONSTRAINT estado_huesped_pk PRIMARY KEY ( idEstado_huesped );
+
+CREATE TABLE estado_orden_pedido (
+    idestado_orden_pedido            INTEGER NOT NULL,
+    descripcion   VARCHAR2(255) NOT NULL
+);
+
+ALTER TABLE estado_orden_pedido ADD CONSTRAINT estado_orden_pedido_pk PRIMARY KEY ( idestado_orden_pedido );
 
 CREATE TABLE estado_recepcion (
-    idEstado_Recepcion            INTEGER NOT NULL,
+    idestado_recepcion            INTEGER NOT NULL,
     descripcion   VARCHAR2(255) NOT NULL
 );
 
-ALTER TABLE estado_recepcion ADD CONSTRAINT estado_recepcion_pk PRIMARY KEY ( idEstado_Recepcion );
+ALTER TABLE estado_recepcion ADD CONSTRAINT estado_recepcion_pk PRIMARY KEY ( idestado_recepcion );
 
 CREATE TABLE factura (
-    idFactura         INTEGER NOT NULL,
+    idfactura                INTEGER NOT NULL,
     nro_factura       INTEGER NOT NULL,
     orden_compra_id   INTEGER,
     fecha             DATE NOT NULL
 );
 
-ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( idFactura );
+ALTER TABLE factura ADD CONSTRAINT factura_pk PRIMARY KEY ( idfactura );
+
+CREATE TABLE fechas_reservas (
+    idfechas_reservas              INTEGER NOT NULL,
+    fecha_ingreso   DATE NOT NULL,
+    fecha_salida    DATE NOT NULL
+);
+
+ALTER TABLE fechas_reservas ADD CONSTRAINT fechas_reservas_pk PRIMARY KEY ( idfechas_reservas );
 
 CREATE TABLE habitacion (
-    idHabitacion           INTEGER NOT NULL,
+    idhabitacion                     INTEGER NOT NULL,
     tipo_cama              VARCHAR2(255) NOT NULL,
     accesorio              VARCHAR2(255) NOT NULL,
     precio                 INTEGER NOT NULL,
     descripcion            VARCHAR2(255) NOT NULL,
     nombre                 VARCHAR2(50) NOT NULL,
-    estado_habitacion_id   INTEGER
+    estado_habitacion_id   INTEGER,
+    fechas_reservas_id     INTEGER
 );
 
-ALTER TABLE habitacion ADD CONSTRAINT habitacion_pk PRIMARY KEY ( idHabitacion );
+ALTER TABLE habitacion ADD CONSTRAINT habitacion_pk PRIMARY KEY ( idhabitacion );
 
 CREATE TABLE huesped (
-    idHuesped           INTEGER NOT NULL,
-    rut          INTEGER NOT NULL,
-    dv           CHAR(1) NOT NULL,
-    nombre       VARCHAR2(50) NOT NULL,
-    apellido     VARCHAR2(50) NOT NULL,
-    telefono     INTEGER NOT NULL,
-    correo       VARCHAR2(255) NOT NULL,
-    cargo        VARCHAR2(50) NOT NULL,
-    empresa_id   INTEGER
+    idhuesped                  INTEGER NOT NULL,
+    rut                 INTEGER NOT NULL,
+    dv                  CHAR(1) NOT NULL,
+    nombre              VARCHAR2(50) NOT NULL,
+    apellido            VARCHAR2(50) NOT NULL,
+    telefono            INTEGER NOT NULL,
+    correo              VARCHAR2(255) NOT NULL,
+    cargo               VARCHAR2(50) NOT NULL,
+    empresa_id          INTEGER,
+    estado_huesped_id   INTEGER
 );
 
-ALTER TABLE huesped ADD CONSTRAINT huesped_pk PRIMARY KEY ( idHuesped );
+ALTER TABLE huesped ADD CONSTRAINT huesped_pk PRIMARY KEY ( idhuesped );
 
 CREATE TABLE huesped_habitacion (
-    idHuesped_Habitacion   INTEGER NOT NULL,
+    idhuesped_habitacion              INTEGER NOT NULL,
     huesped_id      INTEGER,
     habitacion_id   INTEGER
 );
 
-ALTER TABLE huesped_habitacion ADD CONSTRAINT huesped_habitacion_pk PRIMARY KEY ( idHuesped_Habitacion );
+ALTER TABLE huesped_habitacion ADD CONSTRAINT huesped_habitacion_pk PRIMARY KEY ( idhuesped_habitacion );
 
 CREATE TABLE minuta (
-    idMinuta             INTEGER NOT NULL,
+    idminuta              INTEGER NOT NULL,
     nombre_minuta   VARCHAR2(50) NOT NULL,
     descripcion      VARCHAR2(255) NOT NULL,
     fecha_inicio    DATE NOT NULL,
     fecha_fin       DATE NOT NULL
 );
 
-ALTER TABLE minuta ADD CONSTRAINT minuta_pk PRIMARY KEY ( idMinuta );
+ALTER TABLE minuta ADD CONSTRAINT minuta_pk PRIMARY KEY ( idminuta );
 
 CREATE TABLE orden_comedor (
-    idOrden_Comedor                INTEGER NOT NULL,
-    comedor_id        INTEGER,
-    orden_compra_id   INTEGER
+    idorden_comedor            INTEGER NOT NULL,
+    plato_id      INTEGER,
+    minuta_id     INTEGER,
+    servicio_id   INTEGER
 );
 
-ALTER TABLE orden_comedor ADD CONSTRAINT orden_comedor_pk PRIMARY KEY ( idOrden_Comedor );
+ALTER TABLE orden_comedor ADD CONSTRAINT orden_comedor_pk PRIMARY KEY ( idorden_comedor );
 
 CREATE TABLE orden_compra (
-    idOrden_Compra           INTEGER NOT NULL,
-    nro_orden    INTEGER NOT NULL,
-    empresa_id   INTEGER,
-    fecha        DATE NOT NULL
+    idorden_compra          INTEGER NOT NULL,
+    nro_orden               INTEGER NOT NULL,
+    empresa_id              INTEGER,
+    fecha                   DATE NOT NULL,
+    orden_comedor_id        INTEGER,
+    huesped_habitacion_id   INTEGER
 );
 
-ALTER TABLE orden_compra ADD CONSTRAINT orden_compra_pk PRIMARY KEY ( idOrden_Compra );
-
-CREATE TABLE orden_habitacion (
-    idOrden_Habitacion               INTEGER NOT NULL,
-    habitacion_id     INTEGER,
-    orden_compra_id   INTEGER
-);
-
-ALTER TABLE orden_habitacion ADD CONSTRAINT orden_habitacion_pk PRIMARY KEY ( idOrden_Habitacion );
+ALTER TABLE orden_compra ADD CONSTRAINT orden_compra_pk PRIMARY KEY ( idorden_compra );
 
 CREATE TABLE orden_pedido (
-    idOrden_Pedido             INTEGER NOT NULL,
-    nro_orden      INTEGER NOT NULL,
-    empleado_id    INTEGER,
-    fecha          DATE NOT NULL,
-    proveedor_id   INTEGER,
-	estado_orden_id INTEGER
+    idorden_pedido           INTEGER NOT NULL,
+    nro_orden                INTEGER NOT NULL,
+    empleado_id              INTEGER,
+    fecha                    DATE NOT NULL,
+    proveedor_id             INTEGER,
+    estado_orden_pedido_id   INTEGER
 );
 
-ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idOrden_Pedido );
+ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idorden_pedido );
 
 CREATE TABLE plato (
-    idPlato            INTEGER NOT NULL,
+    idplato             INTEGER NOT NULL,
     nombre_plato   VARCHAR2(50) NOT NULL,
     descripcion    VARCHAR2(255) NOT NULL,
     precio         INTEGER NOT NULL
 );
 
-ALTER TABLE plato ADD CONSTRAINT plato_pk PRIMARY KEY ( idPlato );
+ALTER TABLE plato ADD CONSTRAINT plato_pk PRIMARY KEY ( idplato );
 
 CREATE TABLE producto (
-    idProducto                 INTEGER NOT NULL,
+    idproducto                  INTEGER NOT NULL,
     nombre              VARCHAR2(50) NOT NULL,
     fecha_vencimiento   DATE NOT NULL,
     precio              INTEGER NOT NULL,
@@ -167,30 +175,22 @@ CREATE TABLE producto (
     stock_critico       INTEGER NOT NULL
 );
 
-ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( idProducto );
+ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( idproducto );
 
 CREATE TABLE proveedor (
-    idProveedor          INTEGER NOT NULL,
-    rut         INTEGER NOT NULL,
-    dv          CHAR(1) NOT NULL,
-    nombre      VARCHAR2(50) NOT NULL,
-    direccion   VARCHAR2(50) NOT NULL,
-    rubro       VARCHAR2(50) NOT NULL,
-	usuario_id	INTEGER
+    idproveedor           INTEGER NOT NULL,
+    rut          INTEGER NOT NULL,
+    dv           CHAR(1) NOT NULL,
+    nombre       VARCHAR2(50) NOT NULL,
+    direccion    VARCHAR2(50) NOT NULL,
+    rubro        VARCHAR2(50) NOT NULL,
+    usuario_id   INTEGER
 );
 
-ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idProveedor );
-
-CREATE TABLE estado_orden_pedido(
-	idEstado_Orden_pedido INTEGER NOT NULL,
-	descipcion VARCHAR2(255) NOT NULL
-);
-
-ALTER TABLE estado_orden_pedido ADD CONSTRAINT estado_orden_pedido_pk PRIMARY KEY ( idEstado_Orden_pedido );
-
+ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idproveedor );
 
 CREATE TABLE recepcion_producto (
-    idRecepcion_Producto  INTEGER NOT NULL,
+    idrecepcion_producto  INTEGER NOT NULL,
     nro_recepcion         INTEGER NOT NULL,
     codigo_barra          INTEGER NOT NULL,
     producto_id           INTEGER,
@@ -199,130 +199,130 @@ CREATE TABLE recepcion_producto (
     fecha                 DATE NOT NULL
 );
 
-ALTER TABLE recepcion_producto ADD CONSTRAINT recepcion_producto_pk PRIMARY KEY ( idRecepcion_Producto );
+ALTER TABLE recepcion_producto ADD CONSTRAINT recepcion_producto_pk PRIMARY KEY ( idrecepcion_producto );
 
 CREATE TABLE servicio (
-    idServicio    INTEGER NOT NULL,
+    idservicio            INTEGER NOT NULL,
     descripcion   VARCHAR2(50) NOT NULL
 );
 
-ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( idServicio );
+ALTER TABLE servicio ADD CONSTRAINT servicio_pk PRIMARY KEY ( idservicio );
 
 CREATE TABLE tipo_usuario (
-    idTipo_Usuario   INTEGER NOT NULL,
+    idtipo_usuario            INTEGER NOT NULL,
     descripcion   VARCHAR2(50) NOT NULL
 );
 
-ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( idTipo_Usuario );
+ALTER TABLE tipo_usuario ADD CONSTRAINT tipo_usuario_pk PRIMARY KEY ( idtipo_usuario );
 
 CREATE TABLE usuario (
-    idUsuario                INTEGER NOT NULL,
+    idusuario                INTEGER NOT NULL,
     nombre_usuario    VARCHAR2(50) NOT NULL,
     contrasenia       VARCHAR2(255) NOT NULL,
     tipo_usuario_id   INTEGER
 );
 
-ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( idUsuario );
+ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( idusuario );
 
-ALTER TABLE comedor
-    ADD CONSTRAINT comedor_minuta_fk FOREIGN KEY ( minuta_id )
-        REFERENCES minuta ( idMinuta );
+ALTER TABLE orden_compra
+    ADD CONSTRAINT compra_huesped_habitacion_fk FOREIGN KEY ( huesped_habitacion_id )
+        REFERENCES huesped_habitacion ( idhuesped_habitacion );
 
-ALTER TABLE comedor
-    ADD CONSTRAINT comedor_plato_fk FOREIGN KEY ( plato_id )
-        REFERENCES plato ( idPlato );
-
-ALTER TABLE comedor
-    ADD CONSTRAINT comedor_servicio_fk FOREIGN KEY ( servicio_id )
-        REFERENCES servicio ( idServicio );
+ALTER TABLE orden_compra
+    ADD CONSTRAINT compra_orden_comedor_fk FOREIGN KEY ( orden_comedor_id )
+        REFERENCES orden_comedor ( idorden_comedor );
 
 ALTER TABLE empleado
     ADD CONSTRAINT empleado_usuario_fk FOREIGN KEY ( usuario_id )
-        REFERENCES usuario ( idUsuario );
+        REFERENCES usuario ( idusuario );
 
 ALTER TABLE empresa
     ADD CONSTRAINT empresa_usuario_fk FOREIGN KEY ( usuario_id )
-        REFERENCES usuario ( idUsuario );
+        REFERENCES usuario ( idusuario);
+
+ALTER TABLE orden_pedido
+    ADD CONSTRAINT estado_orden_pedido_fk FOREIGN KEY ( estado_orden_pedido_id )
+        REFERENCES estado_orden_pedido ( idestado_orden_pedido );
 
 ALTER TABLE factura
     ADD CONSTRAINT factura_orden_fk FOREIGN KEY ( orden_compra_id )
-        REFERENCES orden_compra ( idOrden_Compra );
+        REFERENCES orden_compra ( idorden_compra );
 
 ALTER TABLE habitacion
     ADD CONSTRAINT habitacion_estado_fk FOREIGN KEY ( estado_habitacion_id )
-        REFERENCES estado_habitacion ( idEstado_Habitacion );
+        REFERENCES estado_habitacion ( idestado_habitacion );
+
+ALTER TABLE habitacion
+    ADD CONSTRAINT habitacion_fechas_reservas_fk FOREIGN KEY ( fechas_reservas_id )
+        REFERENCES fechas_reservas ( idfechas_reservas );
 
 ALTER TABLE huesped_habitacion
     ADD CONSTRAINT habitacion_huesped_fk FOREIGN KEY ( habitacion_id )
-        REFERENCES habitacion ( idHabitacion );
+        REFERENCES habitacion ( idhabitacion );
 
 ALTER TABLE huesped
     ADD CONSTRAINT huesped_empresa_fk FOREIGN KEY ( empresa_id )
-        REFERENCES empresa ( idEmpresa );
+        REFERENCES empresa ( idempresa );
+
+ALTER TABLE huesped
+    ADD CONSTRAINT huesped_estado_huesped_fk FOREIGN KEY ( estado_huesped_id )
+        REFERENCES estado_huesped ( idestado_huesped );
 
 ALTER TABLE huesped_habitacion
     ADD CONSTRAINT huesped_habitacion_fk FOREIGN KEY ( huesped_id )
-        REFERENCES huesped ( idHuesped );
+        REFERENCES huesped ( idhuesped );
 
 ALTER TABLE orden_comedor
-    ADD CONSTRAINT comedor_orden_fk FOREIGN KEY ( comedor_id )
-        REFERENCES comedor ( idComedor );
+    ADD CONSTRAINT orden_comedor_minuta_fk FOREIGN KEY ( minuta_id )
+        REFERENCES minuta ( idminuta );
 
 ALTER TABLE orden_comedor
-    ADD CONSTRAINT orden_comedor_fk FOREIGN KEY ( orden_compra_id )
-        REFERENCES orden_compra ( idOrden_Compra );
+    ADD CONSTRAINT orden_comedor_plato_fk FOREIGN KEY ( plato_id )
+        REFERENCES plato ( idplato );
+
+ALTER TABLE orden_comedor
+    ADD CONSTRAINT orden_comedor_servicio_fk FOREIGN KEY ( servicio_id )
+        REFERENCES servicio ( idservicio );
 
 ALTER TABLE orden_compra
     ADD CONSTRAINT orden_compra_empresa_fk FOREIGN KEY ( empresa_id )
-        REFERENCES empresa ( idEmpresa );
+        REFERENCES empresa ( idempresa );
 
 ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_empleado_fk FOREIGN KEY ( empleado_id )
-        REFERENCES empleado ( idEmpleado );
-
-ALTER TABLE orden_habitacion
-    ADD CONSTRAINT orden_hab_compra_fk FOREIGN KEY ( orden_compra_id )
-        REFERENCES orden_compra ( idOrden_Compra );
-
-ALTER TABLE orden_habitacion
-    ADD CONSTRAINT orden_habitacion_fk FOREIGN KEY ( habitacion_id )
-        REFERENCES habitacion ( idHabitacion );
+        REFERENCES empleado ( idempleado );
 
 ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
-        REFERENCES proveedor ( idProveedor );
-		
-ALTER TABLE orden_pedido
-    ADD CONSTRAINT estado_orden_fk FOREIGN KEY ( estado_orden_id )
-        REFERENCES estado_orden_pedido ( idEstado_Orden_pedido );		
+        REFERENCES proveedor ( idproveedor );
+
+ALTER TABLE proveedor
+    ADD CONSTRAINT proveedor_usuario_fk FOREIGN KEY ( usuario_id )
+        REFERENCES usuario ( idusuario );
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_estado_fk FOREIGN KEY ( estado_recepcion_id )
-        REFERENCES estado_recepcion ( idEstado_Recepcion );
+        REFERENCES estado_recepcion ( idestado_recepcion );
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_orden_fk FOREIGN KEY ( orden_pedido_id )
-        REFERENCES orden_pedido ( idOrden_Pedido );
+        REFERENCES orden_pedido ( idorden_pedido );
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_producto_fk FOREIGN KEY ( producto_id )
-        REFERENCES producto ( idProducto );
+        REFERENCES producto ( idproducto );
 
 ALTER TABLE usuario
     ADD CONSTRAINT usuario_tipo_fk FOREIGN KEY ( tipo_usuario_id )
-        REFERENCES tipo_usuario ( idTipo_Usuario );
-		
-ALTER TABLE proveedor
-	ADD CONSTRAINT usuario_proveedor_fk FOREIGN KEY (usuario_id)
-		  REFERENCES usuario ( idUsuario );
+        REFERENCES tipo_usuario ( idtipo_usuario );
 
 
 
 -- Informe de Resumen de Oracle SQL Developer Data Modeler: 
 -- 
--- CREATE TABLE                            21
+-- CREATE TABLE                            22
 -- CREATE INDEX                             0
--- ALTER TABLE                             42
+-- ALTER TABLE                             45
 -- CREATE VIEW                              0
 -- ALTER VIEW                               0
 -- CREATE PACKAGE                           0

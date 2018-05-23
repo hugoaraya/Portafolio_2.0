@@ -107,6 +107,20 @@
 <colAssociation fkAssociation="DFF80C5A-AD65-3F12-7E58-DAA778140CC1" referredColumn="898DC08B-0944-CDC6-4504-2FC4790D222D"/>
 </associations>
 </Column>
+<Column name="estado_huesped_id" id="14FD5958-A2C2-25AA-F329-5DF08FD02891">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 15:18:28 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="3CE4BFFE-536E-C28B-45C2-E788D299E172" referredColumn="71B4F9F5-8EEF-0B37-050D-0AC07A6C6C0C"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="A2B4E1AC-8F21-BC31-487A-8DEBB4DA645F" name="huesped_PK">
@@ -128,6 +142,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="2797588F-0277-27E1-25DE-2CF0CC460611"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="148D0035-2D8D-F831-C166-F3813A09551E" name="huesped_estado_huesped_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 15:18:28 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="14FD5958-A2C2-25AA-F329-5DF08FD02891"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

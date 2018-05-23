@@ -1,20 +1,20 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orden compra empresa FK" directorySegmentName="seg_0" id="D93CBE7B-9B1E-E8B3-B872-858BEA84CF96">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orden_proveedor_FK" directorySegmentName="seg_0" id="DFC5C277-4227-F5CF-9BAA-001C98E5182A">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:54:23 UTC</createdTime>
-<generatorID>5A12E71D-E545-8E15-CD3A-71A3B7510F07</generatorID>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>AB8BD970-895D-002B-A041-994B9E261838</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<sourcePk>55DE78EC-020D-67AB-B284-230CC4BEC736</sourcePk>
+<sourcePk>E25010F9-B1DD-1957-09E4-A6FA8F68E02F</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>F65E3463-3359-E6BA-4D5D-AE262B40C852</sourceEntity>
+<sourceEntity>E8C6EBC2-9055-CFE9-B716-D53646566739</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
-<targetEntity>9D7D56CE-7139-0BB5-D405-2637562A6E74</targetEntity>
+<targetEntity>78D821C5-CA71-DF3B-B53C-5679C0F3E6AE</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
 </Relation>

@@ -1,0 +1,55 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="A4CEF5F2-839B-82BE-2379-DDADE69B20F0" name="fechas_reservas">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:49:55 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_23</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="66284DA5-BDB8-2C05-F2EC-C47BACEBE213">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:50:58 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_ingreso" id="6B0AD360-33EC-AFF9-B7E0-509ACC0F58C3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:51:17 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="fecha_salida" id="A1821333-A11C-A8BA-051A-3637BD45E5F7">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:51:17 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="4BD9CC1B-1919-750D-71B9-63FA4965424B" name="fechas_reservas_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:50:58 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="66284DA5-BDB8-2C05-F2EC-C47BACEBE213"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

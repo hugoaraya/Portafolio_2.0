@@ -3,6 +3,7 @@
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-11 20:37:19 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <ordsAlias>table_21</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
@@ -12,16 +13,18 @@
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-11 20:37:38 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="comedor_id" id="6EEA3F81-5819-AE57-34AE-477AE1D57367">
+<Column name="plato_id" id="FDC8C44B-F018-6C12-CE4A-DF227C1C2BAD">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-11 20:37:42 UTC</createdTime>
+<createdTime>2018-05-23 14:35:40 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -29,13 +32,14 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="AE47EABD-5DAE-DA76-CD1B-4B23820BB8CE" referredColumn="3BDF931F-717D-7340-1DAA-3598DC6CED85"/>
+<colAssociation fkAssociation="BF05902F-65B0-A97E-6C48-EBF51D51A459" referredColumn="F4272A50-E06A-1020-1E4E-4D8D01D818A4"/>
 </associations>
 </Column>
-<Column name="orden_compra_id" id="93092195-DD7A-8AC8-9872-216572898136">
+<Column name="minuta_id" id="3F2F0BC6-32D2-4BB5-6DF7-0A0211070D44">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-11 20:37:53 UTC</createdTime>
+<createdTime>2018-05-23 14:35:59 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>
@@ -43,7 +47,22 @@
 <previousColumn>false</previousColumn>
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
-<colAssociation fkAssociation="588429EB-49C1-7E07-0EDC-D4247CC95ECE" referredColumn="644C403E-1B8C-9F46-E8E8-4B7C75D9C740"/>
+<colAssociation fkAssociation="616C36A4-4803-150D-4A96-7DD81856BBF5" referredColumn="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29"/>
+</associations>
+</Column>
+<Column name="servicio_id" id="C58DBA56-6936-909E-3536-1367A51C6277">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:36:16 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="5AB51BF9-5125-EE6B-2FAF-BF17933CD124" referredColumn="A7C235B8-C441-6BC0-C008-A7C39D75E7EC"/>
 </associations>
 </Column>
 </columns>
@@ -52,6 +71,7 @@
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-11 20:37:38 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
+<shouldEngineer>false</shouldEngineer>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
@@ -59,24 +79,34 @@
 <colUsage columnID="CDD2C7B2-7596-0F7D-ED08-D4581897BB22"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="91D8A6F0-F64B-74D0-F967-D652219FCE44" name="comedor_orden_FK">
+<ind_PK_UK id="3E968922-FAC2-EB84-FDA6-E5561DB5FD34" name="orden_comedor_plato_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-11 20:37:42 UTC</createdTime>
+<createdTime>2018-05-23 14:35:40 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="6EEA3F81-5819-AE57-34AE-477AE1D57367"/>
+<colUsage columnID="FDC8C44B-F018-6C12-CE4A-DF227C1C2BAD"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="24CF2E03-99B3-0802-A105-BB1FB1B358AC" name="orden_comedor_FK">
+<ind_PK_UK id="B0639259-60FD-357B-157D-0BD4521F1F52" name="orden_comedor_minuta_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-11 20:37:53 UTC</createdTime>
+<createdTime>2018-05-23 14:35:59 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <indexState>Foreign Key</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="93092195-DD7A-8AC8-9872-216572898136"/>
+<colUsage columnID="3F2F0BC6-32D2-4BB5-6DF7-0A0211070D44"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="194919E2-3FE6-8CEF-542B-3195DC3C981B" name="orden_comedor_servicio_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:36:16 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C58DBA56-6936-909E-3536-1367A51C6277"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

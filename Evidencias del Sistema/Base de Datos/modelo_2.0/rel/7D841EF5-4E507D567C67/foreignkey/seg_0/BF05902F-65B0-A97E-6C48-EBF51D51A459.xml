@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="71AF667C-B54F-C322-C0E9-0F1991DF333A" containerWithKeyObject="DB15A5C1-8DA3-2A80-36B6-95577B7D0C01" localFKIndex="9A41C379-4EC3-1340-6EA4-7EC386B93A70" name="comedor_plato_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="BF05902F-65B0-A97E-6C48-EBF51D51A459" containerWithKeyObject="393A37B1-FFE0-B502-DDD4-5EFD514F4DBE" localFKIndex="3E968922-FAC2-EB84-FDA6-E5561DB5FD34" name="orden_comedor_plato_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:53:10 UTC</createdTime>
+<createdTime>2018-05-23 14:35:40 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <referredTableLongName>plato</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

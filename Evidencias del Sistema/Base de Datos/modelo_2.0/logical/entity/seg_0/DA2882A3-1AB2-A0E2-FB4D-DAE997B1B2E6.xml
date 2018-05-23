@@ -97,6 +97,33 @@
 <logicalDatatype>LOGDT011</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="orden pedido id" id="1077EE56-1EF5-F76D-558B-BCBD086189B3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>F55BC58A-771C-B55D-D855-D713EAFA2155</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>B1C3AF2B-5A0F-B9F9-FF71-18E3C1FE2289</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fecha" id="37C6831D-0B92-CE9D-7F99-6E88B09BE630">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>021C800F-BF15-F041-3B74-768E265B3FC6</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
 <identifier id="60F15A3F-A2A0-B227-ADAF-9D73AB224B94" name="recepcion producto PK">

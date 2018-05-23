@@ -95,8 +95,8 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>20</dataTypeSize>
-<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
 </Attribute>
 <Attribute name="estado habitacion id" id="0FD1F703-E38F-3D0E-BFBE-7E873E45D996">
 <createdBy>420NiggaBytes</createdBy>
@@ -121,6 +121,20 @@
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
 <referedAttribute>E0F6E3BE-6352-815A-0789-EB47CD0618C3</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="fechas reservas id" id="935BDF53-9C16-2189-325E-2DA7DC386FC3">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>54750A25-5CAE-D93B-9F68-B5AD747A4F6B</generatorID>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<engineerTo>
+<item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
+</engineerTo>
+<referedAttribute>9C27B9B2-9AF6-A27A-5172-BBEFF0FE727D</referedAttribute>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT011</logicalDatatype>

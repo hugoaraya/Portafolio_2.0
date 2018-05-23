@@ -1,18 +1,18 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="orden compra empresa FK" directorySegmentName="seg_0" id="D93CBE7B-9B1E-E8B3-B872-858BEA84CF96">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="compra_huesped_habitacion_FK" directorySegmentName="seg_0" id="EA8C4D4E-976C-6B07-92AA-3E2AC70C0ABB">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:54:23 UTC</createdTime>
-<generatorID>5A12E71D-E545-8E15-CD3A-71A3B7510F07</generatorID>
+<createdTime>2018-05-23 14:56:20 UTC</createdTime>
+<generatorID>071CBEDC-8E95-9BB0-9A32-B80073D53CC5</generatorID>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <engineerTo>
 <item key="7D841EF5-01F6-09F5-45AF-4E507D567C67" value="true"/>
 </engineerTo>
-<sourcePk>55DE78EC-020D-67AB-B284-230CC4BEC736</sourcePk>
+<sourcePk>4AF7B305-F4D0-558C-6E29-69C10315CD5A</sourcePk>
 <identifying>false</identifying>
 <optionalSource>true</optionalSource>
 <optionalTarget>false</optionalTarget>
 <sourceCardinality>1</sourceCardinality>
-<sourceEntity>F65E3463-3359-E6BA-4D5D-AE262B40C852</sourceEntity>
+<sourceEntity>661DA9B1-BDD8-9282-F917-480D9FC05586</sourceEntity>
 <targetCardinalityString>*</targetCardinalityString>
 <targetEntity>9D7D56CE-7139-0BB5-D405-2637562A6E74</targetEntity>
 <transferable>true</transferable>
