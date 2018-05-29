@@ -1,0 +1,105 @@
+
+ .container {
+      width: 600px;
+      margin: 20px auto; 
+  }
+  .progressbar {
+      counter-reset: step;
+  }
+  .progressbar li {
+      list-style-type: none;
+      width: 25%;
+      float: left;
+      font-size: 12px;
+      position: relative;
+      text-align: center;
+      text-transform: uppercase;
+      color: #7d7d7d;
+  }
+  .progressbar li:before {
+      width: 30px;
+      height: 30px;
+      content: counter(step);
+      counter-increment: step;
+      line-height: 30px;
+      border: 2px solid #7d7d7d;
+      display: block;
+      text-align: center;
+      margin: 0 auto 10px auto;
+      border-radius: 50%;
+      background-color: white;
+  }
+  .progressbar li:after {
+      width: 100%;
+      height: 2px;
+      content: '';
+      position: absolute;
+      background-color: #7d7d7d;
+      top: 15px;
+      left: -50%;
+      z-index: -1;
+  }
+  .progressbar li:first-child:after {
+      content: none;
+  }
+  
+  .progressbar li.active {
+      color: green;
+  }
+  .progressbar li.active:before {
+      border-color: #55b776;
+  }
+  .progressbar li.active + li:after {
+      background-color: #55b776;
+  }
+  
+
+
+button {
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 450px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  &:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+
+#main-container{
+        margin: 150px auto;
+	width: 1000px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+          box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #1abc9c;
+	border-bottom: solid 5px #1abc9c;
+	color: white;
+          box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td {
+	background-color: #17a689;
+	color: white;
+}
