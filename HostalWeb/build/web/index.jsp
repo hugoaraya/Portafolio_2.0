@@ -25,8 +25,8 @@
 			<nav class="nav" id="nav">
 				<ul class="menu">
 					<li class="menu__item"><a class="menu__link select" href="">Inicio</a></li>
-					<li class="menu__item"><a class="menu__link" href="">Servicios</a></li>
-					<li class="menu__item"><a class="menu__link" href="">Galeria</a></li>
+					<li class="menu__item"><a class="menu__link" href="#info__columna">Servicios</a></li>
+					<li class="menu__item"><a class="menu__link" href="#juguetes">Galeria</a></li>
 					<li class="menu__item"><a class="menu__link" href="login.jsp">Iniciar Sesión</a></li>				</ul>
 			</nav>
 		</div>
@@ -37,7 +37,7 @@
 	<main class="main">
 		<div class="contenedor">	
 		<section class="info">
-			<article class="info__columna">
+			<article class="info__columna" id="info__columna">
                             <img src="img/f_img_1.png" alt="" class="info__img">
 				<h2 class="info__titulo">Descansa como nunca.</h2>
 				<p class="info__txt">Ofrecemos un grato ambiente de descanso para que olvides que estas de trabajo! </p>
@@ -95,9 +95,9 @@
 				<p class="footer-links">
 					<a href="#top">Inicio</a>
 					·
-					<a href="#juguetes">Servicios</a>
+					<a href="#info__columna">Servicios</a>
 					·
-					<a href="#">Galeria</a>
+					<a href="#juguetes">Galeria</a>
 					·
 					<a href="login.jsp">Iniciar Sesión</a>					·
 					

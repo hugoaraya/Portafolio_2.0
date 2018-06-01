@@ -26,7 +26,6 @@ public class Plato {
         this.descripcion = descripcion;
         this.precio = precio;
     }
-
     
     public int getId() {
         return id;

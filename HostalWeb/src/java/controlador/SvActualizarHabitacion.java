@@ -5,7 +5,7 @@
  */
 package controlador;
 
-import static dao.HabitacionesDAO.AgregarHabitacion;
+import static dao.HabitacionesDAO.modificarHabitaciones;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.SQLException;
@@ -22,8 +22,8 @@ import modelo.Habitacion;
  *
  * @author 420NiggaBytes
  */
-@WebServlet(name = "SvAgregarHabitacion", urlPatterns = {"/agregarHabitacion"})
-public class SvAgregarHabitacion extends HttpServlet {
+@WebServlet(name = "SvActualizarHabitacion", urlPatterns = {"/actualizarHabitacion"})
+public class SvActualizarHabitacion extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -33,7 +33,6 @@ public class SvAgregarHabitacion extends HttpServlet {
      * @param response servlet response
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
-     * @throws java.sql.SQLException
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, SQLException {
@@ -43,8 +42,7 @@ public class SvAgregarHabitacion extends HttpServlet {
           String accesorios = request.getParameter("accesorios");
           int precio = Integer.parseInt(request.getParameter("precio"));
           String descripcion = request.getParameter("descripcion");
-          String nombre = request.getParameter("nombre");
-          int estado = Integer.parseInt(request.getParameter("estado"));
+          String nombre = request.getParameter("nombre");         
           int capacidad = Integer.parseInt(request.getParameter("capacidad"));
           
           Habitacion hab = new Habitacion();
@@ -53,15 +51,12 @@ public class SvAgregarHabitacion extends HttpServlet {
           hab.setAccesorios(accesorios);
           hab.setPrecio_habitacion(precio);
           hab.setDescripcion(descripcion);
-          hab.setNombre_habitacion(nombre);
-          hab.setEstado_habitacion_id(estado);
+          hab.setNombre_habitacion(nombre);         
           hab.setCapacidad(capacidad);
           
-          AgregarHabitacion(hab);   
+          modificarHabitaciones(hab); 
           
-          
-          response.sendRedirect("listaHabitaciones.jsp");
-            
+           response.sendRedirect("listaHabitaciones.jsp");
         }
     }
 
@@ -80,7 +75,7 @@ public class SvAgregarHabitacion extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(SvAgregarHabitacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SvActualizarHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 
@@ -98,7 +93,7 @@ public class SvAgregarHabitacion extends HttpServlet {
         try {
             processRequest(request, response);
         } catch (SQLException ex) {
-            Logger.getLogger(SvAgregarHabitacion.class.getName()).log(Level.SEVERE, null, ex);
+            Logger.getLogger(SvActualizarHabitacion.class.getName()).log(Level.SEVERE, null, ex);
         }
     }
 

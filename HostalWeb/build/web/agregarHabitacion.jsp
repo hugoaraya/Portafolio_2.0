@@ -5,6 +5,7 @@
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page session="true"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -41,17 +42,23 @@
             }
 
         %>
-        <form action="SvAgregarHabitacion" method="post">
+        <form action="agregarHabitacion" method="post">
             <SELECT NAME="tipo_cama">
-                <OPTION VALUE="Vista al Mar">Vista al Mar</OPTION>
-                <OPTION VALUE="Piscina">Piscina</OPTION>
-                <OPTION VALUE="Jardin">Jardín</OPTION>
-                <OPTION VALUE="Quincho">Quincho</OPTION>
-                <OPTION VALUE="Estacionamiento">Estacionamiento</OPTION>
-            </SELECT></P>
-
-
-
+                <OPTION VALUE="Individual">Individual</OPTION>
+                <OPTION VALUE="Doble Cama">Doble Cama</OPTION>
+                <OPTION VALUE="Tiple Cama">Tiple Cama</OPTION>
+                <OPTION VALUE="Doble Camarote">Doble Camarote</OPTION>             
+            </SELECT>
+            <input type="text" name="accesorios">
+            <input type="number" name="precio" min="0">
+            <input type="text" name="descripcion">  
+            <input type="text" name="nombre">
+           <SELECT NAME="estado">
+                <OPTION VALUE="1">Disponible</OPTION>
+                <OPTION VALUE="2">Ocupada</OPTION>                   
+            </SELECT>
+            <input type="number" name="capacidad" min="0">
+            <input type="submit">
     </form>
 
 

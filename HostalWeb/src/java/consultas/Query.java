@@ -5,6 +5,8 @@
  */
 package consultas;
 
+import modelo.Habitacion;
+
 /**
  *
  * @author 420NiggaBytes
@@ -114,27 +116,56 @@ public class Query {
      public static String SQL_INSERTAR_HABITACIONES = "";
      public static String SQL_MODIFICAR_HABITACIONES = "";
      public static String SQL_MODIFICAR_ESTADO_HABITACIONES = "";
-     
+     public static String SQL_LISTAR_HABITACION_ID = "";
      //LISTAR
       public static String SQL_LISTAR_HABITACIONES_METODO() {
-         SQL_LISTAR_HABITACIONES = "select * from habitacion" ;
+         SQL_LISTAR_HABITACIONES = "select h.idhabitacion,h.tipo_cama,h.accesorio,h.precio,h.descripcion,h.nombre,e.descripcion,h.capacidad"
+                 + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion)" ;
         return  SQL_LISTAR_HABITACIONES;
+      }
+      public static String SQL_LISTAR_HABITACION_ID_METODO(int id) {
+         SQL_LISTAR_HABITACION_ID = "select idhabitacion,tipo_cama,accesorio,precio,descripcion,nombre,estado_habitacion_id,capacidad"
+                 + " from habitacion where idhabitacion =  '" + id + "'";
+        return  SQL_LISTAR_HABITACION_ID;
       }
       
       //INSERTAR
       public static String SQL_INSERTAR_HABITACIONES_METODO(String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, int estado_habitacion_id, int capacidad) {
-         SQL_INSERTAR_HABITACIONES = "INSERT INTO HABITACION VALUES(SEQ_HABITACION.NEXTVAL,'"+tipo_cama+ "','"+accesorios+ "','"+precio_habitacion+ "','"+descripcion+ "','"+nombre_habitacion+ "','"+estado_habitacion_id+ "','"+capacidad+"')";
+         SQL_INSERTAR_HABITACIONES = "INSERT INTO habitacion (idhabitacion,tipo_cama,accesorio,precio,descripcion,nombre,estado_habitacion_id,capacidad) VALUES(0,'"+tipo_cama+ "','"+accesorios+"','"+precio_habitacion+ "','"+descripcion+ "','"+nombre_habitacion+ "','"+estado_habitacion_id+ "','"+capacidad+"')";
         return  SQL_INSERTAR_HABITACIONES;
       }
       
-      //MODIFICAR
-      public static String SQL_MODIFICAR_HABITACIONES_METODO(int id_habitacion, String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, int estado_habitacion_id, int capacidad) {
-         SQL_MODIFICAR_HABITACIONES = "UPDATE HABITACION " ;
-        return  SQL_MODIFICAR_HABITACIONES;
-      }
+      //MODIFICAR 
+      public static String SQL_MODIFICAR_HABITACIONES_METODO(int id,String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, int capacidad) {
+        SQL_MODIFICAR_HABITACIONES = "UPDATE habitacion SET tipo_cama = '" + tipo_cama
+                + "', accesorio = '" + accesorios
+                + "', precio = '" + precio_habitacion
+                + "', descripcion = '" + descripcion
+                + "', nombre = '" + nombre_habitacion
+                + "', capacidad = '" + capacidad
+                + "'  where idhabitacion =" + id;
+        return SQL_MODIFICAR_HABITACIONES;
+    }
+      
+      
       //CAMBIAR ESTADO
       public static String SQL_MODIFICAR_ESTADO_HABITACIONES_METODO() {
-         SQL_MODIFICAR_ESTADO_HABITACIONES = "select * from habitacion" ;
+         SQL_MODIFICAR_ESTADO_HABITACIONES = "" ;
         return  SQL_MODIFICAR_ESTADO_HABITACIONES;
       }
+      
+     //MANTENEDOR COMEDOR
+      public static String SQL_LISTAR_COMEDOR = "";
+      
+       public static String SQL_LISTAR_COMEDOR_METODO() {
+         SQL_LISTAR_HABITACIONES = "select idplato,nombre_plato,descripcion,precio from plato";
+        return  SQL_LISTAR_HABITACIONES;
+      }
+       
+       
+       
+       
+       
+      
 }
+

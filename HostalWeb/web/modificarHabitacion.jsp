@@ -4,6 +4,9 @@
     Author     : 420NiggaBytes
 --%>
 
+<%@page import="java.util.ArrayList"%>
+<%@page import="modelo.Habitacion"%>
+<%@page import="dao.HabitacionesDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <%@page session="true"%>
 <!DOCTYPE html>
@@ -40,29 +43,35 @@
             } else {
                 out.print("<script>location.replace('index.jsp');</script>");
             }
+                   
+            
+           
+               String id = request.getParameter("id");
+               HabitacionesDAO daoco = new HabitacionesDAO();
+            Habitacion con = new Habitacion();
+            con = daoco.getHabitacionPorId(Integer.parseInt(id));
 
         %>
-        <form action="agregarHabitacion" method="post">
+        
+        
+        <form action="actualizarHabitacion" method="post">
+            
             <SELECT NAME="tipo_cama">
-                <OPTION VALUE="Individual">Individual</OPTION>
+                <OPTION VALUE="Individual" Selected>Individual</OPTION>
                 <OPTION VALUE="Doble Cama">Doble Cama</OPTION>
                 <OPTION VALUE="Tiple Cama">Tiple Cama</OPTION>
                 <OPTION VALUE="Doble Camarote">Doble Camarote</OPTION>             
             </SELECT>
-            <input type="text" name="accesorios">
-            <input type="number" name="precio" min="0">
-            <input type="text" name="descripcion">  
-            <input type="text" name="nombre">
-           <SELECT NAME="estado">
-                <OPTION VALUE="1">Disponible</OPTION>
-                <OPTION VALUE="2">Ocupada</OPTION>                   
-            </SELECT>
-            <input type="number" name="capacidad" min="0">
+            <input type="text" name="accesorios" value="<%=con.getAccesorios()%>">
+            <input type="text" name="precio" value="<%=con.getPrecio_habitacion()%>">
+            <input type="text" name="descripcion" value="<%=con.getDescripcion()%>">  
+            <input type="text" name="nombre" value="<%=con.getNombre_habitacion()%>">           
+            <input type="text" name="capacidad" value="<%=con.getCapacidad()%>">
             <input type="submit">
-    </form>
+ </form>
 
 
-    <%            } else {
+    <%          } else {
             response.getWriter().print("Por Favor Inicie Sesion.");
             response.sendRedirect("index.jsp");
         }

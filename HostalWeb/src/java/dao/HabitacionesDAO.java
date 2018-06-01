@@ -9,27 +9,95 @@ import java.sql.SQLException;
 import modelo.Habitacion;
 import static consultas.Query.*;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 
 /**
  *
  * @author 420NiggaBytes
  */
 public class HabitacionesDAO {
-    public static int AgregarHabitacion(Habitacion hab) throws SQLException {
-        int resultado = 0;
+    public static void AgregarHabitacion(Habitacion hab) throws SQLException {
+        
 
         String sql = SQL_INSERTAR_HABITACIONES_METODO(hab.getTipo_cama(),hab.getAccesorios(),hab.getPrecio_habitacion(),
-                hab.getDescripcion(),hab.getNombre_habitacion(),hab.getEstado_habitacion_id(),hab.getId_habitacion());
-
+                hab.getDescripcion(),hab.getNombre_habitacion(),hab.getEstado_habitacion_id(),hab.getCapacidad());
+        
         Connection conexion = new Conexion().fabricarConexion();
-        Statement st = conexion.createStatement();
+        Statement st = conexion.createStatement();         
 
-        resultado = st.executeUpdate(sql);
+         st.executeUpdate(sql);
 
         st.close();
-        conexion.close();
-
-        return resultado;
+        conexion.close();    
+       
     }
+    
+    public static ArrayList<Habitacion> listaHabitacion() throws SQLException {
+
+        String sql1 = SQL_LISTAR_HABITACIONES_METODO();
+        Connection conexion = new Conexion().fabricarConexion();
+
+        PreparedStatement ps = conexion.prepareStatement(sql1);
+        ResultSet rs;
+        rs = ps.executeQuery();
+        ArrayList<Habitacion> arreglo = new ArrayList<>();
+
+        while (rs.next()) {
+            Habitacion hab = new Habitacion();
+            hab.setId_habitacion(rs.getInt(1));
+            hab.setTipo_cama(rs.getString(2));
+            hab.setAccesorios(rs.getString(3));            
+            hab.setPrecio_habitacion(rs.getInt(4));
+            hab.setDescripcion(rs.getString(5));           
+            hab.setNombre_habitacion(rs.getString(6));
+            hab.setEstado_habitacion(rs.getString(7));
+            hab.setCapacidad(rs.getInt(8));
+            arreglo.add(hab);
+        }
+
+        rs.close();
+        conexion.close();
+        return arreglo;
+    }
+    
+      public static void modificarHabitaciones(Habitacion hab) throws SQLException {
+        
+        String sql = SQL_MODIFICAR_HABITACIONES_METODO(hab.getId_habitacion(),hab.getTipo_cama(),hab.getAccesorios(),hab.getPrecio_habitacion(),
+        hab.getDescripcion(),hab.getNombre_habitacion(),hab.getCapacidad());
+        Connection cn =  new Conexion().fabricarConexion();
+        Statement st = cn.createStatement();
+        st.executeUpdate(sql);
+        st.close();
+        cn.close();      
+    }
+      
+      
+      public static Habitacion getHabitacionPorId(int id) throws SQLException {
+        Habitacion hab = null;
+        
+            Connection cn = new Conexion().fabricarConexion();
+            Statement st = cn.createStatement();
+            String sql = SQL_LISTAR_HABITACION_ID_METODO(id);            
+            ResultSet rs = st.executeQuery(sql);
+
+            while (rs.next()) {
+                hab = new Habitacion();
+                hab.setId_habitacion(id);
+                hab.setTipo_cama(rs.getString(2));
+                hab.setAccesorios(rs.getString(3));            
+                hab.setPrecio_habitacion(rs.getInt(4));
+                hab.setDescripcion(rs.getString(5));           
+                hab.setNombre_habitacion(rs.getString(6));
+                hab.setEstado_habitacion_id(rs.getInt(7));
+                hab.setCapacidad(rs.getInt(8));           
+    }
+             rs.close();
+            st.close();
+            cn.close();
+       return hab;
+  }
+      
 }

@@ -16,21 +16,23 @@ public class Habitacion {
     private int precio_habitacion;
     private String descripcion;
     private String nombre_habitacion;
-    private int estado_habitacion_id;
+    private String estado_habitacion;
     private int capacidad;
+    private int estado_habitacion_id;
 
     public Habitacion() {
     }
 
-    public Habitacion(int id_habitacion, String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, int estado_habitacion_id, int capacidad) {
+    public Habitacion(int id_habitacion, String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, String estado_habitacion, int capacidad,int estado_habitacion_id) {
         this.id_habitacion = id_habitacion;
         this.tipo_cama = tipo_cama;
         this.accesorios = accesorios;
         this.precio_habitacion = precio_habitacion;
         this.descripcion = descripcion;
         this.nombre_habitacion = nombre_habitacion;
-        this.estado_habitacion_id = estado_habitacion_id;
+        this.estado_habitacion = estado_habitacion;
         this.capacidad = capacidad;
+        this.estado_habitacion_id = estado_habitacion_id;
     }
 
     public int getId_habitacion() {
@@ -81,12 +83,12 @@ public class Habitacion {
         this.nombre_habitacion = nombre_habitacion;
     }
 
-    public int getEstado_habitacion_id() {
-        return estado_habitacion_id;
+    public String getEstado_habitacion() {
+        return estado_habitacion;
     }
 
-    public void setEstado_habitacion_id(int estado_habitacion_id) {
-        this.estado_habitacion_id = estado_habitacion_id;
+    public void setEstado_habitacion(String estado_habitacion) {
+        this.estado_habitacion = estado_habitacion;
     }
 
     public int getCapacidad() {
@@ -95,6 +97,14 @@ public class Habitacion {
 
     public void setCapacidad(int capacidad) {
         this.capacidad = capacidad;
+    }
+
+    public int getEstado_habitacion_id() {
+        return estado_habitacion_id;
+    }
+
+    public void setEstado_habitacion_id(int estado_habitacion_id) {
+        this.estado_habitacion_id = estado_habitacion_id;
     }
     
     
