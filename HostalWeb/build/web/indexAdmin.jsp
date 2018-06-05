@@ -54,9 +54,19 @@
                         <p>Administrador </p>
                         <span>Hostal Doña Clarita</span>
                     </div>
-                    <br> 
-                    <a href='listaHabitaciones.jsp' title="Mantenedor Habitaciones" class="link">Mantenedor Habitaciones</a><br>
-                    <a href='listaComedor.jsp' title="Mantenedor Comedor" class="link">Mantenedor Comedor</a> 
+                    <div class="data">
+                        <div class="inner-data">
+                            <p>Habitaciones</p>
+                            <a href='listaHabitaciones.jsp' title="Mantenedor Habitaciones" class="link"><img src="img/habitacion.png" alt="Habitaciones" width="40" height="40" border="0"></a><br>
+                        </div>
+                        <div class="inner-data">
+                            <p>Comedor</p>
+                             <a href='listaComedor.jsp' title="Mantenedor Platos" class="link"><img src="img/platos.png" alt="Platos" width="40" height="40" border="0"></a> 
+                             <a href='listaMinuta.jsp' title="Mantenedor Minutas" class="link"><img src="img/minuta.png" alt="Minutas" width="40" height="40" border="0"></a> 
+                        </div> 
+                    </div>  
+                    
+                   
                 </div>
 
                 <div class="floating-icon">

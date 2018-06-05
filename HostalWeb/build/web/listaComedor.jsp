@@ -48,7 +48,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nro</th><th>Nombre Plato</th><th>Descripcion</th><th>Precio</th><th>   </th>
+                        <th>Nro</th><th>Nombre Plato</th><th><button onclick="location.href='agregarPlato.jsp'">Nueva</button></th>
                     </tr>
                </thead>   
                <%            
@@ -62,10 +62,9 @@
 
                <tr>
                    <td><p><%=temp.getId()%> </p></td>
-                   <td><p><%=temp.getNombre()%></p></td>
-                   <td><p><%=temp.getDescripcion()%></p></td>
-                   <td><p><%=temp.getPrecio()%></p></td> 
-                   <td><p><a href="#=<%=temp.getId()%>" title="Modificar"><img src="img/x.png" alt="Modificar" width="40" height="40" border="0"></a></p></td>
+                   <td><p><%=temp.getNombre_plato()%></p></td>
+                   
+                   <td><p><button onclick="location.href='modificarPlato.jsp?id=<%=temp.getId()%>'">Modificar</button></p></td>
                </tr>               
                     
                <%

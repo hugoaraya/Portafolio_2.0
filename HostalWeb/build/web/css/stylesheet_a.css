@@ -1,8 +1,9 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600');
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
 *{
   margin: 0;
   padding: 0;
+  
 }
 
 body{
@@ -13,7 +14,7 @@ body{
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;   
-    font-family: 'Open Sans', sans-serif;
+    font-family: "Roboto", sans-serif;
 }
 .x {
     text-decoration: none;
@@ -42,6 +43,7 @@ body{
   background: rgba(182, 11, 11, 0.7 );
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
 }
 
 .img-container{
@@ -64,6 +66,7 @@ body{
   float: left;
   padding: 30px 40px;
   box-sizing: border-box;
+  
 }
 
 .head{

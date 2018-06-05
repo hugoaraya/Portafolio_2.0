@@ -10,7 +10,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <script src="js/validaciones.js" type="text/javascript"></script>
+        <link href="css/formulariosVarios.css" rel="stylesheet" type="text/css"/>
+        <title>Perfil Administrador</title>
         <%
             response.setHeader("Pragma", "no-cache");
             response.setHeader("Cache-Control", "no-store");
@@ -42,25 +44,36 @@
             }
 
         %>
-        <form action="agregarHabitacion" method="post">
+        <div class="login-page">
+         <div class="form">
+             <h4 align="center">Formulario Habitación</h4>
+        <form id="agregar_habitacion_form" action="agregarHabitacion" method="post" class="login-form">
+            <input type="text" name="nombre" id="nombre" placeholder="Nombre Habitacion"><br>
             <SELECT NAME="tipo_cama">
-                <OPTION VALUE="Individual">Individual</OPTION>
+                <OPTION VALUE="Individual" selected>Individual</OPTION>
                 <OPTION VALUE="Doble Cama">Doble Cama</OPTION>
                 <OPTION VALUE="Tiple Cama">Tiple Cama</OPTION>
                 <OPTION VALUE="Doble Camarote">Doble Camarote</OPTION>             
-            </SELECT>
-            <input type="text" name="accesorios">
-            <input type="number" name="precio" min="0">
-            <input type="text" name="descripcion">  
-            <input type="text" name="nombre">
+            </SELECT><br>   
+            <input type="text" name="accesorios" id="accesorios" placeholder="Accesorios"><br>
+            <input type="text" name="precio" id="precio" placeholder="Precio"><br>
+            <SELECT NAME="capacidad">
+                <OPTION VALUE="1" selected>1 Huesped</OPTION>
+                <OPTION VALUE="2">2 Huesped</OPTION>
+                <OPTION VALUE="3">3 Huesped</OPTION>
+                <OPTION VALUE="4">4 Huesped</OPTION>             
+            </SELECT><br>            
            <SELECT NAME="estado">
                 <OPTION VALUE="1">Disponible</OPTION>
-                <OPTION VALUE="2">Ocupada</OPTION>                   
-            </SELECT>
-            <input type="number" name="capacidad" min="0">
-            <input type="submit">
+                <OPTION VALUE="3">No disponible por mantención</OPTION>                   
+            </SELECT><br>
+            <textarea name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>  
+           <br><br>
+            <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
+           <p class="message"><a href="listaHabitaciones.jsp">Volver</a></p>
     </form>
-
+  </div>
+</div>
 
     <%            } else {
             response.getWriter().print("Por Favor Inicie Sesion.");

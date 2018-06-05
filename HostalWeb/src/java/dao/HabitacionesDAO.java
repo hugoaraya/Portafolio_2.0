@@ -63,15 +63,17 @@ public class HabitacionesDAO {
         return arreglo;
     }
     
-      public static void modificarHabitaciones(Habitacion hab) throws SQLException {
+      public static void modificarHabitaciones(int id,String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, int capacidad) throws SQLException {
         
-        String sql = SQL_MODIFICAR_HABITACIONES_METODO(hab.getId_habitacion(),hab.getTipo_cama(),hab.getAccesorios(),hab.getPrecio_habitacion(),
-        hab.getDescripcion(),hab.getNombre_habitacion(),hab.getCapacidad());
-        Connection cn =  new Conexion().fabricarConexion();
-        Statement st = cn.createStatement();
-        st.executeUpdate(sql);
+        String sql = SQL_MODIFICAR_HABITACIONES_METODO(id, tipo_cama, accesorios, precio_habitacion, descripcion, nombre_habitacion, capacidad);
+         
+        Connection conexion = new Conexion().fabricarConexion();
+        Statement st = conexion.createStatement();         
+
+         st.executeUpdate(sql);
+
         st.close();
-        cn.close();      
+        conexion.close();      
     }
       
       

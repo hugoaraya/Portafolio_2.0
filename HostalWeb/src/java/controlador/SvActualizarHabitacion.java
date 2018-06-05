@@ -38,6 +38,7 @@ public class SvActualizarHabitacion extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
+          int idhabitacion = Integer.parseInt(request.getParameter("id_habitacion"));
           String tipo_cama = request.getParameter("tipo_cama");
           String accesorios = request.getParameter("accesorios");
           int precio = Integer.parseInt(request.getParameter("precio"));
@@ -54,7 +55,7 @@ public class SvActualizarHabitacion extends HttpServlet {
           hab.setNombre_habitacion(nombre);         
           hab.setCapacidad(capacidad);
           
-          modificarHabitaciones(hab); 
+          modificarHabitaciones(idhabitacion, tipo_cama, accesorios, precio, descripcion, nombre, capacidad); 
           
            response.sendRedirect("listaHabitaciones.jsp");
         }

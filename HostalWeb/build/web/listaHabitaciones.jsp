@@ -42,12 +42,12 @@
             <div class="floating-icon">
                     <a class="x" title="Volver" href='indexAdmin.jsp'>X</a>
               </div>
-            <a href="agregarHabitacion.jsp">Habitacion</a>
+           
         <div id="main-container">
             <table>
                 <thead>
                     <tr>
-                        <th>Nro</th><th>Nombre Habitacion</th><th>Tipo Cama</th><th>Accesorio</th><th>Precio</th><th>Capacidad</th><th>Disponibilidad</th><th>   </th>
+                        <th>Nro</th><th>Nombre Habitacion</th><th>Tipo Cama</th><th>Accesorio</th><th>Precio</th><th>Capacidad</th><th>Disponibilidad</th><th> <button onclick="location.href='agregarHabitacion.jsp'">Nueva</button></th>
                     </tr>
                </thead>   
                <%            
@@ -67,9 +67,8 @@
                    <td><p><%=temp.getPrecio_habitacion()%></p></td> 
                    <td><p><%=temp.getCapacidad()%></p></td> 
                    <td><p><%=temp.getEstado_habitacion()%></p></td> 
-                   <td><p><a href="modificarHabitacion.jsp?id=<%=temp.getId_habitacion()%>" title="Modificar"><img src="img/x.png" alt="Modificar" width="40" height="40" border="0"></a></p></td>
-               </tr>               
-                    
+                   <td><p> <button onclick="location.href='modificarHabitacion.jsp?id=<%=temp.getId_habitacion()%>'">Modificar</button></p></td>
+               </tr>       
                <%
                    
                    }

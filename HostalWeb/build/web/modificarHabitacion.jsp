@@ -13,7 +13,9 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Perfil Administrador</title>
+        <script src="js/validaciones.js" type="text/javascript"></script>
+         <link href="css/formulariosVarios.css" rel="stylesheet" type="text/css"/>
         <%
             response.setHeader("Pragma", "no-cache");
             response.setHeader("Cache-Control", "no-store");
@@ -53,23 +55,44 @@
 
         %>
         
-        
-        <form action="actualizarHabitacion" method="post">
-            
+         <div class="login-page">
+         <div class="form">
+             <h4 align="center">Formulario Habitación</h4>
+        <form id="agregar_habitacion_form"  action="actualizarHabitacion" method="post" class="login-form">
+            <input type="hidden" name="id_habitacion" value="<%=con.getId_habitacion()%>">   
+            <label>Nombre Habitacion:</label><br>
+                <input type="text" name="nombre" id="nombre" value="<%=con.getNombre_habitacion()%>"><br>
+                <label>Tipo de cama:</label><br>
             <SELECT NAME="tipo_cama">
-                <OPTION VALUE="Individual" Selected>Individual</OPTION>
+                <OPTION VALUE="Individual" selected>Individual</OPTION>
                 <OPTION VALUE="Doble Cama">Doble Cama</OPTION>
                 <OPTION VALUE="Tiple Cama">Tiple Cama</OPTION>
                 <OPTION VALUE="Doble Camarote">Doble Camarote</OPTION>             
-            </SELECT>
-            <input type="text" name="accesorios" value="<%=con.getAccesorios()%>">
-            <input type="text" name="precio" value="<%=con.getPrecio_habitacion()%>">
-            <input type="text" name="descripcion" value="<%=con.getDescripcion()%>">  
-            <input type="text" name="nombre" value="<%=con.getNombre_habitacion()%>">           
-            <input type="text" name="capacidad" value="<%=con.getCapacidad()%>">
-            <input type="submit">
+            </SELECT><br>
+            <label>Accesorios:</label><br>
+            <input type="text" name="accesorios" id="accesorios" value="<%=con.getAccesorios()%>"><br>
+            <label>Precio:</label><br>
+            <input type="text" name="precio" id="precio" value="<%=con.getPrecio_habitacion()%>"><br>
+            <label>Capacidad:</label><br>
+            <SELECT NAME="capacidad">
+                <OPTION VALUE="1" selected>1 Huesped</OPTION>
+                <OPTION VALUE="2">2 Huesped</OPTION>
+                <OPTION VALUE="3">3 Huesped</OPTION>
+                <OPTION VALUE="4">4 Huesped</OPTION>             
+            </SELECT><br>  
+            <label>Estado de la Habitacion:</label><br>
+           <SELECT NAME="estado">
+                <OPTION VALUE="1">Disponible.</OPTION>
+                <OPTION VALUE="3">No disponible por mantención.</OPTION>                   
+            </SELECT><br>
+            <label>Descripcion de Habitacion:</label><br>
+            <textarea name="descripcion" id="descripcion"><%=con.getDescripcion()%></textarea>  
+           <br><br>
+            <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">  
+           <p class="message"><a href="listaHabitaciones.jsp">Volver</a></p>
  </form>
-
+</div>
+</div>
 
     <%          } else {
             response.getWriter().print("Por Favor Inicie Sesion.");

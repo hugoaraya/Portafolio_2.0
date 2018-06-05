@@ -5,8 +5,6 @@
  */
 package consultas;
 
-import modelo.Habitacion;
-
 /**
  *
  * @author 420NiggaBytes
@@ -120,7 +118,7 @@ public class Query {
      //LISTAR
       public static String SQL_LISTAR_HABITACIONES_METODO() {
          SQL_LISTAR_HABITACIONES = "select h.idhabitacion,h.tipo_cama,h.accesorio,h.precio,h.descripcion,h.nombre,e.descripcion,h.capacidad"
-                 + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion)" ;
+                 + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion) order by h.idhabitacion asc" ;
         return  SQL_LISTAR_HABITACIONES;
       }
       public static String SQL_LISTAR_HABITACION_ID_METODO(int id) {
@@ -143,29 +141,113 @@ public class Query {
                 + "', descripcion = '" + descripcion
                 + "', nombre = '" + nombre_habitacion
                 + "', capacidad = '" + capacidad
-                + "'  where idhabitacion =" + id;
+                + "'  where idhabitacion ='" + id + "'";
         return SQL_MODIFICAR_HABITACIONES;
     }
       
-      
-      //CAMBIAR ESTADO
-      public static String SQL_MODIFICAR_ESTADO_HABITACIONES_METODO() {
-         SQL_MODIFICAR_ESTADO_HABITACIONES = "" ;
-        return  SQL_MODIFICAR_ESTADO_HABITACIONES;
-      }
-      
+            
      //MANTENEDOR COMEDOR
-      public static String SQL_LISTAR_COMEDOR = "";
+      public static String SQL_LISTAR_PLATO = "";
+      public static String SQL_LISTAR_PLATO_ID = "";
+      public static String SQL_AGREGAR_PLATO = "";
+      public static String SQL_MODIFICAR_PLATO = "";
+      public static String SQL_LISTAR_MINUTA = "";
+      public static String SQL_LISTAR_MINUTA_ID = "";
+      public static String SQL_AGREGAR_MINUTA = "";
+      public static String SQL_MODIFICAR_MINUTA = "";
       
-       public static String SQL_LISTAR_COMEDOR_METODO() {
-         SQL_LISTAR_HABITACIONES = "select idplato,nombre_plato,descripcion,precio from plato";
-        return  SQL_LISTAR_HABITACIONES;
+       public static String SQL_LISTAR_PLATO_METODO() {
+         SQL_LISTAR_PLATO = "select idplato,nombre_plato from plato";
+        return  SQL_LISTAR_PLATO;
       }
        
-       
-       
-       
-       
+       public static String SQL_LISTAR_PLATO_ID_METODO(int id) {
+         SQL_LISTAR_PLATO_ID = "select idplato,nombre_plato from plato where idplato =  '" + id + "'";
+        return  SQL_LISTAR_PLATO_ID;
+      }
       
+      //INSERTAR
+      public static String SQL_INSERTAR_PLATO_METODO(String nombre_plato) {
+         SQL_AGREGAR_PLATO = "INSERT INTO plato(idplato,nombre_plato) VALUES(0,'"+nombre_plato+ "')";
+        return  SQL_AGREGAR_PLATO;
+      }
+      
+      //MODIFICAR 
+      public static String SQL_MODIFICAR_PLATO_METODO(int id,String nombre_plato) {
+        SQL_MODIFICAR_PLATO = "UPDATE plato SET nombre_plato = '" + nombre_plato + "'  where idplato ='" + id + "'";
+        return SQL_MODIFICAR_PLATO;
+    }
+       
+      //minuta
+      
+        public static String SQL_LISTAR_MINUTA_METODO() {
+         SQL_LISTAR_MINUTA = "select idminuta,nombre_minuta,to_char(fecha_inicio,'dd/mm/yyyy'),to_char(fecha_fin,'dd/mm/yyyy') from minuta";
+        return  SQL_LISTAR_MINUTA;
+      }
+       
+       public static String SQL_LISTAR_MINUTA_ID_METODO(int id) {
+         SQL_LISTAR_MINUTA_ID = "select idminuta,nombre_minuta,to_char(fecha_inicio,'dd/mm/yyyy'),to_char(fecha_fin,'dd/mm/yyyy') from minuta where idminuta =  '" + id + "'";
+        return  SQL_LISTAR_MINUTA_ID;
+      }
+      
+      //INSERTAR
+      public static String SQL_INSERTAR_MINUTA_METODO(String nombre_minuta,String fecha_inicio,String fecha_fin) {
+         SQL_AGREGAR_MINUTA = "INSERT INTO MINUTA(idminuta,nombre_minuta,fecha_inicio,fecha_fin) VALUES(0,'"+nombre_minuta+ "','"+fecha_inicio+ "','"+fecha_fin+"')";
+        return  SQL_AGREGAR_MINUTA;
+      }                                                                                                      
+      
+      //MODIFICAR 
+      public static String SQL_MODIFICAR_MINUTA_METODO(int id,String nombre_minuta,String fecha_inicio,String fecha_fin) {
+        SQL_MODIFICAR_MINUTA = "UPDATE minuta SET nombre_minuta = '" + nombre_minuta
+                + "', fecha_inicio = '" + fecha_inicio
+                + "', fecha_fin = '" + fecha_fin
+                + "'  where idminuta ='" + id + "'";
+        return SQL_MODIFICAR_MINUTA;
+    }
+       
+       
+      //HUESPED
+      
+      public static String SQL_LISTAR_HUESPED = "";
+      public static String SQL_LISTAR_HUESPED_ID= "";
+      public static String SQL_AGREGAR_HUESPED = "";
+      public static String SQL_MODIFICAR_HUESPED = "";
+       
+       public static String SQL_LISTAR_HUESPED_METODO(int id_empresa) {
+         SQL_LISTAR_HUESPED = "select h.idhuesped,h.rut,h.dv,h.nombre,h.apellido,h.cargo,h.correo,h.telefono,e.estado from huesped h "
+                 + "inner join estado_huesped e on(h.estado_huesped_id = e.idestado_huesped) where empresa_id = '" + id_empresa + "' order by h.apellido asc";
+        return  SQL_LISTAR_HUESPED;
+      }
+       
+       public static String SQL_LISTAR_HUESPED_ID_METODO(int id_huesped) {
+         SQL_LISTAR_HUESPED_ID = "select idhuesped,empresa_id,rut,dv,nombre,apellido,cargo,correo,telefono,estado_huesped_id from huesped where idhuesped = '" + id_huesped + "'";
+        return  SQL_LISTAR_HUESPED_ID;
+      }
+       
+          public static String SQL_MODIFICAR_HUESPED_METODO(int id_huesped, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa, int id_estado_huesped) {
+        SQL_MODIFICAR_HUESPED = "UPDATE huesped SET nombre = '" + nombre   
+                  + "', apellido = '" + apellido
+                  + "', telefono = '" + numero_tefono
+                + "', correo = '" + correo
+                + "', cargo = '" + cargo
+                + "', empresa_id = '" + id_empresa
+                + "', estado_huesped_id = '" + id_estado_huesped
+                + "'  where idhuesped ='" + id_huesped+ "'";
+        return SQL_MODIFICAR_HUESPED;
+}
+          public static String SQL_AGREGAR_HUESPED_METODO(String rut,String dv, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa, int id_estado_huesped) {
+         SQL_AGREGAR_HUESPED = "INSERT INTO huesped (idhuesped,rut, dv, nombre, apellido, telefono,correo,cargo,empresa_id, estado_huesped_id) VALUES (0,'"+rut+ "',"
+                 + "'"+dv+ "',"
+                 + "'"+nombre+ "',"
+                 + "'"+apellido+ "',"
+                 + "'"+numero_tefono+ "',"
+                 + "'"+correo+ "',"
+                 + "'"+cargo+ "',"
+                 + "'"+id_empresa+ "',"
+                 + "'"+id_estado_huesped+"')";
+        return  SQL_AGREGAR_HUESPED;
+      } 
+
+
 }
 
