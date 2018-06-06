@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F0356B7E-211D-32FA-1D93-E9A2659BE03F" name="servicio">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="F12FD917-62C8-71DF-101D-2B50DD8E6D38" name="familia_producto">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:47:02 UTC</createdTime>
+<createdTime>2018-06-06 20:05:02 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
-<ordsAlias>table_19</ordsAlias>
+<ordsAlias>table_25</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idServicio" id="A7C235B8-C441-6BC0-C008-A7C39D75E7EC">
+<Column name="idFamilia_producto" id="187086A5-E337-6C50-6BC6-0108DBC5550F">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:47:26 UTC</createdTime>
+<createdTime>2018-06-06 20:05:44 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,38 +18,28 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="descripcion" id="1B8277D3-D70D-88B7-B62A-3B27EA95C527">
+<Column name="descripcion" id="7AA11F40-41E9-5CAC-E2A3-31B4FB34C374">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:47:26 UTC</createdTime>
+<createdTime>2018-06-06 20:05:44 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="precio" id="59DBF7BC-C519-5015-071C-A157701F74B6">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 19:50:05 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>255</dataTypeSize>
+<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="DA274101-5BDA-23D0-6BD1-B8DABD3521E2" name="servicio_PK">
+<ind_PK_UK id="6FB980CA-5C82-BFD7-6CB9-0837D7C7066C" name="familia_producto_PK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-10 01:47:26 UTC</createdTime>
+<createdTime>2018-06-06 20:05:44 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A7C235B8-C441-6BC0-C008-A7C39D75E7EC"/>
+<colUsage columnID="187086A5-E337-6C50-6BC6-0108DBC5550F"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

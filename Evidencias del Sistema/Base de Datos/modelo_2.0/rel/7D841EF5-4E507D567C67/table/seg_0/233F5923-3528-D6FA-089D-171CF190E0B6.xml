@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="8DACF31D-47B6-81FD-0BCE-C663F34DA322">
+<Column name="idProveedor" id="8DACF31D-47B6-81FD-0BCE-C663F34DA322">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:07:43 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -53,17 +53,6 @@
 <Column name="direccion" id="83356144-ABC3-80AE-DA43-FE8A62BEE6C8">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:08:28 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="rubro" id="AD8649D8-3E75-550C-35D1-C220A326018B">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:08:42 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>

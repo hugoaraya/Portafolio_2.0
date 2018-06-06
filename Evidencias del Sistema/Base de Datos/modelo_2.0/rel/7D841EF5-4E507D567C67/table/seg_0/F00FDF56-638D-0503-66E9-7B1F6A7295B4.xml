@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="048A41CC-13F5-DF39-FB1E-6704DEA000D7">
+<Column name="idOrden_Pedido" id="048A41CC-13F5-DF39-FB1E-6704DEA000D7">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:05:43 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -80,6 +80,20 @@
 <colAssociation fkAssociation="D8DFB62D-FC0D-4F82-66D6-0C4B3F71CED4" referredColumn="F1C231AE-B6E1-1E1A-9FCB-BED738A3E83C"/>
 </associations>
 </Column>
+<Column name="rubro_id" id="285EB085-A0DA-73AB-63F9-14B146F9B479">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:08:03 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="48C994DA-51D1-BA9C-81E5-DF0D7C4ADE28" referredColumn="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="77E88528-E2E9-5B2A-963E-B0D31BCBE529" name="orden_pedido_PK">
@@ -121,6 +135,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="6A820929-A7A3-37D5-0997-447D7BEE0218"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="5D490147-D3E6-776B-E64E-47ADB374F2DC" name="orden_pedido_rubro_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:08:03 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="285EB085-A0DA-73AB-63F9-14B146F9B479"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

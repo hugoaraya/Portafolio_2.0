@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="3576E2F5-EB59-63AE-F725-C4D507A0B84C">
+<Column name="idProducto" id="3576E2F5-EB59-63AE-F725-C4D507A0B84C">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:09:50 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -49,28 +49,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="familia" id="B5903141-154C-EA4E-67D3-9B61A90E8FAD">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:12:04 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="tipo_producto" id="DD18ABAF-D760-E5A6-5BBF-30910FFF168F">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:12:18 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="descripcion" id="E36C31F6-9E21-2205-CDD0-CFB2C30C6AC2">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:13:27 UTC</createdTime>
@@ -102,6 +80,34 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
+<Column name="tipo_producto_id" id="B3EE7BA9-F4D1-DA94-393B-08AB2D7771CE">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:06:57 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="869F4C9C-8C1E-C299-D184-5BEBBC9899F5" referredColumn="9693A559-E063-6FC0-CA56-DE7C81381D4D"/>
+</associations>
+</Column>
+<Column name="familia_producto_id" id="5DB611AA-24B0-8AC6-3567-584322B10034">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:06 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="6C00D6B5-6800-5E76-2D86-D021DDC402FC" referredColumn="187086A5-E337-6C50-6BC6-0108DBC5550F"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="52587FCB-D467-5FE7-A9B5-C98FD2858E84" name="producto_PK">
@@ -113,6 +119,26 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="3576E2F5-EB59-63AE-F725-C4D507A0B84C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F10F311B-97F2-BA0A-6109-E4E61B6604CE" name="producto_tipo_producto_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:06:57 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B3EE7BA9-F4D1-DA94-393B-08AB2D7771CE"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="A3F2B4A7-89F5-18A9-C9C7-63D24708AAD5" name="producto_familia_producto_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:06 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="5DB611AA-24B0-8AC6-3567-584322B10034"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

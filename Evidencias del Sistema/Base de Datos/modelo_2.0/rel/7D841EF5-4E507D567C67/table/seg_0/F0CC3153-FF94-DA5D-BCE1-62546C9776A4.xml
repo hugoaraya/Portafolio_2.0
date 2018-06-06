@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="99085901-CC77-9DEC-322D-8E5E37AD7552">
+<Column name="idHuesped" id="99085901-CC77-9DEC-322D-8E5E37AD7552">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:26:31 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -82,17 +82,6 @@
 <ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="cargo" id="BF80BF19-13AE-B34D-03D5-99AB35821279">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:29:15 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>50</dataTypeSize>
-<ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="empresa_id" id="2797588F-0277-27E1-25DE-2CF0CC460611">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:54:19 UTC</createdTime>
@@ -119,6 +108,20 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 <associations>
 <colAssociation fkAssociation="3CE4BFFE-536E-C28B-45C2-E788D299E172" referredColumn="71B4F9F5-8EEF-0B37-050D-0AC07A6C6C0C"/>
+</associations>
+</Column>
+<Column name="cargo_id" id="35876A53-990B-5532-96C0-79B019F4678E">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:00:44 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4E20FD6A-377F-E99C-1E1A-F7706245E850" referredColumn="61FBC77C-8538-6439-BE2A-996222A32C64"/>
 </associations>
 </Column>
 </columns>
@@ -152,6 +155,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="14FD5958-A2C2-25AA-F329-5DF08FD02891"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="80237DD1-C66A-27B1-7F3C-1D8FFFC74B7B" name="huesped_cargo_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:00:44 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="35876A53-990B-5532-96C0-79B019F4678E"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
