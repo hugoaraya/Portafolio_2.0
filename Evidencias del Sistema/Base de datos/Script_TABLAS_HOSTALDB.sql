@@ -102,7 +102,8 @@ CREATE TABLE habitacion (
     descripcion            VARCHAR2(255) NOT NULL,
     nombre                 VARCHAR2(50) NOT NULL,
     estado_habitacion_id   INTEGER,
-    fechas_reservas_id     INTEGER
+    fechas_reservas_id     INTEGER,
+	capacidad			   INTEGER NOT NULL
 );
 
 ALTER TABLE habitacion ADD CONSTRAINT habitacion_pk PRIMARY KEY ( idhabitacion );
