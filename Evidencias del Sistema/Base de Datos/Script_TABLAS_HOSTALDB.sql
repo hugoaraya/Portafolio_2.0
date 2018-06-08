@@ -328,10 +328,6 @@ ALTER TABLE orden_pedido
         REFERENCES empleado ( idempleado );
 
 ALTER TABLE orden_pedido
-    ADD CONSTRAINT orden_pedido_rubro_fk FOREIGN KEY ( rubro_id )
-        REFERENCES rubro ( idrubro );
-
-ALTER TABLE orden_pedido
     ADD CONSTRAINT orden_proveedor_fk FOREIGN KEY ( proveedor_id )
         REFERENCES proveedor ( idproveedor );
 
