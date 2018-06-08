@@ -167,8 +167,7 @@ CREATE TABLE orden_pedido (
     empleado_id              INTEGER ,
     fecha                    DATE NOT NULL,
     proveedor_id             INTEGER ,
-    estado_orden_pedido_id   INTEGER ,
-    rubro_id                 INTEGER 
+    estado_orden_pedido_id   INTEGER 
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idorden_pedido );
@@ -200,7 +199,8 @@ CREATE TABLE proveedor (
     dv            CHAR(1) NOT NULL,
     nombre        VARCHAR2(50) NOT NULL,
     direccion     VARCHAR2(50) NOT NULL,
-    usuario_id    INTEGER 
+    usuario_id    INTEGER,
+	rubro_id      INTEGER 
 );
 
 ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idproveedor );
@@ -346,6 +346,10 @@ ALTER TABLE producto
 ALTER TABLE proveedor
     ADD CONSTRAINT proveedor_usuario_fk FOREIGN KEY ( usuario_id )
         REFERENCES usuario ( idusuario );
+		
+ALTER TABLE proveedor
+    ADD CONSTRAINT proveedor_rubro_fk FOREIGN KEY ( rubro_id )
+        REFERENCES rubro ( idrubro );
 
 ALTER TABLE recepcion_producto
     ADD CONSTRAINT recepcion_estado_fk FOREIGN KEY ( estado_recepcion_id )
