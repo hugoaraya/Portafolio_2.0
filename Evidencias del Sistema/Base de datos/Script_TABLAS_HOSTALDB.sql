@@ -57,8 +57,7 @@ ALTER TABLE estado_huesped ADD CONSTRAINT estado_huesped_pk PRIMARY KEY ( idesta
 
 CREATE TABLE estado_orden_pedido (
     idestado_orden_pedido   INTEGER NOT NULL,
-    descripcion             VARCHAR2(255) NOT NULL,
-	comentario              VARCHAR2(255)
+    descripcion             VARCHAR2(255) NOT NULL
 );
 
 ALTER TABLE estado_orden_pedido ADD CONSTRAINT estado_orden_pedido_pk PRIMARY KEY ( idestado_orden_pedido );
@@ -167,7 +166,8 @@ CREATE TABLE orden_pedido (
     empleado_id              INTEGER ,
     fecha                    DATE NOT NULL,
     proveedor_id             INTEGER ,
-    estado_orden_pedido_id   INTEGER 
+    estado_orden_pedido_id   INTEGER,
+	comentario              VARCHAR2(255) 
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idorden_pedido );
