@@ -68,7 +68,8 @@
             <p class="message">Fecha Fin Actual: <%=con.getFecha_fin()%></p><br>
             <input type="date" name="fecha_fin" id="fechaFin" min="<%=localDate%>"><br><br>
              <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
-            <p class="message"><a href="listaMinuta.jsp">Volver</a></p>
+            <p class="message"><a href="listaMinuta.jsp">Volver</a></p><br><br>
+          <span id="error" ></span>
           
         </form>
   </div>

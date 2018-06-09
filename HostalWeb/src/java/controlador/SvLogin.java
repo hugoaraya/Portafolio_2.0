@@ -61,7 +61,8 @@ public class SvLogin extends HttpServlet {
                         break;
                         
                      default:
-                         out.write("<a>Usuario  o contraseña incorrecta.</a>");
+                         response.sendRedirect("login.jsp?error=1");
+                         
                          break;
                 }
             }

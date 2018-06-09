@@ -13,17 +13,20 @@ public class Query {
 
     //USUARIO   
     public static String SQL_USUARIO_POR_NIVEL = "";
+    public static String SQL_GET_CLAVE = "";
 
-    public static String SQL_LISTAR_PROVEEDOR_USUARIO_METODO(String user, String pass) {
+    public static String SQL_USUARIO_POR_NIVEL_METODO(String user, String pass) {
         SQL_USUARIO_POR_NIVEL = "select tipo_usuario_id from usuario where nombre_usuario = '"
                 + user + "'and contrasenia = '" + pass + "'";
         return SQL_USUARIO_POR_NIVEL;
-    }
+    }    
     //PLATO  
     public static String SQL_PLATODAO_READ = "Select nombre_plato,descripcion, precio from plato where idplato = ? ";
     //PROVEEDOR
     public static String SQL_LISTAR_DETALLE_ORDEN = "";
     public static String SQL_LISTAR_ORDEN_PEDIDO = "";
+    public static String SQL_LISTAR_ORDEN_PEDIDO_ID = "";
+    public static String SQL_ACEPTAR_O_RECHAZAR_ORDEN = "";
     public static String SQL_LISTAR_PROVEEDOR_USUARIO = "";
     public static String SQL_PEDIR_ID_PROVEEDOR = "";
     public static String SQL_PRECIO_STOCK_TOTAL = "";
@@ -41,16 +44,28 @@ public class Query {
 
     //LISTAR LAS ORDENES DE PEDIDO POR ID PROVEEDOR
     public static String SQL_LISTAR_ORDEN_PEDIDO_POR_PROVEEDOR_METODO(int id) {
-        SQL_LISTAR_ORDEN_PEDIDO = "SELECT O.NRO_ORDEN,E.NOMBRE,E.APELLIDO,O.FECHA,P.RUT,P.DV,T.DESCRIPCION FROM ORDEN_PEDIDO O"
+        SQL_LISTAR_ORDEN_PEDIDO = "SELECT O.NRO_ORDEN,E.NOMBRE,E.APELLIDO,O.FECHA,P.RUT,P.DV,T.DESCRIPCION,O.IDORDEN_PEDIDO FROM ORDEN_PEDIDO O"
                 + " INNER JOIN EMPLEADO E "
                 + "ON(O.EMPLEADO_ID = E.IDEMPLEADO) "
                 + "INNER JOIN PROVEEDOR P "
                 + "ON(O.PROVEEDOR_ID = P.IDPROVEEDOR) "
                 + "INNER JOIN ESTADO_ORDEN_PEDIDO T ON(O.ESTADO_ORDEN_PEDIDO_ID = T.IDESTADO_ORDEN_PEDIDO) "
-                + "WHERE O.PROVEEDOR_ID = '" + id + "'";
+                + "WHERE O.PROVEEDOR_ID = '" + id + "' and T.DESCRIPCION = 'Pendiente' ";
         return SQL_LISTAR_ORDEN_PEDIDO;
     }
-
+    //LISTAR ORDEN DE PEDIDO POR ID
+     public static String SQL_LISTAR_ORDEN_PEDIDO_ID_METODO(int id) {
+         SQL_LISTAR_ORDEN_PEDIDO_ID = "select idorden_pedido from orden_pedido where idorden_pedido =  '" + id + "'";
+        return  SQL_LISTAR_ORDEN_PEDIDO_ID;
+      }
+     //MODIFICAR ESTADO ORDEN DE PEDIDO     
+    public static String SQL_ACEPTAR_O_RECHAZAR_ORDEN_METODO(int id,int estado_orden_pedido_id,String comentarios) {
+        SQL_ACEPTAR_O_RECHAZAR_ORDEN = "UPDATE orden_pedido SET estado_orden_pedido_id = '" + estado_orden_pedido_id +
+                "', comentarios = '" + comentarios +            
+                "'  where idorden_pedido ='" + id + "'";
+        return SQL_ACEPTAR_O_RECHAZAR_ORDEN;
+    }
+  
     //LISTAR EL DETALLE DE LOS PRODUCTOS DE UNA ORDEN DE PEDIDO SEGUN PROVEEDOR  
     public static String SQL_LISTAR_DETALLE_ORDEN_METODO(int nro_orden) {
         SQL_LISTAR_DETALLE_ORDEN = " select p.nombre,"
@@ -77,7 +92,7 @@ public class Query {
     //DATOS PERFIL EMPRESA
 
     public static String SQL_LISTAR_EMPRESA_USUARIO_METODO(String usuario) {
-        SQL_LISTAR_EMPRESA_USUARIO = "SELECT E.IDEMPRESA,E.RUT,E.DV,E.NOMBRE,E.DIRECCION,E.TELEFONO,E.CORREO,U.NOMBRE_USUARIO FROM EMPRESA"
+        SQL_LISTAR_EMPRESA_USUARIO = "SELECT E.IDEMPRESA,E.RUT,E.DV,E.NOMBRE,E.DIRECCION,E.TELEFONO,E.CORREO,U.NOMBRE_USUARIO,E.USUARIO_ID FROM EMPRESA"
                 + " E INNER JOIN USUARIO U "
                 + "ON(E.USUARIO_ID = U.IDUSUARIO) "
                 + "WHERE E.RUT = '" + usuario + "'";
@@ -247,7 +262,15 @@ public class Query {
                  + "'"+id_estado_huesped+"')";
         return  SQL_AGREGAR_HUESPED;
       } 
-
+          
+      //CAMBIAR CONTRASEÑA EMPRESA
+      public static String SQL_CAMBIAR_PASS_EMPRESA = "";
+      
+      //MODIFICAR 
+      public static String SQL_CAMBIAR_PASS_EMPRESA_METODO(String id,String constrasenia) {
+        SQL_CAMBIAR_PASS_EMPRESA = "UPDATE USUARIO SET contrasenia = '" + constrasenia + "' where idusuario ='" + id + "'";
+        return SQL_CAMBIAR_PASS_EMPRESA;
+    }
 
 }
 

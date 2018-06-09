@@ -37,6 +37,7 @@ public class EmpresaDAO {
             emp.setDireccion(rs.getString(5));
             emp.setTelefono(rs.getInt(6));
             emp.setCorreo(rs.getString(7));
+            emp.setUsuario_id(rs.getString(9));
             arreglo.add(emp);
         }
 

@@ -32,7 +32,18 @@
                 <input type="password" name="password" placeholder="Contraseña" required>
                 <input type="submit" name="submit" value="Login">  
             </form>
+            <%
                 
+             
+                if(request.getParameter("error") != null){
+                    int error = Integer.parseInt(request.getParameter("error"));
+             if(error == 1){
+                 %>
+                 <p>Usuario  o contraseña incorrecta.</p>
+                 <%
+            }
+}
+            %>    
                 
         </div>
 

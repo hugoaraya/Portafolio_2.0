@@ -20,7 +20,7 @@ public class UsuarioDAO {
         int nivel = 0;
         try {
             //se crea la query
-            String sql = SQL_LISTAR_PROVEEDOR_USUARIO_METODO(user, pass);
+            String sql = SQL_USUARIO_POR_NIVEL_METODO(user, pass);
             //se crea la conexion
             Connection conexion = new Conexion().fabricarConexion();
             //se recibe los datos de la query
@@ -40,6 +40,8 @@ public class UsuarioDAO {
 
         return nivel;
     }
+    
+    
     
     
 }

@@ -10,91 +10,91 @@ function validarForm(){
     var cargo = document.getElementById("cargo");
     var correo = document.getElementById("correo");
     var telefono = document.getElementById("telefono");       
-   
+    var error = document.getElementById("error");
    
     if(!nombre.value){
-       alert("El campo Nombre es requerido .");
+        error.innerHTML = "El campo Nombre es requerido .";
        nombre.focus();
        verificar = false;
    }
    else if(nombre.value.length < 3){
-       alert("El campo debe tener un largo mayor a 3 caracteres .");
+       error.innerHTML = "El campo debe tener un largo mayor a 3 caracteres .";
        nombre.focus();
        verificar = false;
    }
    else if(!expRegNombre.exec(nombre.value)){
-       alert("Solo se acepta letras y espacios.");
+        error.innerHTML = "Solo se acepta letras y espacios.";
        nombre.focus();
        verificar = false;
    }  
    //   
    else if(!apellido.value){
-       alert("El campo Apellido es requerido .");
+        error.innerHTML = "El campo Apellido es requerido .";
        apellido.focus();
        verificar = false;
    }
    else if(apellido.value.length < 3){
-       alert("El campo debe tener un largo mayor a 3 caracteres .");
+        error.innerHTML = "El campo debe tener un largo mayor a 3 caracteres .";
        apellido.focus();
        verificar = false;
    }
    else if(!expRegNombre.exec(apellido.value)){
-       alert("Solo se acepta letras y espacios.");
+        error.innerHTML = "Solo se acepta letras y espacios.";
        apellido.focus();
        verificar = false;
    }  
    //
     else  if(!cargo.value){
-       alert("El campo Cargo es requerido.");
+        error.innerHTML = "El campo Cargo es requerido.";
        cargo.focus();
        verificar = false;
    }
    else if(cargo.value.length < 4){
-       alert("El campo debe tener un largo mayor a 4 caracteres .");
+        error.innerHTML = "El campo debe tener un largo mayor a 4 caracteres .";
        cargo.focus();
        verificar = false;
    }
    else if(!expRegNombre.exec(cargo.value)){
-       alert("Solo se acepta letras y espacios.");
+        error.innerHTML = "Solo se acepta letras y espacios.";
        cargo.focus();
        verificar = false;
    } 
    //
    else if(!correo.value){
-       alert("El campo Correo es requerido .");
+        error.innerHTML = "El campo Correo es requerido .";
        correo.focus();
        verificar = false;
    }
    else if(correo.value.length < 3){
-       alert("El campo debe tener un largo mayor a 3 caracteres .");
+       error.innerHTML = "El campo debe tener un largo mayor a 3 caracteres .";
        correo.focus();
        verificar = false;
    }
    else if(!regexCorreo.exec(correo.value)){
-       alert("Ingrese un Correo Correcto.");
+        error.innerHTML = "Ingrese un Correo Correcto.";
        correo.focus();
        verificar = false;
    }
    //
     else if(!telefono.value){
-       alert("El campo telefono es requerido.");
+        error.innerHTML = "El campo telefono es requerido.";
        telefono.focus();
        verificar = false;
    }
    else if(isNaN(telefono.value)){
-       alert("El campo debe ser numerico.");
+        error.innerHTML = "El campo debe ser numerico.";
        telefono.focus();
        verificar = false;
    }
     else if(telefono.value <= 0){
-       alert("El telefono debe ser mayor a 0.");
+        error.innerHTML = "El telefono debe ser mayor a 0.";
        telefono.focus();
        verificar = false;
    } 
   //
   
     if(verificar){
-        alert("Operacion Exitosa.");
+         error.innerHTML = "Operacion Exitosa.";
         document.getElementById("agregar_huesped").submit();
     }
 }

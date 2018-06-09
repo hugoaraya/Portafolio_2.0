@@ -16,7 +16,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Perfil Administrador</title>
-        <script src="js/validaciones_comedor.js" type="text/javascript"></script>
+        <script src="js/validaciones_comedor_1.js" type="text/javascript"></script>
          <link href="css/formulariosVarios.css" rel="stylesheet" type="text/css"/>
         <%
             response.setHeader("Pragma", "no-cache");
@@ -62,9 +62,12 @@
              <h4 align="center">Formulario Platos</h4>
         <form id="agregar_comedor" action="modificarPlato" method="post" class="login-form">
             <input type="hidden" name="idplato" value="<%=con.getId()%>">           
-                <input type="text" name="nombre_plato" id="nombre" value="<%=con.getNombre_plato()%>" ><br>                             
+                <input type="text" name="nombre_plato" id="nombre" value="<%=con.getNombre_plato()%>" ><br>
+         
          <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
-          <p class="message"><a href="listaComedor.jsp">Volver</a></p>
+         <br>         
+          <p class="message"><a href="listaComedor.jsp">Volver</a></p><br><br>
+          <span id="error" ></span>
  </form>
 </div>
 </div>

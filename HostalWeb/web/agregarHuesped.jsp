@@ -74,7 +74,8 @@
                 <OPTION VALUE="4">No Pertenece a la empresa</OPTION> 
             </SELECT><br><br>
              <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
-            <p class="message"><a href="listaHuesped.jsp">Volver</a></p>
+            <p class="message"><a href="listaHuesped.jsp">Volver</a></p><br><br>
+          <span id="error" ></span>
           
         </form>
   </div>
