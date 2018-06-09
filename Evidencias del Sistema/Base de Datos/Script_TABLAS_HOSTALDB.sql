@@ -180,8 +180,7 @@ CREATE TABLE plato (
 ALTER TABLE plato ADD CONSTRAINT plato_pk PRIMARY KEY ( idplato );
 
 CREATE TABLE producto (
-    idproducto            INTEGER NOT NULL,
-    nombre                VARCHAR2(50) NOT NULL,
+    idproducto            INTEGER NOT NULL,   
     fecha_vencimiento     DATE NOT NULL,
     precio                INTEGER NOT NULL,
     descripcion           VARCHAR2(50) NOT NULL,
