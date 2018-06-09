@@ -208,7 +208,7 @@ ALTER TABLE proveedor ADD CONSTRAINT proveedor_pk PRIMARY KEY ( idproveedor );
 CREATE TABLE recepcion_producto (
     idrecepcion_producto   INTEGER NOT NULL,
     nro_recepcion          INTEGER NOT NULL,
-    codigo_barra           INTEGER NOT NULL,
+    codigo_barra           INTEGER ,
     producto_id            INTEGER ,
     estado_recepcion_id    INTEGER ,
     orden_pedido_id        INTEGER ,
