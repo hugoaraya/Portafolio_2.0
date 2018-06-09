@@ -187,7 +187,8 @@ CREATE TABLE producto (
     stock_critico         INTEGER NOT NULL,
     tipo_producto_id      INTEGER,
     familia_producto_id   INTEGER,
-	marca_id
+	marca_id			  INTEGER,
+	codigo_barra_id       INTEGER
 );
 
 ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( idproducto );
