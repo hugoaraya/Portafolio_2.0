@@ -1,7 +1,7 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="48C994DA-51D1-BA9C-81E5-DF0D7C4ADE28" containerWithKeyObject="F00FDF56-638D-0503-66E9-7B1F6A7295B4" localFKIndex="5D490147-D3E6-776B-E64E-47ADB374F2DC" name="orden_pedido_rubro_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="A33BC6DD-A8AD-F6B6-2F92-09DC3237997B" containerWithKeyObject="233F5923-3528-D6FA-089D-171CF190E0B6" localFKIndex="31AD8F56-0609-5C15-7351-654DD04DC2AB" name="proveedor_rubro_FK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 20:08:03 UTC</createdTime>
+<createdTime>2018-06-09 01:22:46 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <referredTableLongName>rubro</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>

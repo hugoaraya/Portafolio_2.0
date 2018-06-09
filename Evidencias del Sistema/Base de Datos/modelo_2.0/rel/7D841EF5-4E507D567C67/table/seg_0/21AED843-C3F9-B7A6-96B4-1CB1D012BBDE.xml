@@ -28,16 +28,6 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="codigo_barra" id="7946C165-898D-9608-5C4B-90CEA865A055">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:18:54 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="producto_id" id="98C2DE93-AB2E-9496-C6CA-213A47C6C543">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:20:59 UTC</createdTime>

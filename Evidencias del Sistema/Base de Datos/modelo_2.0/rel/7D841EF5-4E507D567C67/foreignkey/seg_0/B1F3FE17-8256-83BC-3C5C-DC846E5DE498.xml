@@ -1,0 +1,16 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="B1F3FE17-8256-83BC-3C5C-DC846E5DE498" containerWithKeyObject="AB58A72D-8AE1-2876-9383-5BE440E51617" localFKIndex="6D274DCF-EFFB-FBD8-0ACE-B9AE53BB72D3" name="producto_codigo_barra_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:26:10 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<referredTableLongName>codigo_barra</referredTableLongName>
+<deleteRule>NO ACTION</deleteRule>
+<referredTableID>B0A03DAE-8A19-59E0-9FD6-AA63C8F8020F</referredTableID>
+<keyObject>37D0D6E3-8E9E-B5F0-CF75-7DB1E4FAE3D1</keyObject>
+<referredKeyID>37D0D6E3-8E9E-B5F0-CF75-7DB1E4FAE3D1</referredKeyID>
+<mandatory>true</mandatory>
+<refColNames>idcodigo_barra</refColNames>
+<transferable>true</transferable>
+<rely>false</rely>
+<columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>
+</FKIndexAssociation>

@@ -182,12 +182,12 @@ ALTER TABLE plato ADD CONSTRAINT plato_pk PRIMARY KEY ( idplato );
 CREATE TABLE producto (
     idproducto            INTEGER NOT NULL,   
     fecha_vencimiento     DATE NOT NULL,
-    precio                INTEGER NOT NULL,
-    descripcion           VARCHAR2(50) NOT NULL,
+    precio                INTEGER NOT NULL,   
     stock                 INTEGER NOT NULL,
     stock_critico         INTEGER NOT NULL,
-    tipo_producto_id      INTEGER ,
-    familia_producto_id   INTEGER 
+    tipo_producto_id      INTEGER,
+    familia_producto_id   INTEGER,
+	marca_id
 );
 
 ALTER TABLE producto ADD CONSTRAINT producto_pk PRIMARY KEY ( idproducto );
@@ -253,6 +253,20 @@ CREATE TABLE usuario (
 );
 
 ALTER TABLE usuario ADD CONSTRAINT usuario_pk PRIMARY KEY ( idusuario );
+
+CREATE TABLE marca (
+	idmarca INTEGER NOT NULL,
+	descripcion  VARCHAR2(50) NOT NULL
+);
+
+ALTER TABLE marca ADD CONSTRAINT marca_pk PRIMARY KEY ( idmarca );
+
+CREATE TABLE codigo_barra (
+    idcodigo_barra   INTEGER NOT NULL,
+    codigo           INTEGER NOT NULL
+);
+
+ALTER TABLE codigo_barra ADD CONSTRAINT codigo_barra_pk PRIMARY KEY ( idcodigo_barra );
 
 ALTER TABLE orden_compra
     ADD CONSTRAINT compra_huesped_habitacion_fk FOREIGN KEY ( huesped_habitacion_id )
@@ -337,6 +351,15 @@ ALTER TABLE producto
 ALTER TABLE producto
     ADD CONSTRAINT producto_tipo_producto_fk FOREIGN KEY ( tipo_producto_id )
         REFERENCES tipo_producto ( idtipo_producto );
+		
+		ALTER TABLE producto
+    ADD CONSTRAINT marca_producto_fk FOREIGN KEY ( marca_id )
+        REFERENCES marca ( idmarca );
+		
+		ALTER TABLE producto
+    ADD CONSTRAINT producto_codigo_barra_fk FOREIGN KEY ( codigo_barra_id )
+        REFERENCES codigo_barra ( idcodigo_barra );
+
 
 ALTER TABLE proveedor
     ADD CONSTRAINT proveedor_usuario_fk FOREIGN KEY ( usuario_id )

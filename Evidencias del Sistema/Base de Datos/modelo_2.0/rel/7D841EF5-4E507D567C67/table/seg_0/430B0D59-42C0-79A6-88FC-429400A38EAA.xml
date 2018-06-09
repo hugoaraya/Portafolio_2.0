@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7C5A9B3-2443-C97B-AFD3-81B7A41DFA6E" name="rubro">
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="430B0D59-42C0-79A6-88FC-429400A38EAA" name="marca">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 20:07:29 UTC</createdTime>
+<createdTime>2018-06-09 01:24:35 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
-<ordsAlias>table_26</ordsAlias>
+<ordsAlias>table_28</ordsAlias>
 <allowColumnReorder>false</allowColumnReorder>
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="idRubro" id="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC">
+<Column name="idmarca" id="33733951-9437-8899-157B-97F09EED4707">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<createdTime>2018-06-09 01:25:05 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -18,9 +18,9 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="descripcion" id="29545DA6-E2A4-5ED9-E793-31D54B3AF6DE">
+<Column name="descripcion" id="7D8F650E-1876-BE02-B666-14B0D12CFB96">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<createdTime>2018-06-09 01:25:05 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
@@ -31,15 +31,15 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="17C851B9-8B02-ED21-AED4-990DEF48B29B" name="rubro_PK">
+<ind_PK_UK id="3C909A06-54E0-3704-208D-34ECFBD03D20" name="marca_PK">
 <createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<createdTime>2018-06-09 01:25:05 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
 <pk>true</pk>
 <indexState>Primary Constraint</indexState>
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
-<colUsage columnID="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC"/>
+<colUsage columnID="33733951-9437-8899-157B-97F09EED4707"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>

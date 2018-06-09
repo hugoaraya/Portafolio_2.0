@@ -75,6 +75,19 @@
 <colAssociation fkAssociation="DC68C318-6D9D-C07C-D0CA-6D94F635A66F" referredColumn="3F85F396-FB53-8799-48B1-7322790717CB"/>
 </associations>
 </Column>
+<Column name="rubro_id" id="6ABABF47-16B4-BF8F-D6B5-DA70CA836EAC">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:22:37 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="A33BC6DD-A8AD-F6B6-2F92-09DC3237997B" referredColumn="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC"/>
+</associations>
+</Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
 <ind_PK_UK id="88B67ED7-82DB-2420-9326-0033BBED910A" name="proveedor_PK">
@@ -96,6 +109,16 @@
 <isSurrogateKey>false</isSurrogateKey>
 <indexColumnUsage>
 <colUsage columnID="E387C349-4FCD-C629-706B-4DDBFC557703"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="31AD8F56-0609-5C15-7351-654DD04DC2AB" name="proveedor_rubro_FK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:22:46 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6ABABF47-16B4-BF8F-D6B5-DA70CA836EAC"/>
 </indexColumnUsage>
 </ind_PK_UK>
 </indexes>
