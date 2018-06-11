@@ -52,7 +52,7 @@
             <SELECT NAME="tipo_cama">
                 <OPTION VALUE="Individual" selected>Individual</OPTION>
                 <OPTION VALUE="Doble Cama">Doble Cama</OPTION>
-                <OPTION VALUE="Tiple Cama">Tiple Cama</OPTION>
+                <OPTION VALUE="Triple Cama">Triple Cama</OPTION>
                 <OPTION VALUE="Doble Camarote">Doble Camarote</OPTION>             
             </SELECT><br>   
             <input type="text" name="accesorios" id="accesorios" placeholder="Accesorios"><br>
