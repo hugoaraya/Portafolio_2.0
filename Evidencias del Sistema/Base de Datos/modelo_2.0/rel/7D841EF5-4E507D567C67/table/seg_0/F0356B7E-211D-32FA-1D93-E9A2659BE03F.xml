@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="A7C235B8-C441-6BC0-C008-A7C39D75E7EC">
+<Column name="idServicio" id="A7C235B8-C441-6BC0-C008-A7C39D75E7EC">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-10 01:47:26 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -27,6 +27,16 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="precio" id="59DBF7BC-C519-5015-071C-A157701F74B6">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 19:50:05 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

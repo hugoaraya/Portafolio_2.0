@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/tabla_p.css"> 
+        <link rel="stylesheet" type="text/css" href="css/tabla_p_1.css"> 
         <title>Perfil Proveedor</title>    
         <%response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
             response.setHeader("Pragma", "no-cache");
@@ -48,7 +48,7 @@
             <table>
                 <thead>
                     <tr>
-                        <th>Nro Orden</th><th>Nombre Empleado</th><th>Fecha</th><th>Rut Proveedor</th><th>Estado Orden</th><th>Detalle</th>
+                        <th>Nro Orden</th><th>Nombre Empleado</th><th>Fecha</th><th>Rut Proveedor</th><th>Estado Orden</th><th>Detalle</th><th>Opciones</th> 
                     </tr>
                </thead>   
                <%            String rut = session.getAttribute("user").toString();
@@ -70,6 +70,8 @@
                    <td><p><%=ordenes.getRut()%></p></td>
                    <td><p><%=ordenes.getEstado_orden()%></p></td>
                    <td><p><a href="detalle_orden.pdf?nro_orden=<%=ordenes.getNro_orden()%>" title="Ver Detalle"><img src="img/search.png" alt="Ver Detalle" width="40" height="40" border="0"></a></p></td>
+                   <td><p> <button onclick="location.href='modificarOrdenPedido.jsp?id=<%=ordenes.getId_orden_pedido()%>'">Modificar</button></p></td>
+
                </tr>               
 
                <%

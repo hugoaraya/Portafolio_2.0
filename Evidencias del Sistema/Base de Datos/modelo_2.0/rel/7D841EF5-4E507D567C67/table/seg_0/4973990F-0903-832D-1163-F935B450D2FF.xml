@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29">
+<Column name="idMinuta" id="94F76CA3-3BE6-9B64-4C04-E8E3F9734F29">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:49:09 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -27,17 +27,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="descipcion" id="A0EA181A-F143-7B1A-8C7A-8876289BF0CF">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:49:47 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="fecha_inicio" id="493CE5C2-2AA0-DF90-18EA-58730F30D0B6">

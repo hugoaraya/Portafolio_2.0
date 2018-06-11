@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="F4272A50-E06A-1020-1E4E-4D8D01D818A4">
+<Column name="idPlato" id="F4272A50-E06A-1020-1E4E-4D8D01D818A4">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:46:39 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -27,27 +27,6 @@
 <logicalDatatype>LOGDT024</logicalDatatype>
 <dataTypeSize>50</dataTypeSize>
 <ownDataTypeParameters>50,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="descripcion" id="0503A449-8C6D-E21A-7356-371157B1CBC9">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:47:09 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>255</dataTypeSize>
-<ownDataTypeParameters>255,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="precio" id="24206865-28B7-8190-E777-09D989A40064">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:51:14 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 </columns>

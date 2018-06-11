@@ -10,7 +10,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <script src="js/validaciones.js" type="text/javascript"></script>
+        <script src="js/validaciones_1.js" type="text/javascript"></script>
         <link href="css/formulariosVarios.css" rel="stylesheet" type="text/css"/>
         <title>Perfil Administrador</title>
         <%
@@ -70,7 +70,8 @@
             <textarea name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>  
            <br><br>
             <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
-           <p class="message"><a href="listaHabitaciones.jsp">Volver</a></p>
+           <p class="message"><a href="listaHabitaciones.jsp">Volver</a></p><br><br>
+          <span id="error" ></span>
     </form>
   </div>
 </div>

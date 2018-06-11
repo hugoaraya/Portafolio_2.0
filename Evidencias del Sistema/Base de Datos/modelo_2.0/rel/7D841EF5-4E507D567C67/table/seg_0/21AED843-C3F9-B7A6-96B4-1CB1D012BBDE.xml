@@ -8,7 +8,7 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="EEA0192D-C354-D0B8-3D25-87CED1D25490">
+<Column name="idRecepcion_Producto" id="EEA0192D-C354-D0B8-3D25-87CED1D25490">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:18:54 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>
@@ -19,16 +19,6 @@
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="nro_recepcion" id="0BC2E095-0EA9-F519-D153-5D8E5B6CAAE0">
-<createdBy>420NiggaBytes</createdBy>
-<createdTime>2018-05-06 02:18:54 UTC</createdTime>
-<ownerDesignName>modelo_2.0</ownerDesignName>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT011</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
-<Column name="codigo_barra" id="7946C165-898D-9608-5C4B-90CEA865A055">
 <createdBy>420NiggaBytes</createdBy>
 <createdTime>2018-05-06 02:18:54 UTC</createdTime>
 <ownerDesignName>modelo_2.0</ownerDesignName>

@@ -1,0 +1,46 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="D7C5A9B3-2443-C97B-AFD3-81B7A41DFA6E" name="rubro">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:29 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_26</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idRubro" id="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="descripcion" id="29545DA6-E2A4-5ED9-E793-31D54B3AF6DE">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50</dataTypeSize>
+<ownDataTypeParameters>50,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="17C851B9-8B02-ED21-AED4-990DEF48B29B" name="rubro_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-06 20:07:54 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="A2F9B06E-4329-EA17-D3A5-85AC6CBF3BBC"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

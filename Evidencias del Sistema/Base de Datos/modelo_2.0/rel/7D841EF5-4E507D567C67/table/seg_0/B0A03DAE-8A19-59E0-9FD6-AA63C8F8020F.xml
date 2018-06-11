@@ -1,0 +1,45 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="B0A03DAE-8A19-59E0-9FD6-AA63C8F8020F" name="codigo_barra">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:23:28 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<ordsAlias>table_27</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="idcodigo_barra" id="9F888A40-F93C-C5DC-66D4-0D226E1EE931">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:24:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="codigo" id="D7585ACE-A353-1B87-73FA-D798FC21581D">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:24:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="37D0D6E3-8E9E-B5F0-CF75-7DB1E4FAE3D1" name="codigo_barra_PK">
+<createdBy>420NiggaBytes</createdBy>
+<createdTime>2018-06-09 01:24:12 UTC</createdTime>
+<ownerDesignName>modelo_2.0</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="9F888A40-F93C-C5DC-66D4-0D226E1EE931"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>
