@@ -5,6 +5,8 @@
  */
 package consultas;
 
+import java.sql.Date;
+
 /**
  *
  * @author 420NiggaBytes
@@ -35,9 +37,10 @@ public class Query {
     //
     //LISTAR PROVEEDORES SEGUN SU USUARIO = RUT
     public static String SQL_LISTAR_PROVEEDOR_USUARIO_METODO(String usuario) {
-        SQL_LISTAR_PROVEEDOR_USUARIO = "SELECT P.IDPROVEEDOR,P.RUT,P.DV,P.NOMBRE,P.DIRECCION,P.RUBRO,U.NOMBRE_USUARIO FROM PROVEEDOR"
+        SQL_LISTAR_PROVEEDOR_USUARIO = "SELECT P.IDPROVEEDOR,P.RUT,P.DV,P.NOMBRE,P.DIRECCION,R.DESCRIPCION,U.NOMBRE_USUARIO FROM PROVEEDOR"
                 + " P INNER JOIN USUARIO U "
-                + "ON(P.USUARIO_ID = U.IDUSUARIO) "
+                + "ON(P.USUARIO_ID = U.IDUSUARIO)"
+                + " INNER JOIN RUBRO R ON(P.RUBRO_ID = R.IDRUBRO) "
                 + "WHERE P.RUT = '" + usuario + "'";
         return SQL_LISTAR_PROVEEDOR_USUARIO;
     }
@@ -68,10 +71,13 @@ public class Query {
   
     //LISTAR EL DETALLE DE LOS PRODUCTOS DE UNA ORDEN DE PEDIDO SEGUN PROVEEDOR  
     public static String SQL_LISTAR_DETALLE_ORDEN_METODO(int nro_orden) {
-        SQL_LISTAR_DETALLE_ORDEN = " select p.nombre,"
-                + " p.familia,p.tipo_producto,p.descripcion,p.stock,p.stock_critico,p.precio"
+        SQL_LISTAR_DETALLE_ORDEN = "select f.descripcion,t.descripcion,m.descripcion,p.stock,p.stock_critico,p.precio"
                 + " from orden_pedido o inner join recepcion_producto r on(o.idorden_pedido = r.orden_pedido_id)"
-                + " inner join producto p on(r.producto_id = p.idproducto) where o.nro_orden = '" + nro_orden + "'";
+                + " inner join producto p on(r.producto_id = p.idproducto)"
+                + " inner join familia_producto f on(p.familia_producto_id = f.idfamilia_producto)"
+                + " inner join tipo_producto t on(p.tipo_producto_id = t.idtipo_producto)"
+                + " inner join marca m on(p.marca_id = m.idmarca)"
+                + " where o.nro_orden = '" + nro_orden + "'";
         return SQL_LISTAR_DETALLE_ORDEN;
     }
 
@@ -100,7 +106,7 @@ public class Query {
     }
 
     public static String SQL_LISTAR_ORDENES_COMPRA_EMPRESA_METODO(int id) {
-        SQL_LISTAR_ORDENES_COMPRA_EMPRESA = "select o.nro_orden,e.nombre,e.rut,e.dv,o.fecha from ORDEN_COMPRA o"
+        SQL_LISTAR_ORDENES_COMPRA_EMPRESA = "select distinct o.nro_orden,e.nombre,e.rut,e.dv,o.fecha from ORDEN_COMPRA o"
                 + " inner join empresa e on(o.empresa_id = e.idempresa)"
                 + " where o.empresa_id ='" + id + "'";
         return SQL_LISTAR_ORDENES_COMPRA_EMPRESA;
@@ -108,19 +114,22 @@ public class Query {
 
     //LISTAR EL DETALLE DE LA ORDEN DE COMPRA DE UNA EMPRESA 
     public static String SQL_LISTAR_DETALLE_ORDEN_COMPRA_METODO(int nro_orden) {
-        SQL_LISTAR_DETALLE_ORDEN_COMPRA = " select t.nombre,t.apellido,t.rut,t.dv,t.cargo,t.correo,t.telefono,h.descripcion,h.precio "
-                + "from orden_compra o inner join huesped_habitacion p on(o.huesped_habitacion_id  = p.habitacion_id) "
+        SQL_LISTAR_DETALLE_ORDEN_COMPRA = " select t.nombre,t.apellido,t.rut,t.dv,c.descripcion,t.correo,t.telefono,h.descripcion,h.precio "
+                + "from orden_compra o inner join huesped_habitacion p on(o.huesped_habitacion_id  = P.IDHUESPED_HABITACION) "
                 + "inner join habitacion h on(p.HABITACION_ID = h.idhabitacion) "
-                + "inner join huesped t on(p.huesped_id = t.idhuesped) where o.nro_orden =  '" + nro_orden + "'";
+                + "inner join huesped t on(p.huesped_id = t.idhuesped) "
+                + "inner join cargo c on(t.cargo_id = c.idcargo) "
+                + "where o.nro_orden =  '" + nro_orden + "'";
         return SQL_LISTAR_DETALLE_ORDEN_COMPRA;
     }
 
     //PRECIO TOTAL
     public static String SQL_PRECIO_TOTAL_ORDEN_COMPRA_METODO(int nro_orden) {
          SQL_PRECIO_TOTAL_ORDEN_COMPRA = " select sum(h.precio)"
-                + "from orden_compra o inner join huesped_habitacion p on(o.huesped_habitacion_id  = p.habitacion_id) "
+                + "from orden_compra o inner join huesped_habitacion p on(o.huesped_habitacion_id  =  P.IDHUESPED_HABITACION) "
                 + "inner join habitacion h on(p.HABITACION_ID = h.idhabitacion) "
-                + "inner join huesped t on(p.huesped_id = t.idhuesped) where o.nro_orden =  '" + nro_orden + "'";
+                + "inner join huesped t on(p.huesped_id = t.idhuesped) "
+                 + "where o.nro_orden =  '" + nro_orden + "'";
         return  SQL_PRECIO_TOTAL_ORDEN_COMPRA;
     }
     
@@ -130,7 +139,18 @@ public class Query {
      public static String SQL_MODIFICAR_HABITACIONES = "";
      public static String SQL_MODIFICAR_ESTADO_HABITACIONES = "";
      public static String SQL_LISTAR_HABITACION_ID = "";
+     public static String SQL_LISTAR_HABITACION_FECHA_CAP = "";
      //LISTAR
+     
+      public static String SQL_LISTAR_HABITACION_FECHA_CAP_METODO(int capacidad,String fecha_inicio,String fecha_salida) {
+         SQL_LISTAR_HABITACION_FECHA_CAP = "select h.idhabitacion,h.tipo_cama,h.accesorio,h.precio,h.descripcion,h.nombre,e.descripcion,h.capacidad"
+                 + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion)"
+                 + "  inner join FECHAS_RESERVAS f on(H.FECHAS_RESERVAS_ID = f.idfecha_reservas)"
+                 + " where F.FECHA_INGRESO != '" + fecha_inicio + "' and F.FECHA_SALIDA != '" + fecha_salida + "' and h.capacidad = '" + capacidad + "'";
+        return  SQL_LISTAR_HABITACION_FECHA_CAP;
+      }
+     
+     
       public static String SQL_LISTAR_HABITACIONES_METODO() {
          SQL_LISTAR_HABITACIONES = "select h.idhabitacion,h.tipo_cama,h.accesorio,h.precio,h.descripcion,h.nombre,e.descripcion,h.capacidad"
                  + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion) order by h.idhabitacion asc" ;
@@ -229,35 +249,36 @@ public class Query {
       public static String SQL_MODIFICAR_HUESPED = "";
        
        public static String SQL_LISTAR_HUESPED_METODO(int id_empresa) {
-         SQL_LISTAR_HUESPED = "select h.idhuesped,h.rut,h.dv,h.nombre,h.apellido,h.cargo,h.correo,h.telefono,e.estado from huesped h "
-                 + "inner join estado_huesped e on(h.estado_huesped_id = e.idestado_huesped) where empresa_id = '" + id_empresa + "' order by h.apellido asc";
+         SQL_LISTAR_HUESPED = "select h.idhuesped,h.rut,h.dv,h.nombre,h.apellido,c.descripcion,h.correo,h.telefono,e.estado from huesped h "
+                 + "inner join estado_huesped e on(h.estado_huesped_id = e.idestado_huesped)"
+                 + "inner join cargo c on(h.cargo_id = c.idcargo) where empresa_id = '" + id_empresa + "' order by h.apellido asc";
         return  SQL_LISTAR_HUESPED;
       }
        
        public static String SQL_LISTAR_HUESPED_ID_METODO(int id_huesped) {
-         SQL_LISTAR_HUESPED_ID = "select idhuesped,empresa_id,rut,dv,nombre,apellido,cargo,correo,telefono,estado_huesped_id from huesped where idhuesped = '" + id_huesped + "'";
+         SQL_LISTAR_HUESPED_ID = "select idhuesped,empresa_id,rut,dv,nombre,apellido,cargo_id,correo,telefono,estado_huesped_id from huesped where idhuesped = '" + id_huesped + "'";
         return  SQL_LISTAR_HUESPED_ID;
       }
        
-          public static String SQL_MODIFICAR_HUESPED_METODO(int id_huesped, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa, int id_estado_huesped) {
+          public static String SQL_MODIFICAR_HUESPED_METODO(int id_huesped, String nombre, String apellido, int numero_tefono, String correo, int cargo_id, int id_empresa, int id_estado_huesped) {
         SQL_MODIFICAR_HUESPED = "UPDATE huesped SET nombre = '" + nombre   
                   + "', apellido = '" + apellido
                   + "', telefono = '" + numero_tefono
                 + "', correo = '" + correo
-                + "', cargo = '" + cargo
+                + "', cargo_id = '" + cargo_id
                 + "', empresa_id = '" + id_empresa
                 + "', estado_huesped_id = '" + id_estado_huesped
                 + "'  where idhuesped ='" + id_huesped+ "'";
         return SQL_MODIFICAR_HUESPED;
 }
-          public static String SQL_AGREGAR_HUESPED_METODO(String rut,String dv, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa, int id_estado_huesped) {
-         SQL_AGREGAR_HUESPED = "INSERT INTO huesped (idhuesped,rut, dv, nombre, apellido, telefono,correo,cargo,empresa_id, estado_huesped_id) VALUES (0,'"+rut+ "',"
+          public static String SQL_AGREGAR_HUESPED_METODO(String rut,String dv, String nombre, String apellido, int numero_tefono, String correo, int cargo_id, int id_empresa, int id_estado_huesped) {
+         SQL_AGREGAR_HUESPED = "INSERT INTO huesped (idhuesped,rut, dv, nombre, apellido, telefono,correo,cargo_id,empresa_id, estado_huesped_id) VALUES (0,'"+rut+ "',"
                  + "'"+dv+ "',"
                  + "'"+nombre+ "',"
                  + "'"+apellido+ "',"
                  + "'"+numero_tefono+ "',"
                  + "'"+correo+ "',"
-                 + "'"+cargo+ "',"
+                 + "'"+cargo_id+ "',"
                  + "'"+id_empresa+ "',"
                  + "'"+id_estado_huesped+"')";
         return  SQL_AGREGAR_HUESPED;
@@ -271,6 +292,34 @@ public class Query {
         SQL_CAMBIAR_PASS_EMPRESA = "UPDATE USUARIO SET contrasenia = '" + constrasenia + "' where idusuario ='" + id + "'";
         return SQL_CAMBIAR_PASS_EMPRESA;
     }
-
+    
+      
+     //GENERAR ORDEN DE COMPRA
+      public static String SQL_INSERTAR_HUESPED_HABITACION = "";
+      public static String SQL_INSERTAR_ORDEN_COMPRA = "";
+      
+      public static String SQL_INSERTAR_HUESPED_HABITACION_METODO(String huesped_id,String habitacion_id) {
+         SQL_AGREGAR_PLATO = "INSERT INTO huesped_habitacion(idhuesped_habitacion,huesped_id,habitacion_id) "
+                 + "VALUES(0,'"+huesped_id+ "','"+habitacion_id+"')";
+        return  SQL_AGREGAR_PLATO;
+      }
+      
+      public static String SQL_INSERTAR_ORDEN_COMPRA_METODO(int nro_orden,int empresa_id,String fecha,String huesped_habitacion_id) {
+         SQL_INSERTAR_ORDEN_COMPRA = "INSERT INTO orden_compra (idorden_compra,nro_orden,empresa_id,fecha, orden_comedor_id, Huesped_habitacion_id) "
+                 + "VALUES (0,'"+nro_orden+ "','"+empresa_id+ "','"+fecha+ "',null,'"+huesped_habitacion_id+"')";
+        return  SQL_INSERTAR_ORDEN_COMPRA;
+      }
+      
+      
+      
+      
+      public static String SQL_HUESPED_HABITACION_ID = "";
+      
+      public static String SQL_HUESPED_HABITACION_ID_METODO(String huesped_id,String habitacion_id) {
+         SQL_HUESPED_HABITACION_ID = "select idhuesped_habitacion from huesped_habitacion "
+                 + "where huesped_id =  '" + huesped_id + "' and habitacion_id= '"+habitacion_id+"'";
+        return  SQL_HUESPED_HABITACION_ID;
+      }
+      
 }
-
+ 

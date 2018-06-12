@@ -19,11 +19,12 @@ public class Huesped {
     private int id_empresa;
     private String estado_huesped;
     private int id_estado_huesped;
+    private int cargo_id;
 
     public Huesped() {
     }
 
-    public Huesped(int id_huesped, String rut, String dv, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa,String estado_huesped, int id_estado_huesped) {
+    public Huesped(int id_huesped, String rut, String dv, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa,String estado_huesped, int id_estado_huesped,int cargo_id) {
         this.id_huesped = id_huesped;
         this.rut = rut;
         this.dv = dv;
@@ -35,6 +36,7 @@ public class Huesped {
         this.id_empresa = id_empresa;
         this.estado_huesped = estado_huesped;
         this.id_estado_huesped = id_estado_huesped;
+        this.cargo_id = cargo_id;
         
     }
 
@@ -125,6 +127,14 @@ public class Huesped {
 
     public void setId_estado_huesped(int id_estado_huesped) {
         this.id_estado_huesped = id_estado_huesped;
+    }
+
+    public int getCargo_id() {
+        return cargo_id;
+    }
+
+    public void setCargo_id(int cargo_id) {
+        this.cargo_id = cargo_id;
     }
     
     

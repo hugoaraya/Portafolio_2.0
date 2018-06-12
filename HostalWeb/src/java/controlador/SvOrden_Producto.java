@@ -26,7 +26,6 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.text.SimpleDateFormat;
 import java.util.Date;
-import modelo.Producto;
 
 /**
  *
@@ -98,15 +97,14 @@ try{
             par2.add(new Phrase(Chunk.NEWLINE));     
             documento.add(par2);
 
-            PdfPTable tabla = new PdfPTable(7); 
+            PdfPTable tabla = new PdfPTable(6); 
             tabla.setWidthPercentage(100);
             PdfPCell celda1 = new PdfPCell(new Paragraph("Nombre", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda2 = new PdfPCell(new Paragraph("Familia", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda3 = new PdfPCell(new Paragraph("Tipo De Producto", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda4 = new PdfPCell(new Paragraph("Descripcion", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda5 = new PdfPCell(new Paragraph("Stock", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda6 = new PdfPCell(new Paragraph("Stock Critico", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda7 = new PdfPCell(new Paragraph("Precio", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda2 = new PdfPCell(new Paragraph("Tipo De Producto", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda3 = new PdfPCell(new Paragraph("Marca", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda4 = new PdfPCell(new Paragraph("Stock", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda5 = new PdfPCell(new Paragraph("Stock Critico", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda6 = new PdfPCell(new Paragraph("Precio", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
 
             tabla.addCell(celda1);
             tabla.addCell(celda2);
@@ -114,16 +112,16 @@ try{
             tabla.addCell(celda4);
             tabla.addCell(celda5);
             tabla.addCell(celda6);
-            tabla.addCell(celda7);          
+                  
 
             while (rs.next()) {              
+           
                 tabla.addCell(rs.getString(1));
                 tabla.addCell(rs.getString(2));
                 tabla.addCell(rs.getString(3));
-                tabla.addCell(rs.getString(4));
+                tabla.addCell(String.valueOf(rs.getInt(4)));
                 tabla.addCell(String.valueOf(rs.getInt(5)));
-                tabla.addCell(String.valueOf(rs.getInt(6)));
-                tabla.addCell(String.valueOf(rs.getInt(7)));                                
+                tabla.addCell(String.valueOf(rs.getInt(6)));                                
             }            
             documento.add(tabla);
             
@@ -142,10 +140,10 @@ try{
             rs2.close();
             conexion.close();
         } catch (Exception ex) {
-
+                System.out.println("error" + ex);
         }
     }catch(Exception ex) {
-        
+         System.out.println("error" + ex);
     }
     }
 

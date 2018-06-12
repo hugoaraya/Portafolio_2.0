@@ -4,6 +4,7 @@
     Author     : 420NiggaBytes
 --%>
 
+<%@page import="java.time.LocalDate"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -23,23 +24,22 @@
                 <li>Detalle</li>
             </ul>
         </div><br>
-        <form>
+        <form action="formulario_orden_compra_2.jsp" method="post">
             <h1>Paso 1:</h1>
             <h5>Cantidad Trabajadores</h5>
             <select name ="num_trab">
-                <%
+                <% LocalDate localDate = LocalDate.now();   
                     for (int i = 1; i <= 10; i++) {
                 %>                
                 <option value="<%out.print(i);%>"><%out.print(i);%></option>  
                 <%   }
                 %> 
             </select>  
-            <h5>Fecha Entrada:</h5>
-            <input placeholder="Password" type="date" required="">
-            <h5>Fecha Salida:</h5>
-            <input placeholder="Password" type="date" required="">
-            <br>
-            <button>Submit</button>  
+             <h5>Fecha Inicio<h5>
+            <input type="date" name="fecha_inicio" id="fechaInicio" min="<%=localDate%>" ><br>
+            <h5>Fecha Fin</h5>
+            <input type="date" name="fecha_fin" id="fechaFin" min="<%=localDate%>"><br><br>
+            <button type="submit">Submit</button>  
             <a href="formulario_orden_compra_2.jsp">Step 2</a>
             
         </form> 

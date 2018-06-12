@@ -4,6 +4,7 @@
     Author     : 420NiggaBytes
 --%>
 
+<%@page import="java.text.SimpleDateFormat"%>
 <%@page import="dao.Orden_pedidoDAO"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="modelo.Proveedor"%>
@@ -60,13 +61,16 @@
                        ArrayList<Orden_pedido> dor = dao.listaOrdenPedido(temp.getIdProveedor());
                        for (Orden_pedido ordenes : dor) {
 
-
+                            
+            SimpleDateFormat formato
+                    = new SimpleDateFormat("dd/MM/YYYY");
+            String fecha = formato.format(ordenes.getFecha());
                %>                 
 
                <tr>
                    <td><p><%=ordenes.getNro_orden()%> </p></td>
                    <td><p><%=ordenes.getNombre_empleado()%></p></td>
-                   <td><p><%=ordenes.getFecha()%></p></td>
+                   <td><p><%=fecha%></p></td>
                    <td><p><%=ordenes.getRut()%></p></td>
                    <td><p><%=ordenes.getEstado_orden()%></p></td>
                    <td><p><a href="detalle_orden.pdf?nro_orden=<%=ordenes.getNro_orden()%>" title="Ver Detalle"><img src="img/search.png" alt="Ver Detalle" width="40" height="40" border="0"></a></p></td>

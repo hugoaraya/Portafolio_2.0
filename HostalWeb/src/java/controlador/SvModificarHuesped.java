@@ -42,7 +42,7 @@ public class SvModificarHuesped extends HttpServlet {
             int idempresa = Integer.parseInt(request.getParameter("idempresa"));
            String nombre_huesped = request.getParameter("nombre_huesped");
            String apellido_huesped = request.getParameter("apellido_huesped");
-           String cargo = request.getParameter("cargo");
+           int cargo = Integer.parseInt(request.getParameter("cargo"));
            String correo = request.getParameter("correo");
            int telefono = Integer.parseInt(request.getParameter("telefono"));
            int estado_huesped_id = Integer.parseInt(request.getParameter("id_estado_huesped"));

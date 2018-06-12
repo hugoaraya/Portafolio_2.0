@@ -23,7 +23,7 @@ public class HuespedDAO {
         
 
         String sql = SQL_AGREGAR_HUESPED_METODO(hues.getRut(),hues.getDv(),hues.getNombre(),hues.getApellido()
-                ,hues.getNumero_tefono(),hues.getCorreo(),hues.getCargo(),hues.getId_empresa(),hues.getId_estado_huesped());
+                ,hues.getNumero_tefono(),hues.getCorreo(),hues.getCargo_id(),hues.getId_empresa(),hues.getId_estado_huesped());
         
         Connection conexion = new Conexion().fabricarConexion();
         Statement st = conexion.createStatement();         
@@ -83,7 +83,7 @@ public class HuespedDAO {
                 hues.setDv(rs.getString(4));
                 hues.setNombre(rs.getString(5));
                 hues.setApellido(rs.getString(6));
-                hues.setCargo(rs.getString(7));
+                hues.setCargo_id(rs.getInt(7));
                 hues.setCorreo(rs.getString(8));
                 hues.setNumero_tefono(rs.getInt(9));
                 hues.setId_estado_huesped(rs.getInt(10));                      
@@ -93,9 +93,9 @@ public class HuespedDAO {
             cn.close();
        return hues;
   }
-       public static void modificarHuesped(int id_huesped, String nombre, String apellido, int numero_tefono, String correo, String cargo, int id_empresa, int id_estado_huesped) throws SQLException {
+       public static void modificarHuesped(int id_huesped, String nombre, String apellido, int numero_tefono, String correo, int cargo_id, int id_empresa, int id_estado_huesped) throws SQLException {
         
-        String sql = SQL_MODIFICAR_HUESPED_METODO(id_huesped, nombre, apellido, numero_tefono, correo, cargo, id_empresa, id_estado_huesped);
+        String sql = SQL_MODIFICAR_HUESPED_METODO(id_huesped, nombre, apellido, numero_tefono, correo, cargo_id , id_empresa, id_estado_huesped);
          
         Connection conexion = new Conexion().fabricarConexion();
         Statement st = conexion.createStatement();         

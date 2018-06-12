@@ -42,7 +42,7 @@ public class SvAgregarHuesped extends HttpServlet {
           String dv = request.getParameter("dv");
           String nombre = request.getParameter("nombre_huesped");
           String apellido = request.getParameter("apellido_huesped");
-          String cargo = request.getParameter("cargo");
+          int cargo_id = Integer.parseInt(request.getParameter("cargo"));
           String correo = request.getParameter("correo");
           int telefono = Integer.parseInt(request.getParameter("telefono"));          
           int empresa_id = Integer.parseInt(request.getParameter("empresa_id"));
@@ -54,7 +54,7 @@ public class SvAgregarHuesped extends HttpServlet {
           hues.setDv(dv);
           hues.setNombre(nombre);
           hues.setApellido(apellido);
-          hues.setCargo(cargo);
+          hues.setCargo_id(cargo_id);
           hues.setCorreo(correo);
           hues.setNumero_tefono(telefono);
           hues.setId_empresa(empresa_id);

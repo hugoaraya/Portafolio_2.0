@@ -13,7 +13,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/tabla_h.css"> 
+        <link rel="stylesheet" type="text/css" href="css/tabla_h_1.css"> 
         <title>Perfil Administrador</title>    
         <%response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
             response.setHeader("Pragma", "no-cache");

@@ -139,10 +139,10 @@ public class SvOrden_Habitacion extends HttpServlet {
             rs2.close();
             conexion.close();
         } catch (Exception ex) {
-
+            System.out.println("error"+ex);
         }
     }catch(Exception ex) {
-        
+          System.out.println("error"+ex);
     }
     }
 

@@ -10,19 +10,19 @@ package modelo;
  * @author 420NiggaBytes
  */
 public class Producto {
-    private String nombre,familia,tipo_producto,descripcion;
+    private String nombre,familia,tipo_producto,marca;
     private int stock,stock_critico,precio;
 
     public Producto() {
     }
 
     public Producto(String nombre, String familia, String tipo_producto, 
-            String descripcion, int stock, 
+            String marca, int stock, 
             int stock_critico, int precio) {
         this.nombre = nombre;
         this.familia = familia;
         this.tipo_producto = tipo_producto;
-        this.descripcion = descripcion;
+        this.marca = marca;
         this.stock = stock;
         this.stock_critico = stock_critico;
         this.precio = precio;        
@@ -52,12 +52,12 @@ public class Producto {
         this.tipo_producto = tipo_producto;
     }
 
-    public String getDescripcion() {
-        return descripcion;
+    public String getMarca() {
+        return marca;
     }
 
-    public void setDescripcion(String descripcion) {
-        this.descripcion = descripcion;
+    public void setMarca(String marca) {
+        this.marca = marca;
     }
 
     public int getStock() {

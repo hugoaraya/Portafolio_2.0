@@ -4,6 +4,15 @@
     Author     : 420NiggaBytes
 --%>
 
+<%@page import="modelo.Orden_compra"%>
+<%@page import="dao.Orden_CompraDAO"%>
+<%@page import="modelo.Habitacion"%>
+<%@page import="dao.HabitacionesDAO"%>
+<%@page import="modelo.Huesped"%>
+<%@page import="dao.HuespedDAO"%>
+<%@page import="modelo.Empresa"%>
+<%@page import="java.util.ArrayList"%>
+<%@page import="dao.EmpresaDAO"%>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -24,30 +33,44 @@
                 <li>Detalle</li>
             </ul>
         </div>
-        <br>  
+
         <form>
             <div id="main-container">
                 <table>
                     <thead>
                         <tr>
-                            <th>Nombre Huesped</th><th>Rut Huesped</th><th>Cargo</th><th>Correo</th><th>Telefono</th><th>Seleccionar</th>
+                            <th>ID</th>
                         </tr>
-                    </thead>                            
+                    </thead>   
+                    <%
+
+                        
+
+                    %>                 
+
                     <tr>
-                        <td><p>Juan Perez</p></td>
-                        <td><p>1273745-6</p></td>
-                        <td><p>Ejecutivo</p></td>
-                        <td><p>juanperez@empresa.cl</p></td>
-                        <td><p>2222222</p></td>
-                        <td><p><input type="checkbox" id="check"></p></td>
-                    </tr>  
-                </table> 
-                <br>
-                <button>Submit</button>
-                <a href="formulario_orden_compra_1.jsp">Step 1</a>
-                <a href="indexEmpresa.jsp">Volver</a>
-            </div>
-            
-      </form>
+                        <td><p><%=%> </p></td>
+
+
+                    </tr>       
+                    <%
+
+                        }
+
+
+                    %>
+
+
+
+
+                    <br>
+                    <button>Submit</button>
+                    <a href="formulario_orden_compra_1.jsp">Step 1</a>
+                    <a href="indexEmpresa.jsp">Volver</a>
+            </div>             
+        </form>
+
+
     </body>
 </html>
+

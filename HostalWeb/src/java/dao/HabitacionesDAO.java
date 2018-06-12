@@ -102,4 +102,32 @@ public class HabitacionesDAO {
        return hab;
   }
       
+       public static ArrayList<Habitacion> listaHabitacionFechaCap(int capacidad,String fecha_inicio,String fecha_salida) throws SQLException {
+
+        String sql1 = SQL_LISTAR_HABITACION_FECHA_CAP_METODO(capacidad, fecha_inicio, fecha_salida);
+        Connection conexion = new Conexion().fabricarConexion();
+
+        PreparedStatement ps = conexion.prepareStatement(sql1);
+        ResultSet rs;
+        rs = ps.executeQuery();
+        ArrayList<Habitacion> arreglo = new ArrayList<>();
+
+        while (rs.next()) {
+            Habitacion hab = new Habitacion();
+            hab.setId_habitacion(rs.getInt(1));
+            hab.setTipo_cama(rs.getString(2));
+            hab.setAccesorios(rs.getString(3));            
+            hab.setPrecio_habitacion(rs.getInt(4));
+            hab.setDescripcion(rs.getString(5));           
+            hab.setNombre_habitacion(rs.getString(6));
+            hab.setEstado_habitacion(rs.getString(7));
+            hab.setCapacidad(rs.getInt(8));
+            arreglo.add(hab);
+        }
+
+        rs.close();
+        conexion.close();
+        return arreglo;
+    }
+      
 }

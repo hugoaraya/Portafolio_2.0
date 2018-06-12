@@ -31,13 +31,12 @@ public class Orden_ProductoDAO {
         
         while(rs.next()){
         Producto pro = new Producto();
-        pro.setNombre(rs.getString(1));
-        pro.setFamilia(rs.getString(2));
-        pro.setTipo_producto(rs.getString(3));
-        pro.setDescripcion(rs.getString(4));
-        pro.setStock(rs.getInt(5));
-        pro.setStock_critico(rs.getInt(6));
-        pro.setPrecio(rs.getInt(7));      
+        pro.setFamilia(rs.getString(1));
+        pro.setTipo_producto(rs.getString(2));
+        pro.setMarca(rs.getString(3));
+        pro.setStock(rs.getInt(4));
+        pro.setStock_critico(rs.getInt(5));
+        pro.setPrecio(rs.getInt(6));      
         arreglo.add(pro);
         }
         

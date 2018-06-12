@@ -75,7 +75,7 @@ public class SvAgregarMinuta extends HttpServlet {
             } else if (i > 7) {
                 dia += fechaEntrada.charAt(i);
             }
-//            System.out.println(i+"="+fechaQlaExtrania.charAt(i));
+
         }
         fechaNormal = dia + "/" + mes + "/" + anio;
         return fechaNormal;

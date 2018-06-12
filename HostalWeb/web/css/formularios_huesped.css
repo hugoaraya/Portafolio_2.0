@@ -106,16 +106,9 @@ input[type=date]::-webkit-outer-spin-button {
 }
 
 textarea {
-   resize: none;
-   
+   resize: none;   
    height: 150px;
 }
-
-
-
 span{   
-
-    color: #336bc0;
-    
-    
+    color: #336bc0;  
 }

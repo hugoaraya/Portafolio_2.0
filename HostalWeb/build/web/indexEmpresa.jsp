@@ -13,7 +13,7 @@
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Perfil Empresa</title>       
-        <link rel="stylesheet" type="text/css" href="css/stylesheet_e.css"> 
+        <link rel="stylesheet" type="text/css" href="css/stylesheet_e_1.css"> 
         <%
           response.setHeader("Cache-Control","no-cache,no-store,must-revalidate");
           response.setHeader("Pragma","no-cache");
