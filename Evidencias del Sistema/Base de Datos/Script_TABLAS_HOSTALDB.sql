@@ -212,8 +212,10 @@ CREATE TABLE recepcion_producto (
     producto_id            INTEGER ,
     estado_recepcion_id    INTEGER ,
     orden_pedido_id        INTEGER ,
-    fecha                  DATE NOT NULL
+    fecha                  DATE ,
+    CANTIDAD_P             INTEGER
 );
+
 
 ALTER TABLE recepcion_producto ADD CONSTRAINT recepcion_producto_pk PRIMARY KEY ( idrecepcion_producto );
 
