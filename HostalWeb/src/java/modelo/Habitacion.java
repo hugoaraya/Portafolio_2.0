@@ -19,11 +19,13 @@ public class Habitacion {
     private String estado_habitacion;
     private int capacidad;
     private int estado_habitacion_id;
+    private String fecha_inicio,fecha_fin;
 
     public Habitacion() {
     }
 
-    public Habitacion(int id_habitacion, String tipo_cama, String accesorios, int precio_habitacion, String descripcion, String nombre_habitacion, String estado_habitacion, int capacidad,int estado_habitacion_id) {
+    public Habitacion(int id_habitacion, String tipo_cama, String accesorios, int precio_habitacion, String descripcion, 
+            String nombre_habitacion, String estado_habitacion, int capacidad,int estado_habitacion_id,String fecha_inicio,String fecha_fin) {
         this.id_habitacion = id_habitacion;
         this.tipo_cama = tipo_cama;
         this.accesorios = accesorios;
@@ -33,6 +35,8 @@ public class Habitacion {
         this.estado_habitacion = estado_habitacion;
         this.capacidad = capacidad;
         this.estado_habitacion_id = estado_habitacion_id;
+        this.fecha_inicio = fecha_inicio;
+        this.fecha_fin = fecha_fin;
     }
 
     public int getId_habitacion() {
@@ -105,6 +109,22 @@ public class Habitacion {
 
     public void setEstado_habitacion_id(int estado_habitacion_id) {
         this.estado_habitacion_id = estado_habitacion_id;
+    }
+
+    public String getFecha_inicio() {
+        return fecha_inicio;
+    }
+
+    public void setFecha_inicio(String fecha_inicio) {
+        this.fecha_inicio = fecha_inicio;
+    }
+
+    public String getFecha_fin() {
+        return fecha_fin;
+    }
+
+    public void setFecha_fin(String fecha_fin) {
+        this.fecha_fin = fecha_fin;
     }
     
     

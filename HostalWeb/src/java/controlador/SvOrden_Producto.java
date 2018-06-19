@@ -97,21 +97,20 @@ try{
             par2.add(new Phrase(Chunk.NEWLINE));     
             documento.add(par2);
 
-            PdfPTable tabla = new PdfPTable(6); 
+            PdfPTable tabla = new PdfPTable(5); 
             tabla.setWidthPercentage(100);
             PdfPCell celda1 = new PdfPCell(new Paragraph("Nombre", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda2 = new PdfPCell(new Paragraph("Tipo De Producto", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda3 = new PdfPCell(new Paragraph("Marca", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda4 = new PdfPCell(new Paragraph("Stock", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda5 = new PdfPCell(new Paragraph("Stock Critico", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda6 = new PdfPCell(new Paragraph("Precio", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
+            PdfPCell celda5 = new PdfPCell(new Paragraph("Precio", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
 
             tabla.addCell(celda1);
             tabla.addCell(celda2);
             tabla.addCell(celda3);
             tabla.addCell(celda4);
             tabla.addCell(celda5);
-            tabla.addCell(celda6);
+       
                   
 
             while (rs.next()) {              
@@ -120,8 +119,7 @@ try{
                 tabla.addCell(rs.getString(2));
                 tabla.addCell(rs.getString(3));
                 tabla.addCell(String.valueOf(rs.getInt(4)));
-                tabla.addCell(String.valueOf(rs.getInt(5)));
-                tabla.addCell(String.valueOf(rs.getInt(6)));                                
+                tabla.addCell(String.valueOf(rs.getInt(6)));                                    
             }            
             documento.add(tabla);
             

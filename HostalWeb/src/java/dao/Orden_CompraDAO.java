@@ -12,6 +12,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
+import modelo.Orden_comedor;
 
 /**
  *
@@ -90,7 +91,7 @@ public class Orden_CompraDAO {
    public static void AgregarOrdenCompra(Orden_compra oc) throws SQLException {
         
 
-        String sql = SQL_INSERTAR_ORDEN_COMPRA_METODO(oc.getNro_orden(),oc.getEmpresa_id(),oc.getFecha_orden(),oc.getHuesped_habitacion_id());
+        String sql = SQL_INSERTAR_ORDEN_COMPRA_METODO(oc.getNro_orden(),oc.getEmpresa_id(),oc.getFecha_orden(),oc.getOrden_comedor_id(),oc.getHuesped_habitacion_id());
                 
                 Connection conexion = new Conexion().fabricarConexion();
            Statement st = conexion.createStatement();         
@@ -101,4 +102,43 @@ public class Orden_CompraDAO {
             conexion.close();  
        
     }  
+   
+    public static void AgregarOrdenComedor(Orden_comedor oc) throws SQLException {
+        
+
+        String sql = SQL_INSERTAR_ORDEN_COMEDOR_METODO(oc.getPlato_id(),oc.getMinuta_id(),oc.getServicio_id());
+                
+                Connection conexion = new Conexion().fabricarConexion();
+           Statement st = conexion.createStatement();         
+
+             st.executeUpdate(sql);
+
+            st.close();
+            conexion.close();  
+       
+    }  
+   
+      public static ArrayList<Orden_comedor> ObtenerOrdenComedor(int plato_id,int minuta_id) throws SQLException{
+        
+        
+        String sql1 = SQL_ORDEN_COMEDOR_ID_METODO(plato_id,minuta_id);
+        Connection conexion = new Conexion().fabricarConexion();
+      
+        PreparedStatement ps = conexion.prepareStatement(sql1);
+        ResultSet rs;
+        rs = ps.executeQuery();
+        ArrayList<Orden_comedor> arreglo = new ArrayList<>();       
+        
+        while(rs.next()){
+        Orden_comedor oc = new Orden_comedor();
+        oc.setId_orden_comedor(rs.getInt(1));     
+        
+        arreglo.add(oc);
+        }
+        
+        rs.close();       
+        conexion.close();
+        return arreglo;
+         
+       }
 }

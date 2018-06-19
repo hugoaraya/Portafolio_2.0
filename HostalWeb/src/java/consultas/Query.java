@@ -146,7 +146,7 @@ public class Query {
          SQL_LISTAR_HABITACION_FECHA_CAP = "select h.idhabitacion,h.tipo_cama,h.accesorio,h.precio,h.descripcion,h.nombre,e.descripcion,h.capacidad"
                  + " from habitacion h inner join estado_habitacion e on(h.estado_habitacion_id = e.idestado_habitacion)"
                  + "  inner join FECHAS_RESERVAS f on(H.FECHAS_RESERVAS_ID = f.idfecha_reservas)"
-                 + " where F.FECHA_INGRESO != '" + fecha_inicio + "' and F.FECHA_SALIDA != '" + fecha_salida + "' and h.capacidad = '" + capacidad + "'";
+                 + " where e.descripcion = 'Diponible' and F.FECHA_INGRESO != '" + fecha_inicio + "' and F.FECHA_SALIDA != '" + fecha_salida + "' and h.capacidad >= '" + capacidad + "'";
         return  SQL_LISTAR_HABITACION_FECHA_CAP;
       }
      
@@ -244,6 +244,7 @@ public class Query {
       //HUESPED
       
       public static String SQL_LISTAR_HUESPED = "";
+       public static String SQL_LISTAR_HUESPED_NO_HOSPEDADO = "";
       public static String SQL_LISTAR_HUESPED_ID= "";
       public static String SQL_AGREGAR_HUESPED = "";
       public static String SQL_MODIFICAR_HUESPED = "";
@@ -253,6 +254,13 @@ public class Query {
                  + "inner join estado_huesped e on(h.estado_huesped_id = e.idestado_huesped)"
                  + "inner join cargo c on(h.cargo_id = c.idcargo) where empresa_id = '" + id_empresa + "' order by h.apellido asc";
         return  SQL_LISTAR_HUESPED;
+      }
+       
+       public static String SQL_LISTAR_HUESPED_NO_HOSPEDADO_METODO(int id_empresa) {
+         SQL_LISTAR_HUESPED_NO_HOSPEDADO = "select h.idhuesped,h.rut,h.dv,h.nombre,h.apellido,c.descripcion,h.correo,h.telefono,e.estado from huesped h "
+                 + "inner join estado_huesped e on(h.estado_huesped_id = e.idestado_huesped)"
+                 + "inner join cargo c on(h.cargo_id = c.idcargo) where empresa_id = '" + id_empresa + "' and e.estado = 'En Espera' order by h.apellido asc";
+        return  SQL_LISTAR_HUESPED_NO_HOSPEDADO;
       }
        
        public static String SQL_LISTAR_HUESPED_ID_METODO(int id_huesped) {
@@ -304,21 +312,42 @@ public class Query {
         return  SQL_AGREGAR_PLATO;
       }
       
-      public static String SQL_INSERTAR_ORDEN_COMPRA_METODO(int nro_orden,int empresa_id,String fecha,String huesped_habitacion_id) {
+      public static String SQL_INSERTAR_ORDEN_COMPRA_METODO(int nro_orden,int empresa_id,String fecha,int orden_comedor_id,String huesped_habitacion_id) {
          SQL_INSERTAR_ORDEN_COMPRA = "INSERT INTO orden_compra (idorden_compra,nro_orden,empresa_id,fecha, orden_comedor_id, Huesped_habitacion_id) "
-                 + "VALUES (0,'"+nro_orden+ "','"+empresa_id+ "','"+fecha+ "',null,'"+huesped_habitacion_id+"')";
+                 + "VALUES (0,'"+nro_orden+ "','"+empresa_id+ "','"+fecha+ "','"+orden_comedor_id+ "','"+huesped_habitacion_id+"')";
         return  SQL_INSERTAR_ORDEN_COMPRA;
       }
-      
-      
-      
-      
+            
       public static String SQL_HUESPED_HABITACION_ID = "";
       
       public static String SQL_HUESPED_HABITACION_ID_METODO(String huesped_id,String habitacion_id) {
          SQL_HUESPED_HABITACION_ID = "select idhuesped_habitacion from huesped_habitacion "
                  + "where huesped_id =  '" + huesped_id + "' and habitacion_id= '"+habitacion_id+"'";
         return  SQL_HUESPED_HABITACION_ID;
+      }
+      
+      public static String SQL_INSERTAR_ORDEN_COMEDOR = "";
+      
+    public static String SQL_INSERTAR_ORDEN_COMEDOR_METODO(int plato_id,int minuta_id,String servicio_id) {
+         SQL_INSERTAR_ORDEN_COMEDOR = "INSERT INTO orden_comedor (idorden_comedor,plato_id,minuta_id,servicio_id) "
+                 + "VALUES(0,'"+plato_id+ "','"+minuta_id+"','"+servicio_id+"')";
+        return  SQL_INSERTAR_ORDEN_COMEDOR;
+      }
+     
+    public static String SQL_ORDEN_COMEDOR_ID = "";
+      
+      public static String SQL_ORDEN_COMEDOR_ID_METODO(int plato_id,int minuta_id) {
+         SQL_ORDEN_COMEDOR_ID = "select idorden_comedor from orden_comedor "
+                 + "where plato_id = '" + plato_id + "' and minuta_id= '"+minuta_id+"'";
+        return  SQL_ORDEN_COMEDOR_ID;
+      }
+      
+       public static String SQL_INSERTAR_FECHAS = "";
+      
+    public static String SQL_INSERTAR_FECHAS_METODO(String fecha_inicio,String fecha_fin) {
+         SQL_INSERTAR_FECHAS = "INSERT INTO fechas_reservas (idfecha_reservas,fecha_ingreso,fecha_salida) "
+                 + "VALUES(0,'"+fecha_inicio+ "','"+fecha_fin+"')";
+        return  SQL_INSERTAR_FECHAS;
       }
       
 }

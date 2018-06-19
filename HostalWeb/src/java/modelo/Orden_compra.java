@@ -18,12 +18,13 @@ public class Orden_compra {
     private String huesped_id,habitacion_id,huesped_habitacion_id;
     private int empresa_id;
     private String fecha_orden;
+    private int orden_comedor_id;
 
     public Orden_compra() {
     }
 
     public Orden_compra(int nro_orden, String nombre_empresa, String rut, String dv, Date fecha, 
-            String huesped_id, String habitacion_id, String huesped_habitacion_id,int empresa_id,String fecha_orden) {
+            String huesped_id, String habitacion_id, String huesped_habitacion_id,int empresa_id,String fecha_orden,int orden_comedor_id) {
         this.nro_orden = nro_orden;
         this.nombre_empresa = nombre_empresa;
         this.rut = rut;
@@ -34,6 +35,7 @@ public class Orden_compra {
         this.huesped_habitacion_id = huesped_habitacion_id;
         this.empresa_id = empresa_id;
         this.fecha_orden = fecha_orden;
+        this.orden_comedor_id = orden_comedor_id;
     }
 
     public int getNro_orden() {
@@ -114,6 +116,14 @@ public class Orden_compra {
 
     public void setFecha_orden(String fecha_orden) {
         this.fecha_orden = fecha_orden;
+    }
+
+    public int getOrden_comedor_id() {
+        return orden_comedor_id;
+    }
+
+    public void setOrden_comedor_id(int orden_comedor_id) {
+        this.orden_comedor_id = orden_comedor_id;
     }
     
     
