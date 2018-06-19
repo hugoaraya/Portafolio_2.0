@@ -18,9 +18,11 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import static dao.Orden_CompraDAO.AgregarHuespedHabitacion;
 import static dao.Orden_CompraDAO.AgregarOrdenCompra;
-import java.sql.Date;
+import static dao.Orden_CompraDAO.AgregarOrdenComedor;
+import static dao.Orden_CompraDAO.ObtenerOrdenComedor;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import modelo.Orden_comedor;
 import modelo.Orden_compra;
 
 /**
@@ -44,35 +46,56 @@ public class SvHuespedHabitacion extends HttpServlet {
             throws ServletException, IOException, SQLException {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
-
+            //insertar fechas
+            
+            //
+            //variables para insertar en huesped habitacion
             String id_habitacion[] = request.getParameterValues("id_habitacion");
             String id_huesped[] = request.getParameterValues("id_huesped");
+            //variables para insertar en orden de compra 
             int empresa_id = Integer.parseInt(request.getParameter("empresa_id"));
             int nro_orden = (int)Math.round(Math.random() * 89999) + 10000;
-                    
             LocalDate localDate = LocalDate.now();
-            for (String id_huesped1 : id_huesped) {
+            //insertar orden comedor
+            String servicio_id = request.getParameter("tipo_servicio");
+            int id_plato = (int)Math.round(Math.random() * 1) + 4;
+            int id_minuta = (int)Math.round(Math.random() * 1) + 4;
+            //           
+            //
+            // se recorren los huesped y habitaciones seleccionadas
+            for (String id_huesped1 : id_huesped) {                
                 for (String id_habitacion1 : id_habitacion) {
+                    //insertar nueva orden de comedor
+                Orden_comedor oco = new Orden_comedor();
+                oco.setPlato_id(id_plato);
+                oco.setMinuta_id(id_minuta);
+                oco.setServicio_id(servicio_id);                
+                AgregarOrdenComedor(oco);      
+                 //
                     Orden_compra oc = new Orden_compra();
                     oc.setHuesped_id(id_huesped1);
                     oc.setHabitacion_id(id_habitacion1);
+                    //se insertan las id de huesped y habitacion
                     AgregarHuespedHabitacion(oc);
-
+                    // se recorren y se recupera la id de huesped habitacion 
                     Orden_CompraDAO ocs = new Orden_CompraDAO();
                     ArrayList<Orden_compra> oc1 = ocs.listaHuespedHabitacion(id_huesped1, id_habitacion1);
-
+                    //recorre orden comedor y recupera la id
+                     Orden_CompraDAO ocomedor = new Orden_CompraDAO();
+                     ArrayList<Orden_comedor> ocomedors = ocomedor.ObtenerOrdenComedor(id_plato, id_minuta);                                        
                     for (Orden_compra orden : oc1) {
-                        
+                        for (Orden_comedor ordensita : ocomedors){    
+                        //se insertan los datos en la orden de compra
                         String fecha = localDate.toString();
                         Orden_compra oc20 = new Orden_compra();
                         oc20.setNro_orden(nro_orden);
                         oc20.setEmpresa_id(empresa_id);
                         oc20.setFecha_orden(convertirFecha(fecha));
+                        oc20.setOrden_comedor_id(ordensita.getId_orden_comedor());
                         oc20.setHuesped_habitacion_id(orden.getHuesped_habitacion_id());                    
-                         AgregarOrdenCompra(oc20);       
-                                
-                        
+                        AgregarOrdenCompra(oc20);       
                     }
+                }
 
                 }
             }

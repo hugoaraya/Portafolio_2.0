@@ -67,6 +67,38 @@ public class HuespedDAO {
         return arreglo;
     }
      
+     public static ArrayList<Huesped> listarHuespedNoHospedado(int id_empresa) throws SQLException{
+        
+        
+        String sql1 = SQL_LISTAR_HUESPED_NO_HOSPEDADO_METODO(id_empresa);
+        Connection conexion = new Conexion().fabricarConexion();
+      
+        PreparedStatement ps = conexion.prepareStatement(sql1);
+        ResultSet rs;
+        rs = ps.executeQuery();
+        ArrayList<Huesped> arreglo = new ArrayList<>();       
+        
+        while(rs.next()){
+        Huesped hues = new Huesped();
+        hues.setId_huesped(rs.getInt(1));
+        hues.setRut(rs.getString(2));
+        hues.setDv(rs.getString(3));
+        hues.setNombre(rs.getString(4));
+        hues.setApellido(rs.getString(5));
+        hues.setCargo(rs.getString(6));
+        hues.setCorreo(rs.getString(7));
+        hues.setNumero_tefono(rs.getInt(8));
+        hues.setEstado_huesped(rs.getString(9));
+        
+        
+        arreglo.add(hues);
+        }
+        
+        rs.close();       
+        conexion.close();
+        return arreglo;
+    }
+     
      public static Huesped getHuespedPorId(int id_huesped) throws SQLException {
         Huesped hues = null;
         

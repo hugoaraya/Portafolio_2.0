@@ -57,7 +57,7 @@
          <div class="form">
              <h4 align="center">Cambiar Clave</h4><br>
         <form id="cambiar_clave" action="cambiarClave" method="post" class="login-form">           
-            <input type="text" name="usuario_id" value="<%=temp.getUsuario_id()%>">      
+            <input type="hidden" name="usuario_id" value="<%=temp.getUsuario_id()%>">      
             <input type="password" name="clave" id="pass" placeholder="Nueva Contraseña"><br> 
              <input type="password" id="repass" placeholder="Repetir Contraseña"><br> 
              <input type="button" id="btn_enviar" value="Enviar" onclick="validarForm()">
