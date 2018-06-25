@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css?family=Poiret+One|Source+Code+Pro');
+*{
+	box-sizing: border-box;
+}
+img{
+	display: block;
+	max-width: 100%;
+}
+body{
+	
+        font-family: 'Poiret One', cursive;
+	margin:0;
+        font-size: 18px;
+}
+h1,h2,h3,h4,h5,h6{
+	font-family: 'Poiret One', cursive;
+        font-style: italic;	
+}
+.section__titulo{
+	text-align: center;
+	font-size: 35px;
+        color: #7e8787;
+}
+.contenedor{
+	margin: auto;
+	width: 99%;	
+}
+/*----------------------Estilos del Header--------------------*/
+.header{
+	height: 60px;
+}
+.header .contenedor{
+	display: flex;
+	justify-content: space-between;
+}
+.logo, .icon-menu{
+	margin: 2px;
+	color: white;
+	border-bottom-color: black;
+}
+.icon-menu{
+	display: block;
+	width: 40px;
+	height: 40px;
+	font-size: 30px;
+	background: grey;	
+	text-align: center;
+	line-height: 50px;
+	border-radius: 5px;
+	margin-left: auto;
+	cursor: pointer;
+}
+/*----------------------Estilos del menu--------------------*/
+.nav{
+	position: absolute;
+	top: 80px;
+	left: -100%;
+	width: 100%;
+	transition: all 0,4s;
+	
+}
+.menu{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+.menu__link{	
+	display: block;
+	padding: 10px;
+	background: grey;
+	text-decoration: none;
+	color: #fff;
+}
+.menu__link:hover {
+	background: #fff;
+	color: grey;
+}
+.mostrar{
+	left:0;			
+}
+.select {
+	background: #fff;
+	color: grey;
+}
+
+/*----------------------------Estilos banner--------------*/
+.banner{
+	margin-top: -60px;
+	position: relative;
+	z-index: -1000;
+	margin-bottom: 20px;
+}
+.banner .contenedor{
+	position: absolute;
+	top: 86%;
+	left: 85%;
+	transform: translateX(-50%) translateY(-50%);
+	width: 100%;
+	color: white;
+	text-align: center;
+	
+}
+.banner__txt{
+	display: none;
+}
+/*---------------------------Estilos de info-------------*/
+.info__columna{
+	background:aliceblue;
+        color: #7e8787;
+	padding: 15px;
+	margin-bottom: 30px;
+}
+/*---------------------Estilos de juguetes------------------*/
+.juguetes__columna{
+	position: relative;
+	margin-bottom: 30px;
+}
+.juguetes__descripcion{
+	position: absolute;
+	top: 0;
+	left: 0;
+	color: white;
+	background: rgba(0,0,0,0.2);
+	width: 60%;
+	height: 100%;
+	padding: 5px;
+}	
+.juguetes__titulo{
+	font-size: 20px;
+	margin: 5px;
+}
+.juguetes__img{
+	width: 100%;
+}
+.juguetes__img{
+	width: 100%;
+} 
+/*---------------------Estilos de footer------------------*/
+
+
+
+/*--------------------Estilos responsive---------------------*/
+@media(min-width:480px){
+	.logo{
+		font-size: 40px;
+	}
+	.banner__titulo{
+		font-size: 30px;
+		margin: 5px 0;
+	}
+	.banner__txt{
+		display: bock;
+		font-size: 18px;
+		margin: 7px 0;
+	}
+	.info{
+		display: flex;
+		justify-content: space-between;
+		margin-top: -15px;
+		
+	}
+	.info__columna{
+		width: 33%;		
+	}
+	.info__titulo{
+		font-size: 30px;
+		margin: 5px;
+	}
+	.section__titulo{
+		width: 100%
+	}
+	.juguetes{
+		flex-wrap: wrap;
+		margin-top: 0;
+	}
+	
+	.juguetes{
+		display: flex;
+		justify-content: space-between;
+		margin-top: -15px;
+		
+	}
+	.juguetes__columna{
+		width: 49.5%;
+	}
+	
+}
+
+@media(min-width:768px){
+	.banner__titulo{
+		font-size: 50px;		
+	}
+	.juguetes__titulo{
+		font-size: 40px;
+	}
+}
+
+@media(min-width:1024px){
+	.contenedor{
+		width: 1000px;
+	}
+	.section__titulo{
+		font-size: 50px;
+		margin: 10px;	
+	}
+	.nav{
+		position: static;
+		width: auto;
+	}
+	.menu{
+		display: flex;
+	}
+	.icon-menu{
+		display: none;		
+	}
+	.menu__link{
+		background: none;
+		font-size: 20px;
+	}
+	.select {
+		background: aliceblue;
+	}
+	
+	.banner__titulo{
+		font-size: 60px;		
+	}
+	banner__txt{
+		font-size: 25px;
+	}	
+	.info__titulo{
+		font-size: 40px;
+		text-align: center;
+	}
+	.juguetes__descripcion{
+		padding: 10px;		
+		flex-wrap: wrap;
+		
+	}
+	.juguetes__titulo{
+		font-size: 50px;
+	}
+	.juguetes__txt{
+		font-size: 20px;
+	}
+}
+
+@media(min-width:1280px){
+	.contenedor{
+		width: 1200px;
+	}
+	.logo{
+		font-size: 60px;
+	}
+	.banner .contenedor{
+		top: 90%;
+	}
+	
+}
+
+

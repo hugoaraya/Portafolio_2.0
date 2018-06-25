@@ -1,0 +1,73 @@
+
+  
+
+  a {
+      text-decoration: none;
+      color: #1abc9c;  
+      text-align: center;
+  }
+
+button, input[type=button]{
+  border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  padding: 6px;
+  width: 200px;
+  color: white;
+  margin-left: 400px;
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  &:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+select{
+    border: none;
+  background: #1abc9c;
+  cursor: pointer;
+  border-radius: 3px;
+  width: 100%;
+   color: white;
+   box-shadow: 0 3px 6px 0 rgba(0,0,0,0.2);
+  &:hover { 
+    transform: translateY(-3px);
+    box-shadow: 0 6px 6px 0 rgba(0,0,0,0.2);
+  }
+}
+#main-container{
+        margin: 80px auto;
+	width: 1000px;
+}
+
+table{
+	background-color: white;
+	text-align: left;
+	border-collapse: collapse;
+	width: 100%;
+          box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+th, td{
+	padding: 20px;
+}
+
+thead{
+	background-color: #1abc9c;
+	border-bottom: solid 5px #1abc9c;
+	color: white;
+          box-shadow: 2px 2px 5px 1px rgba(0,0,0,0.2);
+}
+
+tr:nth-child(even){
+	background-color: #ddd;
+}
+
+tr:hover td {
+	background-color: #17a689;
+	color: white;
+}
+
+span{   
+    color: #336bc0;  
+}

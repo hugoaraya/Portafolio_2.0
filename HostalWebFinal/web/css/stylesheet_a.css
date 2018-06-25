@@ -1,0 +1,121 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+
+*{
+  margin: 0;
+  padding: 0;
+  
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    background: url(../img/admin-bak.png);
+    background-position: center center;    
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;   
+    font-family: "Roboto", sans-serif;
+}
+.x {
+    text-decoration: none;
+    font-size: 35px;
+    color: #fff9f0;
+    position: absolute;   
+    top: -0%;
+    right: 27%;
+    cursor: pointer; 
+  }
+  .link {
+    text-decoration: none;
+    color: #fff9f0;
+    cursor: pointer;
+  }
+.wrapper{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
+.container{
+  width: 500px;
+  height: 800px;
+  background: rgba(182, 11, 11, 0.7 );
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  
+}
+
+.img-container{
+  width: 40%;
+  height: 100%;
+  float: left;
+  position: relative;
+}
+
+.img-container img{
+  width: 100%;
+  height: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+
+.content{
+  width: 60%;
+  height: 100%;
+  float: left;
+  padding: 30px 40px;
+  box-sizing: border-box;
+  
+}
+
+.head{
+  padding-bottom: 30px;
+}
+
+.head p{
+  font-size: 30px;
+  color: #DB7575;
+  font-weight: 600;
+}
+
+.head span{
+    color: #ffffff;
+  font-size: 20px;
+}
+
+.data{
+  width: 90%;
+  overflow: hidden;
+}
+
+.inner-data{
+  width: 50%;
+  float: left;
+  text-align: left;
+  color: #ffffff;
+}
+
+.inner-data p{
+  font-size: 22px;
+  padding-bottom: 5px;
+}
+
+.inner-data span{
+  font-size: 16px;
+  font-weight: 400;
+  
+}
+.floating-icon{
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: -5%;
+  right: -1%;
+  background: #B60B0B;
+  border-radius: 50%;
+  cursor: pointer; 
+  
+}
+
+
