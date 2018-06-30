@@ -75,7 +75,9 @@ public class SvOrden_Habitacion extends HttpServlet {
             PdfWriter.getInstance(documento, out);
             documento.open();
             //Imagen
-            Image imagenes = Image.getInstance("C:\\Users\\420NiggaBytes\\Pictures\\Duoc\\PORTFOLIO\\Codigo\\HostalWeb\\logo_hostal.png");
+              String relativeWebPath = "/img/logo_hostal.png";
+            String absoluteDiskPath = getServletContext().getRealPath(relativeWebPath);
+            Image imagenes = Image.getInstance(absoluteDiskPath);
             imagenes.setAlignment(Element.ALIGN_CENTER);
             imagenes.scalePercent(50);
             documento.add(imagenes);

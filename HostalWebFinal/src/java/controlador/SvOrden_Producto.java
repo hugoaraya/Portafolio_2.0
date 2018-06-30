@@ -72,8 +72,10 @@ try{
             PdfWriter.getInstance(documento, out);
             documento.open();
             //Imagen
-            Image imagenes = Image.getInstance("C:\\Users\\420NiggaBytes\\Pictures\\Duoc\\PORTFOLIO\\Codigo\\HostalWeb\\logo_hostal.png");
-            imagenes.setAlignment(Element.ALIGN_LEFT);
+            String relativeWebPath = "/img/logo_hostal.png";
+            String absoluteDiskPath = getServletContext().getRealPath(relativeWebPath);
+            Image imagenes = Image.getInstance(absoluteDiskPath);
+            imagenes.setAlignment(Element.ALIGN_MIDDLE);
             imagenes.scalePercent(50);
             documento.add(imagenes);
 
@@ -97,19 +99,18 @@ try{
             par2.add(new Phrase(Chunk.NEWLINE));     
             documento.add(par2);
 
-            PdfPTable tabla = new PdfPTable(5); 
+            PdfPTable tabla = new PdfPTable(4); 
             tabla.setWidthPercentage(100);
             PdfPCell celda1 = new PdfPCell(new Paragraph("Nombre", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda2 = new PdfPCell(new Paragraph("Tipo De Producto", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda3 = new PdfPCell(new Paragraph("Marca", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
             PdfPCell celda4 = new PdfPCell(new Paragraph("Stock", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
-            PdfPCell celda5 = new PdfPCell(new Paragraph("Precio", FontFactory.getFont("Arial", 12, Font.BOLD, BaseColor.BLACK)));
 
             tabla.addCell(celda1);
             tabla.addCell(celda2);
             tabla.addCell(celda3);
             tabla.addCell(celda4);
-            tabla.addCell(celda5);
+
        
                   
 
@@ -119,7 +120,7 @@ try{
                 tabla.addCell(rs.getString(2));
                 tabla.addCell(rs.getString(3));
                 tabla.addCell(String.valueOf(rs.getInt(4)));
-                tabla.addCell(String.valueOf(rs.getInt(6)));                                    
+                                                
             }            
             documento.add(tabla);
             
@@ -127,7 +128,7 @@ try{
             par3.add(new Phrase(Chunk.NEWLINE));
             Font fontprecio = new Font(Font.FontFamily.TIMES_ROMAN, 12, Font.NORMAL, BaseColor.BLACK);
             while (rs2.next()) {
-            par3.add(new Phrase("Total Productos: " + String.valueOf(rs2.getInt(2)) + "       Precio Total: $" + String.valueOf(rs2.getInt(1)), fontprecio));
+            par3.add(new Phrase("Total Productos: " + String.valueOf(rs2.getInt(1)), fontprecio));
             par3.setAlignment(Element.ALIGN_RIGHT);
             }
             

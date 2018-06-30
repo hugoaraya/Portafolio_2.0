@@ -73,7 +73,7 @@ public class Query {
 
     //LISTAR EL DETALLE DE LOS PRODUCTOS DE UNA ORDEN DE PEDIDO SEGUN PROVEEDOR  
     public static String SQL_LISTAR_DETALLE_ORDEN_METODO(int nro_orden) {
-        SQL_LISTAR_DETALLE_ORDEN = "select f.descripcion,t.descripcion,m.descripcion,p.stock,p.stock_critico,p.precio"
+        SQL_LISTAR_DETALLE_ORDEN = "select f.descripcion,t.descripcion,m.descripcion,r.cantidad_p"
                 + " from orden_pedido o inner join recepcion_producto r on(o.idorden_pedido = r.orden_pedido_id)"
                 + " inner join producto p on(r.producto_id = p.idproducto)"
                 + " inner join familia_producto f on(p.familia_producto_id = f.idfamilia_producto)"
@@ -85,7 +85,7 @@ public class Query {
 
     //CANTIDAD STOCK Y PRECIO TOTAL
     public static String SQL_PRECIO_STOCK_TOTAL_METODO(int nro_orden) {
-        SQL_PRECIO_STOCK_TOTAL = " select sum(p.stock * p.precio),sum(p.stock) "
+        SQL_PRECIO_STOCK_TOTAL = " select sum(r.cantidad_p) "
                 + " from orden_pedido o inner join recepcion_producto r on(o.idorden_pedido = r.orden_pedido_id)"
                 + " inner join producto p on(r.producto_id = p.idproducto) where o.nro_orden = '" + nro_orden + "'";
         return SQL_PRECIO_STOCK_TOTAL;

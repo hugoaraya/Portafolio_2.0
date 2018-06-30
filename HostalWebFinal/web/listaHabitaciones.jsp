@@ -39,9 +39,7 @@
             }
 
         %>
-            <div class="floating-icon">
-                    <a class="x" title="Volver" href='indexAdmin.jsp'>X</a>
-              </div>
+            
            
         <div id="main-container">
             <table>
@@ -78,6 +76,9 @@
             }
         %>
         </table>
+        <div class="floating-icon">
+                    <a class="x" title="Volver" href='indexAdmin.jsp'>X</a>
+              </div>
         </div>
                
     </body>

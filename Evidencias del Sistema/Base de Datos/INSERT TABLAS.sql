@@ -15,7 +15,7 @@ INSERT INTO TIPO_USUARIO VALUES (5,'Eliminado');
 INSERT INTO ESTADO_HABITACION VALUES (1,'Diponible');
 INSERT INTO ESTADO_HABITACION VALUES (2,'Ocupada');
 INSERT INTO ESTADO_HABITACION VALUES (3,'Mantencion');
-
+INSERT INTO ESTADO_HABITACION VALUES (4,'Reservada');
 --select * from ESTADO_RECEPCION;
 INSERT INTO ESTADO_RECEPCION VALUES (1,'Pendiente');
 INSERT INTO ESTADO_RECEPCION VALUES (2,'Cerrada');
@@ -29,6 +29,7 @@ INSERT INTO ESTADO_ORDEN_PEDIDO VALUES (3,'Rechazada');
 INSERT INTO ESTADO_HUESPED VALUES (1,'Hospedado');
 INSERT INTO ESTADO_HUESPED VALUES (2,'Check Out');
 INSERT INTO ESTADO_HUESPED VALUES (3,'No Aplica'); ---- no trabaja en la empresa -----
+INSERT INTO ESTADO_HUESPED VALUES (4,'En Espera')
 
 --select * from SERVICIO;
 INSERT INTO rubro (idrubro,descripcion) VALUES (1,'Abarrotez');
@@ -111,7 +112,7 @@ INSERT INTO producto (idproducto,fecha_vencimiento,precio,stock,stock_critico,ti
 VALUES (0,TO_DATE('2019-09-05', 'YYYY-MM-DD'),2200,3,9,8,8,8,8);
 INSERT INTO producto (idproducto,fecha_vencimiento,precio,stock,stock_critico,tipo_producto_id,familia_producto_id,marca_id,codigo_barra_id)
 VALUES (0,TO_DATE('2019-11-01', 'YYYY-MM-DD'),3300,7,12,9,9,9,9);
---select * from ORDEN_PEDIDO;
+--select * from;
 INSERT INTO orden_pedido (idorden_pedido,nro_orden,empleado_id,fecha,proveedor_id,estado_orden_pedido_id,comentario) 
 VALUES (1,'123456',1,TO_DATE('2019-11-01', 'YYYY-MM-DD'),1,1,'Sin Comentarios');
 --select * from RECEPCION_PRODUCTO;
@@ -166,6 +167,7 @@ INSERT INTO plato (idplato,nombre_plato) VALUES (2,'Ensalada Cesar');
 -- select * from MINUTA
 INSERT INTO minuta (idminuta,nombre_minuta,fecha_inicio,fecha_fin)
 VALUES (1,'Flan de cafe',TO_DATE('2019-01-25', 'YYYY-MM-DD'),TO_DATE('2019-01-30', 'YYYY-MM-DD'));
+VALUES (2,'Pastel de queso',TO_DATE('2019-03-25', 'YYYY-MM-DD'),TO_DATE('2019-04-30', 'YYYY-MM-DD'));
 -- select * from ORDEN_COMEDOR
 INSERT INTO orden_comedor (idorden_comedor,plato_id,minuta_id,servicio_id) 
 VALUES (1,1,1,1);

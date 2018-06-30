@@ -15,7 +15,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/tabla_comedor.css"> 
+        <link rel="stylesheet" type="text/css" href="css/tabla_comedor_1.css"> 
         
         <title>Perfil Administrador</title>    
         <%response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
@@ -46,6 +46,9 @@
                     <a class="x" title="Volver" href='indexAdmin.jsp'>X</a>
               </div>
         <div id="main-container">
+            <div class="floating-icon">
+                    <a class="x" title="Volver" href='indexAdmin.jsp'>X</a>
+              </div>
             <table>
                 <thead>
                     <tr>

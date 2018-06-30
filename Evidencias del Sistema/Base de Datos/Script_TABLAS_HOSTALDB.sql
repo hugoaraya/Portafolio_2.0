@@ -167,7 +167,7 @@ CREATE TABLE orden_pedido (
     fecha                    DATE NOT NULL,
     proveedor_id             INTEGER ,
     estado_orden_pedido_id   INTEGER,
-	comentario              VARCHAR2(255) 
+	comentarios              VARCHAR2(255) 
 );
 
 ALTER TABLE orden_pedido ADD CONSTRAINT orden_pedido_pk PRIMARY KEY ( idorden_pedido );

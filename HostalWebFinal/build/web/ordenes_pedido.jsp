@@ -16,7 +16,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <link rel="stylesheet" type="text/css" href="css/tabla_p_1.css"> 
+        <link rel="stylesheet" type="text/css" href="css/tabla_p_1_1.css"> 
         <title>Perfil Proveedor</title>    
         <%response.setHeader("Cache-Control", "no-cache,no-store,must-revalidate");
             response.setHeader("Pragma", "no-cache");
@@ -42,10 +42,11 @@
             }
 
         %>
-                <div class="floating-icon">
+                
+        <div id="main-container">
+            <div class="floating-icon">
                     <a class="x" href='indexProveedor.jsp'>X</a>
               </div>
-        <div id="main-container">
             <table>
                 <thead>
                     <tr>

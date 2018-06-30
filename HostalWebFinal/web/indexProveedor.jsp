@@ -49,7 +49,7 @@
         <div class="wrapper">
             <div class="container">
                 <div class="img-container">
-                    <img src="img/food.png" alt="">
+                    <img src="img/proveedor.png" alt="">
                 </div>
                 <div class="content">
                     <div class="head">
@@ -68,7 +68,6 @@
                     </div>  
                     <br> 
                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<a href='ordenes_pedido.jsp' title="Ver Ordenes Pedido" class="link"><img src="img/IconoOrdenCompra.png" alt="Ordenes Pedido" width="40" height="40" border="0"></a>&nbsp;&nbsp;&nbsp;
-                    &nbsp;&nbsp;&nbsp;<a href='index_p.jsp' title="Ir A Inicio" class="link"><img src="img/inicio.png" alt="Inicio" width="40" height="40" border="0"></a> 
                     
                 </div>
 

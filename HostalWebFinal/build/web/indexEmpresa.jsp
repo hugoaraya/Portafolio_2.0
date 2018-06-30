@@ -72,7 +72,6 @@
                     &nbsp;<a href='ordenes_compra.jsp' title="Ver Ordenes De Compra" class="link"><img src="img/o_compra.png" alt="Ordenes Compra" width="40" height="40" border="0"></a>
                     &nbsp;&nbsp;&nbsp;<a href="listaHuesped.jsp" title="Ver Huespedes"><img src="img/huesped.png" alt="Pedir Habitacion" width="40" height="40" border="0"></a>&nbsp;&nbsp;&nbsp;
                     <a href='cambiarClave.jsp'title="Cambiar Clave" class="link"><img src="img/cambiarpass.png" alt="Cambiar Clave" width="40" height="40" border="0"></a>  
-                    &nbsp;&nbsp;&nbsp;<a href='index_p.jsp'title="Ir A Inicio" class="link"><img src="img/inicio_p.png" alt="Inicio" width="40" height="40" border="0"></a>
 
                 </div>
 
