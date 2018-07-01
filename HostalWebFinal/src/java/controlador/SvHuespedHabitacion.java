@@ -98,10 +98,10 @@ public class SvHuespedHabitacion extends HttpServlet {
             }
             //insertar datos del servicio y plato con minuta aleatoria
             String servicio_id = request.getParameter("tipo_servicio");
-            int id_plato = (int) (Math.floor(Math.random() * contp) + 1);
-            int id_minuta = (int) (Math.floor(Math.random() * contm) + 1);  
-            out.print("<h1>"+contp+"</h1>");
-            out.print("<h1>"+contm+"</h1>");
+            int id_plato = (int) (Math.floor(Math.random() * contp) - 1);
+            int id_minuta = (int) (Math.floor(Math.random() * contm) - 1);  
+//            out.print("<h1>"+contp+"</h1>");
+//            out.print("<h1>"+contm+"</h1>");
             //           
             //
             // se recorren los huesped y habitaciones seleccionadas
